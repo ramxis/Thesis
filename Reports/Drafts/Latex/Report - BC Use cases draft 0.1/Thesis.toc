@@ -1,0 +1,10 @@
+\select@language {english}
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Ethereum and Smart Contracts}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Ethereum}{2}{subsection.2.1}
+\contentsline {section}{\numberline {3}Conclusion}{3}{section.3}
+\contentsline {section}{List of Figures}{I}{section*.1}
+\contentsline {section}{List of Tables}{II}{section*.2}
+\contentsline {section}{Bibliography}{III}{section*.3}
+\contentsline {section}{\numberline {A}Appendix Stuff}{IV}{appendix.A}

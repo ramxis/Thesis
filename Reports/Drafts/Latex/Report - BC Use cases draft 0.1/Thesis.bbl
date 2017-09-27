@@ -1,0 +1,13 @@
+\begin{thebibliography}{Wik17}
+
+\bibitem[Aut00]{Author_Year_Title}
+Author.
+\newblock {Title}.
+\newblock {\em Journal}, 1(1):1--2, June 1000.
+
+\bibitem[Wik17]{wiki:xxx}
+Wikipedia.
+\newblock Ethereum --- wikipedia{,} the free encyclopedia, 2017.
+\newblock [Online; accessed 9-September-2017 ].
+
+\end{thebibliography}

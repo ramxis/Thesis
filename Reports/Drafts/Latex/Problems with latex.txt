@@ -1,0 +1,3 @@
+italics are not working
+weired font
+/begin{quote} is not working properly
