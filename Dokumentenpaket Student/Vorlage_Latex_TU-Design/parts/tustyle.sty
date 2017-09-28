@@ -1,0 +1,290 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{tustyle}[]
+
+\RequirePackage{calc}
+\RequirePackage{color}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[automark]{scrlayer-scrpage}
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage
+{geometry}
+
+\renewcommand{\footfont}{\fontfamily{5fp}\fontseries{n}\fontshape{n}\fontsize{8}{1.2}\selectfont}
+
+\def\footnotesize{\fontsize{8}{1.2}\selectfont}
+
+\setkomafont{chapter}{\fontfamily{5fp}\fontseries{b}\fontshape{n}\fontsize{14pt}{1.2}\selectfont}
+\setkomafont{section}{\fontfamily{5fp}\fontseries{b}\fontshape{n}\fontsize{14pt}{1.2}\selectfont}
+\setkomafont{subsection}{\fontfamily{5fp}\fontseries{b}\fontshape{n}\fontsize{14pt}{1.2}\selectfont}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+% Definieren der Befehle TUchapter, TUsection, TUsubsecton und TUsubsubsection für die korrekten Abstände und Linien
+\newcommand{\TUchapter}[1]{\begin{minipage}[c][4em][t]{\textwidth}\rule{\linewidth}{0.6pt}\vspace{-6.8em}\chapter{#1}\vspace{-2.8em}\rule{\linewidth}{0.6pt}\end{minipage}\chaptermark{#1}}
+\newcommand{\TUsection}[1]{\section{#1}}
+\newcommand{\TUsubsection}[1]{\subsection{#1}}
+\newcommand{\TUsubsubsection}[1]{\subsubsection{#1}}
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\newlength{\BOf}
+\setlength{\BOf}{0mm}
+\newlength{\TUbarheight}
+\newlength{\TUbarlinedist} 
+\newlength{\TUlinewidth}	
+\newlength{\TUlogoheight}
+\newlength{\TUfinalline} 
+\newlength{\TUpageframe} 
+\newlength{\TUbottom} 
+
+\newlength{\TUvcut}
+\setlength{\TUvcut}{0cm}
+
+\DeclareOption{vcut}{\setlength{\TUvcut}{1cm}}
+\DeclareOption{largevcut}{\setlength{\TUvcut}{1,6cm}}
+
+\setlength{\TUbarheight}{4 mm }
+\setlength{\TUbarlinedist}{1.4 mm } 
+\setlength{\TUlinewidth}{1.2 pt}	
+\setlength{\TUlogoheight}{22 mm}
+\setlength{\TUfinalline}{0.6 pt} 
+\setlength{\TUpageframe}{15 mm} 
+\setlength{\TUbottom}{20 mm} 
+
+\DeclareOption{langpaper}{
+\setlength{\TUbarheight}{3.5 mm} 
+\setlength{\TUbarlinedist}{1.4 mm} 
+\setlength{\TUlinewidth}{1.2 pt }	
+\setlength{\TUlogoheight}{17 mm}
+\setlength{\TUfinalline}{0.6 pt} 
+\setlength{\TUpageframe}{10 mm} 
+\setlength{\TUbottom}{14 mm} 
+}
+
+\DeclareOption{a6paper}{
+\setlength{\TUbarheight}{3 mm }
+\setlength{\TUbarlinedist}{1.4 mm } 
+\setlength{\TUlinewidth}{1.2 pt} 	
+\setlength{\TUlogoheight}{16.5 mm}	
+\setlength{\TUfinalline}{0.6 pt} 	
+\setlength{\TUpageframe}{10 mm} 	
+\setlength{\TUbottom}{15 mm} 
+}
+
+\DeclareOption{a5paper}{
+\setlength{\TUbarheight}{3.3 mm} 
+\setlength{\TUbarlinedist}{1.4 mm} 
+\setlength{\TUlinewidth}{1.2 pt }	
+\setlength{\TUlogoheight}{19 mm }
+\setlength{\TUfinalline}{0.6 pt} 
+\setlength{\TUpageframe}{12 mm} 
+\setlength{\TUbottom}{16 mm} }
+
+\DeclareOption{a4paper}{ 
+\setlength{\TUbarheight}{4 mm }
+\setlength{\TUbarlinedist}{1.4 mm } 
+\setlength{\TUlinewidth}{1.2 pt}	
+\setlength{\TUlogoheight}{22 mm}
+\setlength{\TUfinalline}{0.6 pt} 
+\setlength{\TUpageframe}{15 mm} 
+\setlength{\TUbottom}{15 mm} 
+}
+
+\DeclareOption{a3paper}{ 
+\setlength{\TUbarheight}{4.5 mm} 
+\setlength{\TUbarlinedist}{1.4 mm} 
+\setlength{\TUlinewidth}{1.2 pt }	
+\setlength{\TUlogoheight}{24.5 mm} 
+\setlength{\TUfinalline}{0.6 pt} 
+\setlength{\TUpageframe}{15 mm} 
+\setlength{\TUbottom}{20 mm} 
+}
+
+\DeclareOption{a2paper}{ 
+\setlength{\TUbarheight}{8 mm }
+\setlength{\TUbarlinedist}{2.5 mm} 
+\setlength{\TUlinewidth}{2.2 pt }	
+\setlength{\TUlogoheight}{44.5 mm} 
+\setlength{\TUfinalline}{1.1 pt} 
+\setlength{\TUpageframe}{30 mm} 
+\setlength{\TUbottom}{5 mm }
+}
+
+\DeclareOption{a1paper}{ 
+\setlength{\TUbarheight}{10 mm }
+\setlength{\TUbarlinedist}{3.0 mm} 
+\setlength{\TUlinewidth}{2.8 pt }	
+\setlength{\TUlogoheight}{55.5 mm} 
+\setlength{\TUfinalline}{1.4 pt} 
+\setlength{\TUpageframe}{30 mm} 
+\setlength{\TUbottom}{35 mm} 
+}
+
+\DeclareOption{a0paper}{ 
+\setlength{\TUbarheight}{16 mm }
+\setlength{\TUbarlinedist}{5.2 mm} 
+\setlength{\TUlinewidth}{4.8 pt }
+\setlength{\TUlogoheight}{80 mm }
+\setlength{\TUfinalline}{2.4 pt} 
+\setlength{\TUpageframe}{30 mm} 
+\setlength{\TUbottom}{35 mm} 
+}
+
+\DeclareOption{tufonts}{ 
+	\renewcommand*{\rmdefault}{5ch}
+	\renewcommand*{\sfdefault}{5fp}
+	\newcommand{\acdefault}{5sf}
+	\renewcommand*{\bfdefault}{b}
+	\renewcommand*{\scdefault}{sc}
+	\renewcommand*{\familydefault}{\rmdefault}
+}
+
+\definecolor{tucolor}{RGB}{185,15,34}
+
+\DeclareOption{red}{\definecolor{tucolor}{RGB}{185,15,34}}
+\DeclareOption{lightblue}{\definecolor{tucolor}{RGB}{93,133,195}}
+\DeclareOption{blue}{\definecolor{tucolor}{RGB}{0,78,138}}
+\DeclareOption{lightgreen}{\definecolor{tucolor}{RGB}{175,204,80}}
+\DeclareOption{green}{\definecolor{tucolor}{RGB}{153,192,0}}
+\DeclareOption{orange}{\definecolor{tucolor}{RGB}{236,101,0}}
+
+\ProcessOptions\relax
+
+\AtBeginDocument{
+\newgeometry{top=15mm,bottom=20mm,headsep=\TUpageframe,left=20mm,right=15mm,bindingoffset=\BOf,includehead,includefoot}
+\setheadwidth{\textwidth+2\TUvcut}
+\setfootwidth{\textwidth+2\TUvcut}
+
+\newcommand{\identityline}{\noindent
+\begin{minipage}[b][1.5em]{\textwidth+2\TUvcut}
+{\color{tucolor}{\noindent\rule{\linewidth}{\TUbarheight}}}\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}
+\end{minipage}}
+
+\newcommand{\titleidentityline}{\noindent
+\begin{minipage}[b][1.5em]{\textwidth}\noindent
+{\color{tucolor}{\noindent\rule{\linewidth}{\TUbarheight}}}\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}
+\end{minipage}} %headmark
+
+\newcommand{\fancyidentityline}{\noindent
+\begin{minipage}[b][1.5em]{\textwidth+2\TUvcut}
+{\color{tucolor}{\noindent\rule{\linewidth}{\TUbarheight}}}\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}\\{\textbf{\textsf{\leftmark}}}\hfill\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}
+\end{minipage}\\[.4em]}
+
+\newcommand{\fancyidentityliner}{\noindent
+\begin{minipage}[b][1.5em]{\textwidth+2\TUvcut}
+{\color{tucolor}{\noindent\rule{\linewidth}{\TUbarheight}}}\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}\\{\phantom{.}\hfill\textbf{\textsf{\rightmark}}}\vspace{-1.2em}\vspace{\TUbarlinedist}\\
+\rule{\linewidth}{\TUlinewidth}
+\end{minipage}\\[.4em]}
+}
+
+\automark[chapter]{chapter}
+
+\defpagestyle{TUpages}{%
+(0mm,0mm)
+{\identityline
+}
+{\identityline
+}
+{\identityline}
+}{(\textwidth+2\TUvcut,\TUfinalline){\ \pagemark \hfill\automark}{\headmark\hfill\pagemark\ }
+{\headmark\hfill\pagemark\ }}
+
+\defpagestyle{TUfancypages}{%
+(0mm,0mm)
+{\fancyidentityline
+}
+{\fancyidentityliner
+}
+{\fancyidentityline}
+}{(\textwidth+2\TUvcut,\TUfinalline){\ \pagemark \hfill}{\hfill\pagemark\ }
+{\hfill\pagemark\ }}
+
+\defpagestyle{TUplain}{%
+(0mm,0mm)
+{\identityline
+}
+{\identityline
+}
+{\identityline}
+}{
+(\textwidth+2\TUvcut,\TUfinalline)
+{}
+{}{}}
+
+\defpagestyle{TUtitlepagestyle}{%
+(0mm,0mm)
+{\titleidentityline
+}
+{\titleidentityline
+}
+{\titleidentityline}
+}{
+%(\textwidth,\TUfinalline)
+{}
+{}{}}
+
+
+\newcommand{\TUcolorblock}{\put(-0.15,-4.3){\color{tucolor}{\rule{\textwidth}{10\unitlength+1.24cm}}}}
+
+\newcommand{\theTUtitle}{}
+\newcommand{\theTUauthor}{}
+\newcommand{\theTUdate}{}
+\newcommand{\TUtitle}[1]{\renewcommand{\theTUtitle}{#1}}
+\newcommand{\TUauthor}[1]{\renewcommand{\theTUauthor}{#1}}
+\newcommand{\TUdate}[1]{\renewcommand{\theTUdate}{#1}}
+
+\AtBeginDocument{
+	\gdef\maketitle{
+	\makeatletter
+	\begin{titlepage}
+	\newgeometry{top=15mm,bottom=12mm,headsep=1.5cm,left=17mm,right=14mm,bindingoffset=5mm,includehead,includefoot}
+		\thispagestyle{TUtitlepagestyle}\noindent
+		\setlength{\unitlength}{.1\textwidth}\noindent
+
+		\vfill\noindent
+		\begin{picture}(14.14213562,10)
+			\TUcolorblock
+			\put(-0.15,-4.3){\rule{\textwidth}{.5\TUlinewidth}}
+			\put(-0.15,6.42){\rule{\textwidth}{.5\TUlinewidth}}
+			\put(-0.1,6.42){\begin{minipage}[t]{\textwidth}
+				\vspace{.5\TUlogoheight}\flushright
+				\includegraphics[height=\TUlogoheight]{tud_logo}
+			\end{minipage}}
+			\put(-0.15,7.42){\rule{\textwidth}{.5\TUlinewidth}}
+			\put(-0.15,6.85){\begin{minipage}[c][1.14\unitlength]{\textwidth}
+			\Large\noindent\textsf{\theTUauthor\\\theTUdate}
+			\end{minipage}}
+			\put(-0.15,7.7){\begin{minipage}[b][1.14\unitlength]{\textwidth-0.5cm}\flushleft
+			\fontsize{34}{45}\selectfont\noindent\textsf{\textbf{\theTUtitle}}
+			\end{minipage}}
+		\end{picture}
+	\end{titlepage}
+	\makeatother
+	\setcounter{page}{0}
+}
+
+}
+
+\renewcommand*{\chapterpagestyle}{TUplain}
+\pagestyle{TUpages}
+
+
+\AtBeginDocument{
+\newcommand{\TUabstractpage}[2]{%
+\clearpage \ 
+\vspace{.3\textwidth}
+\begin{center}
+\begin{minipage}{.6\textwidth}
+\paragraph*{#1}
+	#2
+\end{minipage}	
+\hfill
+\end{center}}
+}
+
+\endinput

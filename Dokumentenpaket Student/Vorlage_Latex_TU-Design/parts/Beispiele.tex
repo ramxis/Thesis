@@ -1,0 +1,54 @@
+\TUchapter{Beispiele}
+\TUsection{Bild}			
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{wsmb}		
+		\caption{Logo }
+	\end{figure}
+
+\TUsection{Tabelle}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cccc}
+		\toprule
+		Buchstabe &Zahl &BUCHSTABE &Zahl Zahl \\\midrule
+		a &1 &A &11 \\
+		b &2 &B &22 \\\bottomrule
+	\end{tabular}
+	\caption{Zahlen und Buchstaben}
+\end{table}
+
+\TUsection{Text mit Zitat}
+Die ist ein Beispieltext mit einer zitierten Quelle \cite{Blomeke.2006}. Und noch ein Zitat \cite{Hering.2007}, auf das ein weiteres Zitat aus einer Monographie folgt \cite[23]{Karmasin.2012}.
+
+\TUsection{Zahlen und Einheiten}
+Für eine einheitliche Darstellung von Zahlen und Einheiten wird das Paket \emph{siunitx} verwendet. Diese führt die Makros
+\begin{itemize}
+	\item \verb|\si| für Einheiten
+		\begin{itemize}
+			\item Beispiel:\\
+			\verb|Ein \si{\newton} ist definiert als \si{\kilogram\meter\per\second\squared}.|\\
+			führt zu\\
+			Ein \si{\newton} ist definiert als \si{\kilogram\meter\per\second\squared}.
+		\end{itemize}
+	\item \verb|\SI| für Zahlen und Einheiten
+		\begin{itemize}
+			\item Beispiel: \verb|eine Spannung der Höhe \SI{2,386e3}{\newton\per\milli\meter\squared}|\\
+			führt zu\\
+			eine Spannung der Höhe \SI{2,386e3}{\newton\per\milli\meter\squared}
+		\end{itemize}
+	\item \verb|\SIlist| für Aufzählungen von Zahlen und Einheiten
+		\begin{itemize}
+			\item Beispiel: \verb|\SIlist{10;100;1000}{\kilogram}|\\
+			führt zu\\
+			\SIlist{10;100;1000}{\kilogram}
+		\end{itemize}
+	\item \verb|\SIrange| für die Darstellungen von Bereichen
+		\begin{itemize}
+			\item Beispiel: \verb|\SIrange{300}{500}{\kelvin}|\\
+			führt zu\\
+			\SIrange{300}{500}{\kelvin}
+		\end{itemize}
+\end{itemize}
+ein. Die Darstellung von Zahlen und Einheiten können zentral in der Präambel des Dokuments oder als Parameter der Makros von Fall zu Fall neu definiert werden. So ist sowohl Konsistenz als auch Flexibilität gewährleistet.\\
+Darüber hinaus gibt es noch viele weitere Anwendungsbereiche. Weitere Informationen zur Verwendung und Konfiguration sind der beiliegenden Dokumentation des Pakets zu entnehmen.
