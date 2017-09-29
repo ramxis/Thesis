@@ -1,0 +1,43 @@
+\chapter*{Symbolverzeichnis (tabellarische Alternative)}
+\addcontentsline{toc}{chapter}{Symbolverzeichnis (tabellarische Alternative)}
+\begin{spacing}{1.5}
+\setlength\LTleft{15pt}
+\begin{longtable}{lll}
+	\textbf{Symbol} & \textbf{Einheit} & \textbf{Beschreibung}\\
+	\midrule
+	$D$ & \si{\mm} & Durchmesser\\
+	$D_0$ & \si{\mm} & Ausgangsdurchmesser\\
+	$\varepsilon$ & & Dehnung\\
+	$E$ & \si{\N\per\mm\squared} & Elastizitätsmodul\\
+	$G$ & \si{\N\per\mm\squared} & Schubmodul\\
+	$\lambda$ & \si{\nm} & Wellenlänge\\
+	$l$ & \si{\mm} & Länge\\
+	$l_0$ & \si{\mm} & Ausgangslänge\\
+	$\Delta l$ & \si{\mm} & Längendifferenz\\
+	$n$ & & Anzahl der Versuche\\
+	$\omega$ & \si{\per\s} & Kreisfrequenz\\
+	$\sigma$ & \si{\N\per\mm\squared} & Spannung\\
+	$t$ & \si{\s} & Zeit\\
+	$t_0$ & \si{\s} & Ausgangszeitpunkt\\
+	$\Delta t$ & \si{\s} & Zeitdifferenz\\
+	$T$ & \si{\degreeCelsius} & Temperatur\\
+	$T_0$ & \si{\degreeCelsius} & Ausgangstemperatur bzw. Bezugstemperatur\\
+	$\Delta T$ & \si{\degreeCelsius} & Temperaturdifferenz\\
+	\O & & Durchschnitt
+\end{longtable}
+\end{spacing}
+
+\newpage
+\section{Hinweise zur Erstellung einer Symboltabelle}
+Um eigenständig eine Symboltabelle zu erstellen, finden Sie hier ein Minimalbeispiel, an dem Sie sich orientieren können. Dabei handelt es sich um den \LaTeX-Code, mit dem die ersten Einträge der obenstehenden Tabelle erzeugt wurden.
+
+\lstset{language=TeX,tabsize=4}
+\begin{lstlisting}
+	\begin{longtable}{lll}
+		\textbf{Symbol} & \textbf{Einheit} & \textbf{Beschreibung}\\
+		\midrule
+		$D$ & \si{\mm} & Durchmesser\\
+		$D_0$ & \si{\mm} & Ausgangsdurchmesser\\
+		$\varepsilon$ & & Dehnung
+	\end{longtable}
+\end{lstlisting}

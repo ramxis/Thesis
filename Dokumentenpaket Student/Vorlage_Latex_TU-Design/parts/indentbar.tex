@@ -1,0 +1,117 @@
+\makeatletter
+\newcommand{\myTUDindentbar}[3][\textwidth]{%
+	\setlength{\@TUD@indentbar@width}{#1}%
+	\mbox{%
+		\color{#2}\rule{0.67\@TUD@indentbar@width}{\@TUD@largeruleheight}%
+		\color{#3}\rule{0.33\@TUD@indentbar@width}{\@TUD@largeruleheight}%
+		\hspace{-\@TUD@indentbar@width}%
+		\@TUD@smallrulecolor\rule[-\@TUD@rulesep-\@TUD@smallruleheight]{\@TUD@indentbar@width}{\@TUD@smallruleheight}%
+	}%
+}
+\fancypagestyle{empty}{%
+  	\fancyhf{}
+  	\if@reversemargin
+  	\fancyhfoffset[LO]{\marginparwidth + \marginparsep}%
+  	\fancyhfoffset[RO]{0pt}%
+  	\else
+  	\fancyhfoffset[LO]{0pt}%
+  	\fancyhfoffset[RO]{\marginparwidth + \marginparsep}%
+  	\fi
+  	\if@twoside
+  	\if@reversemargin
+  	\fancyhfoffset[LE]{0pt}%
+  	\fancyhfoffset[RE]{\marginparwidth + \marginparsep}%
+  	\else
+  	\fancyhfoffset[LE]{\marginparwidth + \marginparsep}%
+  	\fancyhfoffset[RE]{0pt}%
+  	\fi
+  	\fi
+  	\fancyhead[C]{\myTUDindentbar[\headwidth]{tud1d}{tud9d}}
+  	\fancyfoot[C]{\tudrule[\headwidth]}
+  }
+
+
+ \fancypagestyle{plain}{%
+ 	\fancyhf{}
+ 	\if@reversemargin
+ 	\fancyhfoffset[LO]{\marginparwidth + \marginparsep}%
+ 	\fancyhfoffset[RO]{0pt}%
+ 	\else
+ 	\fancyhfoffset[LO]{0pt}%
+ 	\fancyhfoffset[RO]{\marginparwidth + \marginparsep}%
+ 	\fi
+ 	\if@twoside
+ 	\if@reversemargin
+ 	\fancyhfoffset[LE]{0pt}%
+ 	\fancyhfoffset[RE]{\marginparwidth + \marginparsep}%
+ 	\else
+ 	\fancyhfoffset[LE]{\marginparwidth + \marginparsep}%
+ 	\fancyhfoffset[RE]{0pt}%
+ 	\fi
+ 	\fi
+ 	\ifTUD@pagingbar
+ 	\if@reversemargin
+ 	\fancyheadoffset[RO]{10mm}%
+ 	\else
+ 	\fancyheadoffset[RO]{\marginparwidth + \marginparsep + 10mm}%
+ 	\fi
+ 	\fancyhead[LO]{%
+ 		\pagingfont%
+ 		\myTUDindentbar[\headwidth - 10mm]{tud1d}{tud9d}\nobreak\hskip1.6mm\nobreak\thepage%
+ 	}
+ 	\if@twoside
+ 	\if@reversemargin
+ 	\fancyheadoffset[LE]{10mm}%
+ 	\else
+ 	\fancyheadoffset[LE]{\marginparwidth + \marginparsep + 10mm}%
+ 	\fi
+ 	\fancyhead[RE]{%
+ 		\pagingfont%
+ 		\thepage\nobreak\hskip1.6mm\nobreak\myTUDindentbar[\headwidth - 10mm]{tud1d}{tud9d}%
+ 	}
+ 	\fi
+ 	\else
+ 	\fancyhead[C]{\myTUDindentbar[\headwidth]{tud1d}{tud9d}}
+ 	\fi
+ 	\fancyfoot[C]{\tudrule[\headwidth]}
+ 	\ifTUD@pagingbar\else
+ 	\if@twoside
+ 	\fancyfoot[LE,RO]{\footerfont\strut\\\thepage}
+ 	\else
+ 	\fancyfoot[R]{\footerfont\strut\\\thepage}
+ 	\fi
+ 	\fi
+ }
+ 
+  %%% headings %%%
+  \fancypagestyle{headings}{%
+  	\fancyhf{}
+  	\if@reversemargin
+  	\fancyhfoffset[LO]{\marginparwidth + \marginparsep}%
+  	\fancyhfoffset[RO]{0pt}%
+  	\else
+  	\fancyhfoffset[LO]{0pt}%
+  	\fancyhfoffset[RO]{\marginparwidth + \marginparsep}%
+  	\fi
+  	\if@twoside
+  	\if@reversemargin
+  	\fancyhfoffset[LE]{0pt}%
+  	\fancyhfoffset[RE]{\marginparwidth + \marginparsep}%
+  	\else
+  	\fancyhfoffset[LE]{\marginparwidth + \marginparsep}%
+  	\fancyhfoffset[RE]{0pt}%
+  	\fi
+  	\fi
+  	\fancyhead[C]{\myTUDindentbar[\headwidth]{tud1d}{tud9d}}
+  	\fancyfoot[C]{\tudrule[\headwidth]\footerfont\strut\\\nouppercase\centermark}
+  	\if@twoside
+  	\fancyfoot[LE,RO]{\footerfont\strut\\\thepage}
+  	\fancyfoot[RE]{\footerfont\strut\\\nouppercase\leftmark}
+  	\fancyfoot[LO]{\footerfont\strut\\\nouppercase\rightmark}
+  	\else
+  	\fancyfoot[R]{\footerfont\strut\\\thepage}
+  	\fancyfoot[L]{\footerfont\strut\\\nouppercase\rightmark}
+  	\fi
+  } 
+ 
+\makeatother

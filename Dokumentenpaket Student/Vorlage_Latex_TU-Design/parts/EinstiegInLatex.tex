@@ -1,0 +1,62 @@
+\TUsection{Einstieg in \LaTeX}
+Für einen fundierten Einsteig gibt es eine Vielzahl an Lehrbüchern, welche u.A. auch in der ULB verfügbar sind. Je nach Lerntyp ist aber auch learning-by-doing sehr gut möglich. Im Folgenden werden einige Internet-Informationsquellen aufgelistet die einen guten Einstieg in die Arbeit mit \LaTeX\ ermöglichen und/oder ein gutes Nachschlagewerk darstellen:
+\begin{itemize}
+	\item \href{http://en.wikibooks.org/wiki/LaTeX}{\LaTeX\ Wikibook} [Zugriff: 13.12.2014]
+	\item \href{http://www.fernuni-hagen.de/imperia/md/content/zmi_2010/a026_latex_einf.pdf}{Manuela Jürgens \& Thomas Feuerstack: \LaTeX\ - eine Einführung und ein bisschen mehr... } [Zugriff: 13.12.2014]
+	\item \href{ftp://ftp.fernuni-hagen.de/pub/pdf/urz-broschueren/broschueren/a0279510.pdf}{Manuela Jürgens: \LaTeX\ - Fortgeschrittene Anwendungen} [Zugriff: 13.12.2014]
+	\item \href{http://latex.tugraz.at/latex/tutorial}{\LaTeX-Tutorial der Universität Graz} [Zugriff: 13.12.2014]
+	\item \href{http://www.gidf.de/}{Geheimtip} [Zugriff: 13.12.2014]
+\end{itemize}
+PDF-Versionen sind, sofern vorhanden, dem Paket beigefügt. Die vorhandene Vorlage setzt das Wissen über den Inhalt der Dokumentation der TUD-Design Vorlage voraus.
+
+Bei Problemen gibt es eine Vielzahl an deutschsprachigen und englischsprachigen Foren, in denen man Hilfe finden kann. Vor Eröffnung eines Beitrags sollte allerdings die Suchfunktion bemüht werden und bei der Erläuterung des Problems ein \href{http://www.golatex.de/wiki/Minimalbeispiel}{Minimalbeispiel} [Zugriff: 13.12.2014] angegeben werden. Speziell bei Problemen mit der TUD-Design Vorlage ist außerdem das \href{http://tuddesign-latex.fs-etit.de/index.php}{LaTeX-Forum des neuen TUD Designs} [Zugriff: 18.04.2014] zu empfehlen.
+
+\TUsubsection{Anzeige des kompilierten PDF-Dokuments}
+TeXstudio verfügt über eine interne PDF-Anzeige, welche den aktuellen Stand des Dokuments nach jedem Kompiliervorgang anzeigt. Unter Umständen kann allerdings auch die Arbeit mit einem externen PDF-Reader sinnvoll sein. 
+
+Hier verursacht Adobe Reader allerdings das Problem, dass bei geöffnetem PDF-Dokument der Kompiliervorgang nicht durchgeführt werden kann, da ein geöffnetes Dokument schreibgeschützt ist. Aus diesem und anderen Gründen eignet sich Sumatra PDF als Reader für die Arbeit mit \LaTeX. Das angezeigte PDF-Dokument wird bei Verwendung von Sumatra PDF nach jedem Kompiliervorgang automatisch aktualisiert. 
+
+Weiterhin ist es mit diesem Reader möglich, durch Doppelklick im PDF an die jeweilige Zeile im \LaTeX-Code zu springen. Auch ein Springen aus dem Code an die jeweilige Stelle des PDFs ist möglich. Die notwendigen Einstellungen, um das Springen zwischen dem PDF-Dokument und dem dazugehörigen \LaTeX-Code zu ermöglichen, können \href{http://robjhyndman.com/hyndsight/texstudio-sumatrapdf/}{dieser Anleitung} [Zugriff: 13.12.2014] entnommen werden.
+
+\TUsubsection{Literaturverwaltung und Literaturverzeichnis}
+%Die Verwendung eines Literaturverwaltungsprogramms zum Schreiben von wissenschaftlichen Arbeiten ist immer lohnenswert. Auf den meisten Suchportalen hat sich mittlerweile etabliert, dass für vorhandene Quellen die Möglichkeit angeboten wird, für die gängigsten Literaturverwaltungsprogramme automatisch einen Eintrag zu erzeugen.
+%Die Literatureinträge können entweder mittels eines externen Programms wie Citavi, Endnote oder Jabref verwaltet oder direkt in \LaTeX\ in einer separaten Datei mit der Endung \emph{.bib} angelegt werden.
+%
+%Externe Programme ermöglichen durch Integration in \LaTeX-Editoren (vergleichbar mit der Integration in Word) bzw. den Export der Datenbank in ein \LaTeX-kompatibles Format ein einfaches Zitieren und automatisches Anlegen von Literaturverzeichnissen.
+
+\paragraph{BibTeX}\noindent\\
+Das Standardformat zur Zitation und zur Erzeugung von Literaturverzeichnissen in \LaTeX\ ist BibTeX. Viele Literaturverwaltungsprogramme wie Citavi, Endnote und Jabref unterstützen den automatischen Export der in der Datenbank der Literaturverwaltungssoftware hinterlegten Informationen in einem zu BibTeX kompatiblen Format.
+Alternativ können die BibTeX-Einträge auch direkt in \LaTeX\ in einer separaten Datei mit der Endung \emph{.bib} angelegt werden. Genauere Informationen hierzu finden Sie  \href{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management\#BibTeX}{hier} [Zugriff: 13.12.2014].
+
+\paragraph{natbib}\noindent\\
+Ein weitverbreitetes Paket zur Erweiterung des Funktionsumfangs von \LaTeX\ für Naturwissenschaftler stellt \href{http://ftp.gwdg.de/pub/ctan/macros/latex/contrib/natbib/natbib.pdf}{Natbib} [Zugriff: 13.12.2014] dar. Natbib ermöglicht die Verwendung zusätzlicher Zitierstile wie beispielsweise die \glqq Harvard\grqq-Zitierweise und weitere Bibliographiestile.
+
+\paragraph{biblatex}\noindent\\
+Mit biblatex existiert eine recht junge Neuimplementierung der bibliographischen Funktionen für \LaTeX, welche inoffiziell als Nachfolger von BibTeX betrachtet wird. biblatex bietet den Vorteil, dass sämtliche Funktionen zur Gestaltung von Zitierstilen und Bibliographiestilen durch Optionen zugänglich gemacht werden. Dadurch entfällt die nicht triviale Programmierung von Stilen in BibTeX zur Anpassung an die jeweiligen Vorgaben.
+
+Weiterhin bietet biblatex in Verbindung mit dem Bibliographie-Prozessor biber volle UTF-8 Unterstützung. Dadurch lässt sich die komplizierte und fehleranfällige Darstellung von deutschen Umlauten und Sonderzeichen in URLs mittels spezieller Befehle vermeiden.
+
+biblatex definiert außerdem einige zusätzliche Eintrags- und Feldtypen, so dass beispielsweise Internetquellen ohne Workarounds über andere Eintragstypen mit dem Eintragstyp \glqq online\grqq\ gut dargestellt werden können. Zusätzlich reduziert sich die Anzahl der Kompilierdurchläufe bis zum fertigen PDF-Dokument auf einen Durchlauf im Vergleich zu drei Durchläufen bei BibTeX. Neben den genannten Vorteilen besitzt biblatex auch vollständige Kompatibilität zu BibTeX, so dass BibTeX-Datensätze ohne Probleme mit biblatex verarbeitet werden können.
+
+Aus oben genannten Gründen baut die vorliegende Vorlage auf biblatex in Verbindung mit biber auf.
+Nichtsdestotrotz bleibt festzuhalten, dass die Anpassung von Zitier- und Bibliographiestilen auch unter biblatex nicht einfach ist und ausreichende \LaTeX-Kenntnisse voraussetzt. Mit Blick auf die Zeiteffizienz sollte deshalb bei sehr expliziten Vorgaben des jeweiligen Fachbereichs für die Abschlussarbeit auch die manuelle Erstellung des Literaturverzeichnisses in Erwägung gezogen werden, sofern nicht die Darstellung Mittels einem der Pakete mit einem der weiter verbreiteten, vorhandenen Stile verhandelt werden kann.
+
+MikTeX liefert die notwendigen Pakete für biblatex und biber bereits von Haus aus mit, so dass diese nur noch wie gewöhnlich geladen werden müssen. Außerdem unterstützt TeXstudio die Verwendung von biblatex und biber und es Bedarf deshalb keiner gesonderten Einstellungen im Editor. Der Kompilationsvorgang von biber wird standardmäßig mit der Funktionstaste F11 aufgerufen. Der Standardkompiliervorgang PdfLaTeX (F1), der das PDF erzeugt, bindet die von biber erzeugten Dateien automatisch ein.
+
+\TUsection{Symbol- und Abkürzungsverzeichnis}
+Teil vieler naturwissenschaftlicher Arbeiten ist ein Symbol- und/oder Abkürzungsverzeichnis. \LaTeX\ bietet hierfür standardmäßig keine spezielle Lösung, so dass die Verzeichnisse manuell erstellt werden oder mittels Paketen wie beispielsweise \textit{glossaries} oder \textit{nomencl} realisiert werden müssen.
+
+Auch hier bietet die manuelle Erstellung mehr Freiheiten und einen geringeren Einarbeitungs- und Einrichtungsaufwand für die reine Verzeichniserstellung, sofern nicht die Zusatzfunktionen der Pakete benötigt werden. Für die manuelle Erstellung mittels einer Tabelle bietet sich das Paket \emph{longtable} an.
+
+Die Vorlage bietet jeweils ein einfaches Beispiel für die Einbindung mittels des Pakets \emph{glossaries}, sowie ein Beispiel mittels einer Tabelle. Für die Verwendung der glossaries-Variante wird \textit{makeindex} benötigt. In der TeXstudio-Konfiguration ist makeindex bereits hinterlegt (Shortcut F12), allerdings muss dort folgende Anpassung für die verwendete Variante vorgenommen werden:\newline
+Unter \verb|Optionen| $\rightarrow$ \verb|TeXstudio konfigurieren| $\rightarrow$ \verb|Befehle| muss beim Eintrag \verb|Makeindex| folgende Befehlszeile stehen (ohne Absatz, alles in einer Zeile): 
+\begin{verbatim}
+makeindex -s %.ist -t %.alg -o %.acr %.acn | 
+makeindex -s %.ist -t %.glg -o %.gls %.glo | 
+makeindex -s %.ist -t %.slg -o %.syi %.syg
+\end{verbatim}
+
+Um die automatischen Verzeichnisse einzubinden, muss das Dokument zunächst normal kompiliert werden (entweder mit pdflatex oder mit dvilatex), anschließend werden die Befehle \emph{glossary} (in TeXstudio standardmäßig per F10) und \emph{Index} (in TeXstudio standardmäßig per F12) aufgerufen und im Anschluss wird das Dokument nochmals normal kompiliert (wieder mit pdflatex oder dvilatex).
+
+\TUsection{Abschließende Bemerkung}
+Auch wenn die manuelle Erstellung in den beiden vorherigen Kapiteln immer im Hinblick auf den häufig vorhandenen Zeitdruck bei einer Abschlussarbeit als zu berücksichtigende Alternative genannt wurde, bleibt dennoch zu sagen, dass einmal erlerntes Wissen über \LaTeX\ und dessen Erweiterungspakete sowie geschriebener Programmcode immer den Vorteil der einfachen Wiederverwendbarkeit für spätere Arbeiten bietet. Es bleibt also letztendlich immer eine Einzelfallentscheidung, ob der zeitliche Aufwand für die Einarbeitung in ein neues Paket o.Ä. (als eine u.U. auch längerfristig fruchtende Lösung) gerechtfertigt oder eine kurzfristig händische Lösung zu bevorzugen ist.
