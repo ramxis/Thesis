@@ -7,7 +7,7 @@ contract helloWorld {
     function helloWorld() {
         deployer = msg.sender;
     }
-    
+
     function mineCoins(uint rewardCoins, address receiver) {
         if(msg.sender==deployer)
         {
