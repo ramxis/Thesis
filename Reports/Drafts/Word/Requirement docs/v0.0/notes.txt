@@ -1,0 +1,21 @@
+Things that an IoT blockchain interface can have
+
+mechanism to define company monitoring parameter i.e. define a new monitoring task and its prmitives
+e.g. define a class called project, tracking etc with primitves such as add sensor node to this project , remove node, display data,
+each time a sensor node is added should its private and public keys be refreshed or should the keys stay static no matter how many times the node is remvoed or added to different projects
+projects web interface should be connected to both block chain / smart contract and sensor nodes? 
+question: role of block chain should it be just a conflict resolution and exchange of value or much more involved?
+mechanism to add new sensor nodes to the system for monitoring
+
+chose the basic functions we need to support in our project and then decide for each function what makes more sense decentralization or centralization.
+prefer decentralization over centeralized solutions where ever possible.
+Read Data from iot device
+Define encryption for data transfer
+Define communication channels i.e. rfid, bluetooth etc
+Write Data
+Define Smart contract Terms
+define Payements
+Define conflict resolution mechanics
+define micro payement channels
+much more think about
+may be have something like webhooks for smart contracts to be read by web or cell interface
