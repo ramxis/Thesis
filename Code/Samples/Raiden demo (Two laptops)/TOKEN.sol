@@ -36,7 +36,7 @@ pragma solidity ^0.4.15;
 
 contract RaidenDemoToken is ERC20Interface {
 	string public constant symbol = "Flash";
-	string public constant name = "Raiden Demo Token";
+	string public constant name = "Raiden Token";
 	uint8 public constant decimals = 1;
 	string public version = "0.2";
 	uint256 public constant _totalSupply = 100000;
