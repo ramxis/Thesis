@@ -1,0 +1,32 @@
+sudo apt-get install chromium-browser
+/////////////python//////////////////////////
+sudo apt-get update
+sudo apt-get -y upgrade
+sudo apt-get install -y python3-pip
+sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
+sudo apt-get install -y python3-venv
+//////////////Ethereum GO//////////////////////////
+https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu
+sudo apt-get install software-properties-common
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+///////////////// Install NOde//////////////////////////////////////
+sudo apt-get install npm
+npm install -g solc
+///////////////////////////install pip/////////////////////////////
+sudo apt install python-pip
+sudo pip install pyethapp
+/////////////// Raiden ////////////////////////////
+////////////// git clone method //////////////////
+sudo apt install git
+git clone https://github.com/raiden-network/raiden.git
+cd raiden
+sudo pip install --upgrade -r requirements.txt
+sudo python setup.py develop
+geth --testnet account new //////: {ff6047d74175a88bfcb296d32caf1dd7a6d98210}
+ pw falconshaheen$
+
+geth --testnet removedb
+geth --testnet --fast --bootnodes "enode://20c9ad97c081d63397d7b685a412227a40e23c8bdc6688c6f37e97cfbc22d2b4d1db1510d8f61e6a8866ad7f0e17c02b14182d37ea7c3c8b9c2683aeb6b733a1@52.169.14.227:30303,enode://6ce05930c72abc632c58e2e4324f7c7ea478cec0ed4fa2528982cf34483094e9cbc9216e7aa349691242576d552a2a56aaeae426c5303ded677ce455ba1acd9d@13.84.180.240:30303"
+
