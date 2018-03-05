@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Raiden GUI</h1>
+
+        <h2>Ether Account:</h2>
+        <button id="btn_popup" onclick="div_createChannelForm()">New Channel</button>
+        <button id="btn_shwchannels">Show Channels</button>
+      </div>
+      <div class="channelTable">
+        <table id="channelsDataTable" style="width:100%">
+          <thead>
+            <tr>
+              <th>Partner_Address</th>
+              <th>Balance</th>
+              <th>channel_address</th>
+              <th>Token_Address</th>
+              <th>state</th>
+              <th>Settle_Timeout</th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+<div class="form" id="popup">
+  <div id="popupContact">
+  <link rel="stylesheet" type="text/css" href="form.css">
+  <!-- Contact Us Form -->
+  <form action="#" id="createChannelForm" method="get" name="form">
+  <img id="close" src="images/close.png" onclick ="div_hide()">
+  <h3>Open a new State Channel</h3>
+  <hr>
+  <input id="Ptr_Address" name="Ptr_Address" placeholder="Partner Address" type="text">
+  <input id="Tkn_Address" name="Tkn_Address" placeholder="Token Address" type="text">
+  <input id="Tkn_Balance" name="Tkn_Balance" placeholder="Balance" type="text">
+  <input id="Timeout" name="Timeout" placeholder="Settlement Timout" type="text">
+  <a href="javascript:%20check_empty()" id="submit">Send</a>
+  </form>
+  </div>
+</div>
+<div class="closeform">
+  <form action="#" id="cform" method="get" name="form">
+      <input id="channelID" name="channel address" placeholder="channel address" type="text">
+      <input type="submit" name="close channel" value="close channel" onclick="closeChannel()"/>
+  </form>
+</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+    <script src="./js/raidenAPI-0.2.0.js">
+       // Our future code here..
+
+    </script>
+
+
+
+</body>
+<!--html ng-app="schannels">
+
+<body>
+  <div ng-controller="channels">
+    <p>The Ether ID from angularjs: {{ethAcc.our_address}}</p>
+
+  </div>
+</body>
+</html-->
+
+</html>
