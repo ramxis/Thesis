@@ -1,0 +1,4 @@
+"tempID1","Temperature",4,-25,120,true,true
+"tempID2","Temperature",4,-5,130,false,true
+"tempID3","Temperature",4,-20,130,true,false
+"pressID","Pressure requirements",2,0,10000,false,true

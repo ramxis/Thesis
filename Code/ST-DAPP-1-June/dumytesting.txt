@@ -1,0 +1,6 @@
+25,"tempID1","germamy","07b323db"
+25,"tempID2","darmstadt","07b323dd"
+30,"tempID3","berlin","07b323db"
+-30,"tempID1","munich","07b323ee"
+2500,"pressID","Darmstadt","00b323fd"
+140,"tempID2","darmstadt","07b232dd"

@@ -1,0 +1,47 @@
+fixing errors
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python3-pip
+sudo apt-get install python3-picamera
+sudo apt-get install python-pip
+
+1.sudo apt-get -y install \
+                    build-essential \
+                    cmake \
+                    g++ \
+                    gcc \
+                    git \
+                    libboost-all-dev \
+                    unzip \
+******************************************************
+2.sudo apt-get install python-cffi
+
+3.sudo apt-get install libffi-dev
+
+4-****************************geth download*************************
+https://geth.ethereum.org/downloads/
+cp geth /usr/bin
+
+5-*****************************1gb swap space************************
+sudo dd if=/dev/zero of=/swap bs=1M count=1024
+sudo mkswap /swap
+sudo swapon /swap
+
+6-******************************Installation from source of the tool Z3 *****************
+mkdir ~/software
+cd ~/software
+https://github.com/Z3Prover/z3
+cp z3-master.zip ~/software
+unzip z3-master.zip
+cd z3-master
+python scripts/mk_make.py
+cd build
+make
+sudo make install
+
+******************************solidity *************************************************
+wget https://github.com/ethereum/solidity/releases/download/v0.4.21/solidity_0.4.21.tar.gz
+git clone --recursive https://github.com/ethereum/solidity.git
+cd solidity
+scripts/install_deps.sh // if doesnt work go manually through the file in section of debian for installing dependencys
+scripts/build.sh

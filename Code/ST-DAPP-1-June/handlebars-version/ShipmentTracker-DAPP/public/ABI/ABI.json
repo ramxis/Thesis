@@ -1,0 +1,652 @@
+[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getHandlerListlength",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_reqID",
+				"type": "string"
+			}
+		],
+		"name": "GetRequirementObject",
+		"outputs": [
+			{
+				"name": "_rreqID",
+				"type": "string"
+			},
+			{
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"name": "_severityLevel",
+				"type": "uint256"
+			},
+			{
+				"name": "_minThreshold",
+				"type": "int256"
+			},
+			{
+				"name": "_maxThreshold",
+				"type": "int256"
+			},
+			{
+				"name": "_minFlag",
+				"type": "bool"
+			},
+			{
+				"name": "_maxFlag",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "GetLogSize",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_reqID",
+				"type": "string"
+			},
+			{
+				"name": "_requireTitle",
+				"type": "string"
+			},
+			{
+				"name": "_level",
+				"type": "uint256"
+			},
+			{
+				"name": "_minthreshold",
+				"type": "int256"
+			},
+			{
+				"name": "_maxthreshold",
+				"type": "int256"
+			},
+			{
+				"name": "_minFlag",
+				"type": "bool"
+			},
+			{
+				"name": "_maxFlag",
+				"type": "bool"
+			}
+		],
+		"name": "SetRequirements",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getHandlerList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"name": "trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "GetLoggedData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getPkgNrListSize",
+		"outputs": [
+			{
+				"name": "size",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "chkViolationByID",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getAllPkgNrs",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "handlerList",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "data",
+				"type": "int256"
+			},
+			{
+				"name": "dataID",
+				"type": "string"
+			},
+			{
+				"name": "location",
+				"type": "string"
+			},
+			{
+				"name": "trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "LogTrackingInformation",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "ethAddress",
+				"type": "address"
+			}
+		],
+		"name": "AuthorizeAddress",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "acceptModification",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "rejectModification",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "chkViolationBytrackingNr",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "ethAddress",
+				"type": "address"
+			}
+		],
+		"name": "RevokeAuthorization",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "AuthorizeAddressEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "ShimpentTrackingEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_reqID",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_severityLevel",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_minThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_maxThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_minFlag",
+				"type": "bool"
+			},
+			{
+				"indexed": false,
+				"name": "_maxFlag",
+				"type": "bool"
+			}
+		],
+		"name": "LogRequirements",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "trackingNr",
+				"type": "string"
+			}
+		],
+		"name": "NewTrackingNumber",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ShippingEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_shAddr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_trackingNr",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_reqID",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_severityLevel",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_sensorData",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_violationLoc",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_minThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_maxThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_blkNr",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_timeStamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ReqViolationEventMinMax",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_shAddr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_trackingNr",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_reqID",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_severityLevel",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_sensorData",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_violationLoc",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_maxThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_blkNr",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_timeStamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ReqViolationEventMax",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_shAddr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_trackingNr",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_reqID",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_severityLevel",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_sensorData",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_violationLoc",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_minThreshold",
+				"type": "int256"
+			},
+			{
+				"indexed": false,
+				"name": "_blkNr",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_timeStamp",
+				"type": "uint256"
+			}
+		],
+		"name": "ReqViolationEventMin",
+		"type": "event"
+	}
+]
