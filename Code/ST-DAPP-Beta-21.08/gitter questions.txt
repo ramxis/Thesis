@@ -1,0 +1,4 @@
+Q1: is there a built in decrytion function in soldiity that i can call to decrypt something whihc was encrypted with callers pvt key using web3? like how there is sha3 function in solidity
+Q2:if i set a array as private and use it to store some public keys for signature matching,
+is that data still public ? i.e. someone running a full node or having full copy of the blockchain can extract keys?
+additionally i have restricted access to get and set methods of this array to only trusted ethreum addresses

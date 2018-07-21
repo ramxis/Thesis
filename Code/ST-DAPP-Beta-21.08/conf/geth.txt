@@ -1,0 +1,3 @@
+geth --fast --cache=1024
+----------------------------test network bug-----------------------------------
+you should stop geth and run either geth --testnet or geth.

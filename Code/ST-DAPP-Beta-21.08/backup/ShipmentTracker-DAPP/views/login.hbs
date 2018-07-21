@@ -1,0 +1,29 @@
+<!--h1>Set Contract Address</h1>
+<form method="post" action="/login">
+  <p>
+    <label>Contract Address:</label>
+    <input type="text" name="contractAddress" id="stContract">
+  </p>
+  <p>
+    <label>Contract ABI:</label>
+    <input type="textarea" name="contractABI" placeholder="Optional.....">
+  </p>
+  <p>
+    <input type="submit" value="Login">
+  </p>
+</form-->
+<link rel="stylesheet" href="/css/login.css">
+<div class="login-form">
+    <form action="/login" method="post">
+        <h2 class="text-center">Log in</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" id="stContract" name="contractAddress" required="required" placeholder='{{contractAddress}} contract Address'>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" placeholder="Optional....contractABI" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,2 @@
+https://hackernoon.com/serializing-string-arrays-in-solidity-db4b6037e520
+https://github.com/pouladzade/Seriality

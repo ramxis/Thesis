@@ -1,0 +1,11 @@
+"07b323db","TEMP","Temperature",4,-25,120,true,true
+"07b323db","PRESSURE","Pressure requirements",4,0,1000,false,true
+"07b323db","LUX","Temperature",4,0,100,false,true
+"07b323db","TID","Temperature",4,0,100,true,false
+
+"08b254db","tempIDMM","Temperature",4,-25,120,true,true
+"07b323ee","tempID","Temperature",4,-5,130,false,true
+"07b323db","tempID","Temperature",4,-20,130,true,false
+"08b254db","PRESSURE","Pressure requirements",2,0,10000,false,true
+
+contractADD:0xedf73b16544ebd9942517c07e6b782bbc54d899c

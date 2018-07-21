@@ -1,0 +1,74 @@
+/////////////////////////////////////Example Token address/////////////////////////////////////////////////////////////////
+0xc9d3d9752b5288e3e5e2ffce1ce180606fd14f27
+0xb0336ad0aea94b186359feba35da4f422d9e0830
+0x3426c4dc06acfc5d80655dbd661e88b2f4cf061e
+0xb8e15e32a693ac872ec5385e749a06770bc95337
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Query all channels
+curl -X GET http://127.0.0.1:5001/api/1/channels
+
+/////////////////////////////////////channel address////////////////////////////////////////////////////////////////////////
+0xa7d893b16f31361dd57d7b7f6e43cf337ff5994e
+0xa87f65aea56062cd1f1fa85d3f3e799381b127fa
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////Registering a Token////////////////////////////////////////////////////////
+curl -X PUT http://127.0.0.1:5001/api/1/tokens/0xc9d3d9752b5288e3e5e2ffce1ce180606fd14f27
+
+curl -X PUT http://127.0.0.1:5001/api/1/tokens/0xb0336ad0aea94b186359feba35da4f422d9e0830
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////Opening a channel//////////////////////////////////////////////////////////
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0xc9d3d9752b5288e3e5e2ffce1ce180606fd14f27","balance": 100000,"settle_timeout": 60}' http://127.0.0.1:5001/api/1/channels
+
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0xb0336ad0aea94b186359feba35da4f422d9e0830","balance": 10,"settle_timeout": 20}' http://127.0.0.1:5001/api/1/channels
+
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0x3426c4dc06acfc5d80655dbd661e88b2f4cf061e","balance": 1000,"settle_timeout": 60}' http://127.0.0.1:5001/api/1/channels
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0xb8e15e32a693ac872ec5385e749a06770bc95337","balance": 1000,"settle_timeout": 20}' http://127.0.0.1:5001/api/1/channels
+//////////////////////////////////////////////////////////////////////////////raiden token/////////////////////////////////////////
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0x0f114a1e9db192502e7856309cc899952b3db1ed","balance": 100,"settle_timeout": 20}' http://127.0.0.1:5001/api/1/channels
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////closing a channel uses channel address///////////////////////////////////////////////////////////////
+
+curl -X PATCH -H "Content-Type: application/json" -d '{ "state":"closed"}' http://127.0.0.1:5001/api/1/channels/0xa7d893b16f31361dd57d7b7f6e43cf337ff5994e
+
+curl -X PATCH -H "Content-Type: application/json" -d '{ "state":"closed"}' http://127.0.0.1:5001/api/1/channels/0xa87f65aea56062cd1f1fa85d3f3e799381b127fa
+
+//////////////////////////////////////////////////settle payement chanels has to be done by counterparty//////////////////////////////////////////////////
+
+curl -X PATCH -H "Content-Type: application/json" -d '{ "state":"settled"}' http://127.0.0.1:5001/api/1/channels/0xa7d893b16f31361dd57d7b7f6e43cf337ff5994e
+curl -X PATCH -H "Content-Type: application/json" -d '{ "state":"settled"}' http://127.0.0.1:5001/api/1/channels/0xa87f65aea56062cd1f1fa85d3f3e799381b127fa
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////leaving a token channel uses token address////////////////////////////////////////////////////////////////////////////////////////////////
+curl -X DELETE http://127.0.0.1:5001/api/1/connections/0xc9d3d9752b5288e3e5e2ffce1ce180606fd14f27
+
+curl -X DELETE -H "Content-Type: application/json" -d '{"only_receiving_channels": false}' http://127.0.0.1:5001/api/1/connections/0xc9d3d9752b5288e3e5e2ffce1ce180606fd14f27
+
+curl -X DELETE http://127.0.0.1:5001/api/1/connections/0xb0336ad0aea94b186359feba35da4f422d9e0830
+
+curl -X DELETE -H "Content-Type: application/json" -d '{"only_receiving_channels": false}' http://127.0.0.1:5001/api/1/connections/0xb0336ad0aea94b186359feba35da4f422d9e0830
+
+//////////////////////////////////////////////////////// Partner Node joining and depositing using channel address ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+curl -X PATCH -H "Content-Type: application/json" -d '{ "balance": 6666}' http://127.0.0.1:5001/api/1/channels/0x6d34e4dd8bdf5fa2e45628d18083b2f8ed9bbc50
+
+/////////////////////////////////////////////////////////// transfering tokens to  partner ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+curl -d '{"amount": 20}' -H "Content-Type: application/json" -X POST http://127.0.0.1:5001/api/1/transfers/tokenaddress/partnernode
+
+curl -d '{"amount": 20}' -H "Content-Type: application/json" -X POST http://127.0.0.1:5001/api/1/transfers/0x0d013db85a9b9705dc6ee0f30611367eb1321dd9/0xc03c0b9684e15d2282e990f5e8682852f229f2ca
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////Please note the balance you see in your channel is your balance not total balance ////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////test with explicit nat////////////////////////////////////////////////////////////////////////////
+Could you retest with explicit NAT traversal methods? I.e.
+--nat stun and
+--nat upnp
