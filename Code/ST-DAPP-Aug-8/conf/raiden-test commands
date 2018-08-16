@@ -1,0 +1,23 @@
+/////////////////checking raiden is working correctly////////////////
+curl -X GET http://127.0.0.1:5001/api/1/address
+///////////output ///////////////////////////////////////////////////
+should be the same eth address as the one chosen when starting raiden
+
+////////////////////////////////////////////////Raiden TOKEN ///////////////////////////////////////////////
+
+The RTT token is here: 0x0f114a1e9db192502e7856309cc899952b3db1ed
+https://ropsten.etherscan.io/address/0x0f114a1e9db192502e7856309cc899952b3db1ed#code
+
+/////////////////////////////////////raiden logging///////////////////////////////////////////////////////////
+raiden --logging :DEBUG --gas-price=600000000000 --keystore-path  ~/.ethereum/testnet/keystore
+
+///////////////////////////////////////////geth//////////////////////////////////////////////////////////////
+
+geth --testnet --fast --rpc --rpcapi eth,net,web3 --bootnodes "enode://20c9ad97c081d63397d7b685a412227a40e23c8bdc6688c6f37e97cfbc22d2b4d1db1510d8f61e6a8866ad7f0e17c02b14182d37ea7c3c8b9c2683aeb6b733a1@52.169.14.227:30303,enode://6ce05930c72abc632c58e2e4324f7c7ea478cec0ed4fa2528982cf34483094e9cbc9216e7aa349691242576d552a2a56aaeae426c5303ded677ce455ba1acd9d@13.84.180.240:30303"
+
+/////////////////////////////////////new token///////////////////////////////////////////////////////////
+0xbb96a15b03971f1ff62ad519228df919eb88b49f
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+curl -X PUT -H "Content-Type: application/json" -d '{"partner_address":"0xc03c0b9684e15d2282e990f5e8682852f229f2ca","token_address":"0x0d013db85a9b9705dc6ee0f30611367eb1321dd9","balance": 100,"settle_timeout": 30}' http://127.0.0.1:5001/api/1/channels

@@ -1,0 +1,21 @@
+35,"TEMP","germamy","07b323db","Pending"
+25,"TEMP","darmstadt","07b323db","Delivered"
+30,"TEMP","berlin","07b323db","Shipping"
+
+-30,"TEMP","munich","07b323ee","Shipping",
+
+350,"TEMP","germamy","07b323db","Shipping"
+2500,"PRESSURE","Darmstadt","07b323db","Shipping"
+-15,"TID","Darmstadt","07b323db","Shipping"
+-25,"TEMP","darmstadt","07b323db","Delivered"
+30,"TEMP","berlin","07b323db","Shipping"
+2500,"PRESSURE","Darmstadt","07b323db","Shipping"
+
+140,"tempID2","darmstadt","07b232dd","Shipping",
+25,"TID","Bonn","07b254db","Shipping",
+25,"TID","GREsiheim","07b254db","Shipping",
+
+300,"TEMP","berlin","07b323dd","Shipping"
+////////////////////////////////////////////////////
+dataID, string location, string _trackingNr, string _status, string _shipperID
+"TEMP","berlin","07b323dd","Shipping","DHL1"

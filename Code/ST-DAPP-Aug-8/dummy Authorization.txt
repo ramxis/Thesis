@@ -1,0 +1,38 @@
+"UPS germany","UPSgermanyPostquantumpubkey"
+"UPS France","UPSFrancePostquantumpubkey"
+"DHL France","DHLFrancePostquantumpubkey"
+"DHL Pakistan","DHLPakistanPostquantumpubkey"
+"DHL germany","DHLgermanyPostquantumpubkey"
+"TCS germany","TCSPostquantumpubkey"
+
+UPSgermany
+UPSgermanyPostquantumpubkey
+0xf53ed797c7153072254020c5287e1ea6f582f438
+
+UPSFrance
+UPSFrancePostquantumpubkey
+0xb34905764752d63ae90ae6aa172d0f2990d4ea26
+
+DHLDarmstadt
+DHLgermanyPostquantumpubkey
+0x2cf8bc610adfbd26cbb8819325cb35f8ac3f04fe
+
+DHLDarmstadt2
+DHLgermanyPostquantumpubkey
+0x58deecc0b671b8fc83b81b6153ad3565de430f03
+
+"0x58deecc0b671b8fc83b81b6153ad3565de430f03","DHLDarmstadt1","eff3bc952afdc46400bcfc07a5699f525119760f364cb04129323e207fcdc18c","07b323db"
+
+
+
+"0x58deecc0b671b8fc83b81b6153ad3565de430f03","DHLDarmstadt2","d6cea69138fa00da0fa2af65912191ad45b35a690150855e99c2f3c293334f85","07b323db"
+
+"0x2cf8bc610adfbd26cbb8819325cb35f8ac3f04ff","DHLDarmstadt3","DHLgermanyPostquantumpubkey1","07b323db"
+"0x4cf8bc610adfbd26cbb8819325cb35f8ac3f04ff","DHLDarmstadt3","DHLgermanyPostquantumpubkey2","07b323db"
+"0x58deecc0b671b8fc83b81b6153ad3565de430f03","DHLDuplicateEtheID","DHLgermanyPostquantumpubkey3","07b323db"
+"0x85deecc0b671b8fc83b81b6153ad3565de430f04","DHLWrongPQKey","DHLgermanyPostquantumpubkey","07b323db"
+
+"0x58deecc0b671b8fc83b81b6153ad3565de430f03","DHLDarmstadt2","DHLgermanyPostquantumpubkey","07b323ee"
+"0x2cf8bc610adfbd26cbb8819325cb35f8ac3f04ff","DHLDarmstadt3","DHLgermanyPostquantumpubkey1","07b323ee"
+"0x58deecc0b671b8fc83b81b6153ad3565de430f03","DHLDuplicateEtheID","DHLgermanyPostquantumpubkey3","07b323ee"
+"0x85deecc0b671b8fc83b81b6153ad3565de430f04","DHLWrongPQKey","DHLgermanyPostquantumpubkey","07b323ee"

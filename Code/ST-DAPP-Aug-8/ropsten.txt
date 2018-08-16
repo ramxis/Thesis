@@ -1,0 +1,8 @@
+0xb30b25cf564c44ad1002031fcecfe75d3bb9cf97
+
+0xe2890ae0df08df663d3a85b08f7ae1ee5ece0116 
+//full contract without encryption deployed on 3rd august
+// new partial contract deployement with chekviolationsbyID segregated, and encryption not implemented
+0x7f4629def982da2d9f0e3a20ee5d30fcae159597
+//--------------------------------------------
+0x9d7142282474117ecccd2abe42f11ed23ce624b1

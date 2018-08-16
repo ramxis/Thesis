@@ -1,0 +1,16 @@
+"07b323db","TEMP","Temperature",4,-25,60,true,true
+"07b323db","PRESSURE","Pressure requirements",4,0,300,false,true
+"07b323db","LUX","Light Reading",4,0,100,false,true
+"07b323db","TID","Temperature",4,0,40,true,true
+
+"07b323dd","TEMP","Temperature",4,-25,120,true,true
+ 
+"08b254db","tempIDMM","Temperature",4,-25,120,true,true
+"07b323ee","tempID","Temperature",4,-5,130,false,true
+"07b323db","tempID","Temperature",4,-20,130,true,false
+"08b254db","PRESSURE","Pressure requirements",2,0,10000,false,true
+
+contractADD:0xedf73b16544ebd9942517c07e6b782bbc54d899c
+0x6eda65d153f153ece7785ca5ab4e1b64a99fe507e574cb14a1ea4290220f3d3d
+
+80,"TEMP","Darmstadt","07b323db","Shipping","Zanbeel","0x6eda65d153f153ece7785ca5ab4e1b64a99fe507e574cb14a1ea4290220f3d3d"
