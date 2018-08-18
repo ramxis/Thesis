@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.24pt}
+\beamer@sectionintoc {1}{Einleitung}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Dokumentation}{2}{0}{1}
+\beamer@sectionintoc {2}{Erster Teil}{4}{0}{2}
+\beamer@sectionintoc {3}{Zweiter Teil}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{Unterpunkt}{5}{0}{3}
+\beamer@subsectionintoc {3}{2}{Noch'n Unterpunkt}{6}{0}{3}
+\beamer@sectionintoc {4}{N\active@dq \dq@prtct {a}chster Teil}{7}{0}{4}

@@ -1,0 +1,66 @@
+\definecolor{secusoblue}{RGB}{0,67,101}
+\makeatletter\renewcommand{\TUD@accentcolor}{\color{secusoblue}}\renewcommand{\TUD@identbarcolor}{\color{secusoblue}}\makeatother
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english=american]{csquotes}
+%\usepackage[sort]{natbib}
+% Paket setspace erlaubt Umschalten auf 1.5fachen Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing %Zeilenabstand wird global auf 1.5 festgelegt
+
+% Great package for creating pictures, graphs, etc. (check the web for examples!)
+  \usepackage{tikz}
+\usetikzlibrary{intersections,calc}
+
+% Some general packages for tables, formulas, creation of booktabs etc.
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsxtra}
+\usepackage{enumitem}
+
+%custom packages added by rameez
+%\usepackage{cite}
+\usepackage{acronym}
+\usepackage{listings}
+\usepackage{url}
+%\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{filecontents}
+
+\raggedbottom
+\parindent 0pt
+
+% Package to include tables (e.g. figures) in the table of contents
+\usepackage[nottoc]{tocbibind} 
+
+% Institution logo (if not defined, uses department and group text)
+\setinstitutionlogo{figs/tud_logo}
+
+\thesistitle{\TitleEnglish}{\TitleGerman}
+\author{\AuthorShort\\ Matriculation No.: 2556345}
+\referee{\GutachterOne}{\GutachterTwo\\ Betreuer: \Betreuer}
+\department{Fachbereich Informatik}
+\group{CDC – Theoretische Informatik – Kryptographie und Computeralgebra}
+
+\newcommand{\stafford}[1]{\fontfamily{5sf} \selectfont #1 \fontfamily{5ch}\selectfont}
+
+\usepackage[colorlinks=true,
+                pdftex,
+                pdfstartview=FitB,
+                pdffitwindow=true,
+                bookmarksopen=true,
+                linkcolor=black,
+                citecolor=black,
+                breaklinks=true,
+                % Title
+                pdftitle={\TitleEnglish},
+                % Author
+                pdfauthor={\AuthorLong, Technische Universit\"at Darmstadt}]{hyperref}

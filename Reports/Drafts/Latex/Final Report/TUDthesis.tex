@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt,pdftex,accentcolor=tud2d,article,parskip,colorbacktitle, type=msc]{tudthesis}
+\usepackage[ngerman,english]{babel}
+%\documentclass[article,dr=phil,type=drfinal,colorback,accentcolor=tud9c]{tudthesis}
+%\usepackage{ngerman}
+\newcommand{\getmydate}{%
+  \ifcase\month%
+    \or Januar\or Februar\or M\"arz%
+    \or April\or Mai\or Juni\or Juli%
+    \or August\or September\or Oktober%
+    \or November\or Dezember%
+  \fi\ \number\year%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% FILL THIS OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% thesis language
+\selectlanguage{english}
+% title in english
+\def\TitleEnglish{Secure IoT Applications Using Scalable Blockchain Models And PQ Primitives}
+% title in german (leave this blank if you dont want one)
+\def\TitleGerman{Sichere IoT Anwendungen unter Nutzung skalierbarer Blockchain Modelle und PQ Primitive}
+% short author name
+\def\AuthorShort{Muhammad Rameez}
+% full author name
+\def\AuthorLong{Muhammad Rameez}
+% the hand in date
+\def\HandInDate{24th September 2018}
+% first referee
+\def\GutachterOne{Gutachter 1}
+% second referee
+\def\GutachterTwo{Gutachter 2}
+% advisor
+\def\Betreuer{Rachid El Bansarkhani}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Header file defines all packages, defines variables, ...
+\input{header}
+
+
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% for hyphentations %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % If you want to define hyphenations (optional)
+  % \input{hyphenationlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% additional logos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Input logo(s) -> necessary if you want to insert several logos
+  % put needs a definition of the position!
+  % \sponsor{  
+  %     \begin{picture}(,)
+  %             \put(399,255){\includegraphics[height=1.4cm]{gfx/logo2}}
+  %     \end{picture}
+  % }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% make title page
+\makethesistitle
+\affidavit[\today]{\AuthorLong}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+%\begin{abstract}
+\include{chapters/Abstract}
+%\end{abstract}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Preface %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+%\begin{Preface}
+\include{chapters/Preface}
+%\end{Preface}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Crate content table
+\tableofcontents
+\newpage
+
+  
+% Adjust page numbering (optional)
+\pagenumbering{arabic}
+\pagestyle{plain}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapters/chapter-introduction}
+\include{chapters/chapter-Blockchain-Echosystem}
+\include{chapters/chapter-Blockchain-Usecases}
+\include{chapters/chapter-Fundamentals}
+\include{chapters/chapter-Architecture}
+\include{chapters/chapter-Implementation}
+\include{chapters/chapter-Testing}
+\include{chapters/chapter-conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\appendix  
+% Adjust page numbering (optional)
+\pagenumbering{Roman}
+ 
+\newpage
+\phantomsection
+\listoffigures 
+\newpage
+\phantomsection
+\listoftables
+\newpage
+
+% Create bibliography
+\phantomsection
+\bibliographystyle{alpha}
+% bibliography file title
+\bibliography{literatur}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Appendix %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{chapters/Appendix.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
