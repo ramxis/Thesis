@@ -1,3 +1,10 @@
 \select@language {english}
 \select@language {english}
 \contentsline {figure}{\numberline {1}{\ignorespaces High Level Overview of the Blockchain}}{1}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Integrated Supply Chains \cite {Airbus:ADS}}}{6}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces How does blockchain work?}}{10}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Digital Signatures in Blockchain}}{12}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Transactions Hashed in a Merkle Tree \cite {paper:001}}}{14}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Constructing a Merkle Tree, adapted from \cite {andy_mb}}}{15}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Median confirmation times for BTC transactions \cite {fig:001}}}{18}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Two way Pegged Sidechain }}{20}{figure.8}

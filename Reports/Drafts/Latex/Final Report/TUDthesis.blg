@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: TUDthesis.aux
 A level-1 auxiliary file: chapters/Abstract.aux
 A level-1 auxiliary file: chapters/Preface.aux
 A level-1 auxiliary file: chapters/chapter-introduction.aux
-A level-1 auxiliary file: chapters/chapter-Blockchain-Echosystem.aux
+A level-1 auxiliary file: chapters/chapter-Blockchain-Primer.aux
 A level-1 auxiliary file: chapters/chapter-Blockchain-Usecases.aux
 A level-1 auxiliary file: chapters/chapter-Fundamentals.aux
 A level-1 auxiliary file: chapters/chapter-Architecture.aux
@@ -11,3 +11,37 @@ A level-1 auxiliary file: chapters/chapter-Testing.aux
 A level-1 auxiliary file: chapters/chapter-conclusion.aux
 The style file: alpha.bst
 Database file #1: literatur.bib
+Warning--entry type for "paper:001" isn't style-file defined
+--line 10 of file literatur.bib
+Warning--entry type for "fig:001" isn't style-file defined
+--line 109 of file literatur.bib
+Warning--entry type for "paper:002" isn't style-file defined
+--line 115 of file literatur.bib
+Warning--entry type for "misc:011" isn't style-file defined
+--line 194 of file literatur.bib
+Warning--entry type for "misc:012" isn't style-file defined
+--line 202 of file literatur.bib
+Warning--entry type for "misc:013" isn't style-file defined
+--line 209 of file literatur.bib
+Warning--entry type for "paper:004" isn't style-file defined
+--line 216 of file literatur.bib
+Warning--entry type for "paper:005" isn't style-file defined
+--line 226 of file literatur.bib
+Warning--entry type for "misc:015" isn't style-file defined
+--line 240 of file literatur.bib
+Warning--entry type for "paper:006" isn't style-file defined
+--line 247 of file literatur.bib
+Warning--entry type for "misc:016" isn't style-file defined
+--line 254 of file literatur.bib
+Warning--entry type for "paper:007" isn't style-file defined
+--line 260 of file literatur.bib
+Warning--entry type for "paper:008" isn't style-file defined
+--line 267 of file literatur.bib
+Warning--entry type for "misc:017" isn't style-file defined
+--line 274 of file literatur.bib
+Warning--entry type for "misc:018" isn't style-file defined
+--line 281 of file literatur.bib
+Warning--entry type for "misc:019" isn't style-file defined
+--line 288 of file literatur.bib
+Warning--to sort, need author or key in misc:016
+(There were 17 warnings)

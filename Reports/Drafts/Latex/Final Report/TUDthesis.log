@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.2)  18 AUG 2018 05:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.2)  28 AUG 2018 10:56
 entering extended mode
 **./TUDthesis.tex
 (TUDthesis.tex
@@ -1565,6 +1565,11 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 Package: filecontents 2018/05/30 v1.4 Create an external file from within a LaT
 eX document
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
+\everycr=\toks48
+\minrowclearance=\skip120
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
@@ -1681,7 +1686,7 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip120
+\Hy@SectionHShift=\skip121
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1693,9 +1698,9 @@ LaTeX Warning: Unused global option(s):
     [11pt,accentcolor=tud2d,article,colorbacktitle].
 
 (TUDthesis.aux (chapters/Abstract.aux) (chapters/Preface.aux)
-(chapters/chapter-introduction.aux) (chapters/chapter-Blockchain-Echosystem.aux
-) (chapters/chapter-Blockchain-Usecases.aux) (chapters/chapter-Fundamentals.aux
-) (chapters/chapter-Architecture.aux) (chapters/chapter-Implementation.aux)
+(chapters/chapter-introduction.aux) (chapters/chapter-Blockchain-Primer.aux)
+(chapters/chapter-Blockchain-Usecases.aux) (chapters/chapter-Fundamentals.aux)
+(chapters/chapter-Architecture.aux) (chapters/chapter-Implementation.aux)
 (chapters/chapter-Testing.aux) (chapters/chapter-conclusion.aux))
 \openout1 = `TUDthesis.aux'.
 
@@ -1742,12 +1747,12 @@ File: t15ch.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5ch.
 \scratchbox=\box54
 \nofMPsegments=\count174
 \nofMParguments=\count175
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count176
 \MPscratchDim=\dimen264
 \MPnumerator=\count177
 \makeMPintoPDFobject=\count178
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks50
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1796,7 +1801,7 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\TUD@part@topskip=\skip121
+\TUD@part@topskip=\skip122
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count179
 Package hyperref Info: Link coloring ON on input line 45.
@@ -1817,29 +1822,29 @@ LaTeX Info: Redefining \nameref on input line 45.
 \@outlinefile=\write5
 \openout5 = `TUDthesis.out'.
 
-\@TUD@tmp@baselineskip=\skip122
-\@TUD@tmp@parwidth=\skip123
-\TUD@titleboxheight=\skip124
-\TUD@titleboxdepth=\skip125
-\TUD@subtitleboxheight=\skip126
-\TUD@subtitleboxdepth=\skip127
-\TUD@logoboxheight=\skip128
-\TUD@logoboxwidth=\skip129
-\TUD@colorbackheight=\skip130
-\TUD@colorbacktitleheight=\skip131
-\TUD@instboxheight=\skip132
-\TUD@instboxdepth=\skip133
-\TUD@instboxwidth=\skip134
-\TUD@instlogoheight=\skip135
-\TUD@instlogowidth=\skip136
-\TUD@sponsorheight=\skip137
+\@TUD@tmp@baselineskip=\skip123
+\@TUD@tmp@parwidth=\skip124
+\TUD@titleboxheight=\skip125
+\TUD@titleboxdepth=\skip126
+\TUD@subtitleboxheight=\skip127
+\TUD@subtitleboxdepth=\skip128
+\TUD@logoboxheight=\skip129
+\TUD@logoboxwidth=\skip130
+\TUD@colorbackheight=\skip131
+\TUD@colorbacktitleheight=\skip132
+\TUD@instboxheight=\skip133
+\TUD@instboxdepth=\skip134
+\TUD@instboxwidth=\skip135
+\TUD@instlogoheight=\skip136
+\TUD@instlogowidth=\skip137
+\TUD@sponsorheight=\skip138
 \TUD@titlebox=\box56
 \TUD@subtitlebox=\box57
 \TUD@logobox=\box58
 \TUD@instbox=\box59
 \TUD@sponsorbox=\box60
-\TUD@tmp@height=\skip138
-\TUD@tmp@depth=\skip139
+\TUD@tmp@height=\skip139
+\TUD@tmp@depth=\skip140
 LaTeX Font Info:    Try loading font information for T1+5fp on input line 68.
 
 ("C:\Users\ramxis\Desktop\Thesis Report\Master Thesis\texmf\tex\latex\tex-tudfo
@@ -1938,7 +1943,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.48601pt on input line 68.
 \@TUD@titlelines=\count181
 
-<tud_logo.pdf, id=310, 157.58875pt x 63.23625pt>
+<tud_logo.pdf, id=350, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 68.
@@ -1967,7 +1972,7 @@ File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 68.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
- <figs/tud_logo.png, id=313, 156.585pt x 62.634pt>
+ <figs/tud_logo.png, id=353, 156.585pt x 62.634pt>
 File: figs/tud_logo.png Graphic file (type png)
 
 <use figs/tud_logo.png>
@@ -2031,114 +2036,178 @@ File: t15sf.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5sf.
 
 
 (chapters/chapter-introduction.tex
-<figs/blockchain.jpg, id=437, 514.92375pt x 157.7895pt>
+<figs/blockchain.jpg, id=487, 514.92375pt x 157.7895pt>
 File: figs/blockchain.jpg Graphic file (type jpg)
 
 <use figs/blockchain.jpg>
-Package pdftex.def Info: figs/blockchain.jpg used on input line 9.
+Package pdftex.def Info: figs/blockchain.jpg used on input line 7.
 (pdftex.def)             Requested size: 257.46124pt x 78.89455pt.
-
-Overfull \hbox (157.75359pt too wide) in paragraph at lines 15--17
-\T1/5ch/m/n/11 i.e. prop-er-ties of each , rea-sons for each one to ex-ist http
-s://github.com/ramxis/Thesis/blob/master/Miscellaneous/Recommended/bank-
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \subsection{Motivation}
-                             [1
+l.11 \clearpage
+                [1
 
- <./figs/blockchain.jpg>])pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.104 \include{chapters/chapter-introduction}
-                                              [2]
-\openout2 = `chapters/chapter-Blockchain-Echosystem.aux'.
-
-
-(chapters/chapter-Blockchain-Echosystem.tex
-Overfull \hbox (33.70607pt too wide) in paragraph at lines 4--5
-\T1/5ch/m/n/11 https://hackernoon.com/the-ultimate-guide-to-understanding-block
-chain-and-cryptocurrencies-f37cf4c0043 
+ <./figs/blockchain.jpg>]
+Overfull \hbox (6.57312pt too wide) in paragraph at lines 17--26
+[][] 
  []
 
-
-Overfull \hbox (6.99815pt too wide) in paragraph at lines 9--10
-\T1/5ch/m/n/11 https://medium.com/byzantine-studio/blockchain-fundamentals-what
--is-a-merkle-tree-d44c529391d7 
- []
-
-
-Overfull \hbox (22.343pt too wide) in paragraph at lines 16--18
-\T1/5ch/m/n/11 if need to fill pages put other eight mech-a-nisms from the fol-
-low-ing list https://www.newgenapps.com/blog/8-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 \subsubsection{Virtual Channels - Perun}
-                                              [3
+l.28 \clearpage
+                [2
 
-
-])pdfTeX warning (ext4): destination with the same identifier (name{page.4}) ha
-s been already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.105 ...e{chapters/chapter-Blockchain-Echosystem}
-                                                   [4]
+l.50 
+      [3
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.59 \clearpage
+                [4]pdfTeX warning (ext4): destination with the same identifier 
+(name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \clearpage
+                [5
+
+] <figs/Airbus-1.png, id=537, 628.3475pt x 518.43687pt>
+File: figs/Airbus-1.png Graphic file (type png)
+
+<use figs/Airbus-1.png>
+Package pdftex.def Info: figs/Airbus-1.png used on input line 66.
+(pdftex.def)             Requested size: 314.17297pt x 259.21779pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.70 \clearpage
+                [6 <./figs/Airbus-1.png>] [7
+
+
+]) [8
+
+]
+\openout2 = `chapters/chapter-Blockchain-Primer.aux'.
+
+
+(chapters/chapter-Blockchain-Primer.tex
+<figs/bc-workflow.jpg, id=562, 669.702pt x 778.107pt>
+File: figs/bc-workflow.jpg Graphic file (type jpg)
+
+<use figs/bc-workflow.jpg>
+Package pdftex.def Info: figs/bc-workflow.jpg used on input line 6.
+(pdftex.def)             Requested size: 669.70036pt x 778.10509pt.
+ [9
+
+
+] [10 <./figs/bc-workflow.jpg>]
+<figs/sig.jpg, id=577, 407.72325pt x 420.97275pt>
+File: figs/sig.jpg Graphic file (type jpg)
+ <use figs/sig.jpg>
+Package pdftex.def Info: figs/sig.jpg used on input line 25.
+(pdftex.def)             Requested size: 407.72224pt x 420.97171pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11
+
+] [12 <./figs/sig.jpg>] [13
+
+]
+<figs/blockdisected.jpg, id=616, 558.28575pt x 599.23875pt>
+File: figs/blockdisected.jpg Graphic file (type jpg)
+
+<use figs/blockdisected.jpg>
+Package pdftex.def Info: figs/blockdisected.jpg used on input line 50.
+(pdftex.def)             Requested size: 279.14218pt x 299.61864pt.
+ <figs/mtree.jpg, id=619, 537.207pt x 420.97275pt>
+File: figs/mtree.jpg Graphic file (type jpg)
+
+<use figs/mtree.jpg>
+Package pdftex.def Info: figs/mtree.jpg used on input line 56.
+(pdftex.def)             Requested size: 268.60284pt x 210.48586pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14 <./figs/blockdisected.jpg>] [15 <./figs/mtree.jpg>]
+LaTeX Font Info:    Try loading font information for TS1+5ch on input line 73.
+
+("C:\Users\ramxis\Desktop\Thesis Report\Master Thesis\texmf\tex\latex\tex-tudfo
+nts\softmake\charter\ts15ch.fd"
+File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
+) [16
+
+]
+<figs/median-confirmation-time.png, id=651, 867.24pt x 487.8225pt>
+File: figs/median-confirmation-time.png Graphic file (type png)
+
+<use figs/median-confirmation-time.png>
+Package pdftex.def Info: figs/median-confirmation-time.png used on input line 9
+8.
+(pdftex.def)             Requested size: 867.2379pt x 487.8213pt.
+ [17] [18 <./figs/median-confirmation-time.png>] [19
+
+] <figs/sidechain.jpg, id=693, 625.1355pt x 228.25275pt>
+File: figs/sidechain.jpg Graphic file (type jpg)
+
+<use figs/sidechain.jpg>
+Package pdftex.def Info: figs/sidechain.jpg used on input line 114.
+(pdftex.def)             Requested size: 625.13396pt x 228.25218pt.
+ [20
+
+ <./figs/sidechain.jpg>]) [21]
 \openout2 = `chapters/chapter-Blockchain-Usecases.aux'.
 
 
-(chapters/chapter-Blockchain-Usecases.tex)pdfTeX warning (ext4): destination wi
-th the same identifier (name{page.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.106 ...ude{chapters/chapter-Blockchain-Usecases}
-                                                   [5
+(chapters/chapter-Blockchain-Usecases.tex [22
 
 
-]
+] [23] [24
+
+] [25] [26]) [27]
 \openout2 = `chapters/chapter-Fundamentals.aux'.
 
 
-(chapters/chapter-Fundamentals.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{page.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.30 ...subsection{Curious Case of Crypto Kitties}
-                                                   [6
+(chapters/chapter-Fundamentals.tex [28
 
 
-]) [7]
+]) [29]
 \openout2 = `chapters/chapter-Architecture.aux'.
 
 
-(chapters/chapter-Architecture.tex) [8
+(chapters/chapter-Architecture.tex [30
 
 
-]
+]) [31]
 \openout2 = `chapters/chapter-Implementation.aux'.
 
- (chapters/chapter-Implementation.tex)
-[9
+
+(chapters/chapter-Implementation.tex) [32
 
 
 ]
 \openout2 = `chapters/chapter-Testing.aux'.
 
- (chapters/chapter-Testing.tex) [10
+ (chapters/chapter-Testing.tex)
+[33
 
 
 ]
 \openout2 = `chapters/chapter-conclusion.aux'.
 
- (chapters/chapter-conclusion.tex)
-[11
+ (chapters/chapter-conclusion.tex) [34
 
 
 ] (TUDthesis.lof)
@@ -2151,48 +2220,130 @@ l.30 ...subsection{Curious Case of Crypto Kitties}
 \tf@lot=\write8
 \openout8 = `TUDthesis.lot'.
 
- [2] (TUDthesis.bbl
+[2] (TUDthesis.bbl
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 7.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\t1txtt.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\t1txtt.fd"
 File: t1txtt.fd 2000/12/15 v3.1
-)) [3]
-(chapters/Appendix.tex
+)
+Underfull \hbox (badness 1824) in paragraph at lines 34--38
+[]\T1/5ch/m/n/11 Andreas M. Antonopou-los.  Mas-ter-ing Bit-coin.  [][]$\T1/txt
+t/m/n/11 https : / / github . com / bitcoinbook /
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+[]\T1/5ch/m/n/11 GoChainGo.  Why Scal-ing Pub-lic Blockchains Is a Lot Harder
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--125
+\T1/5ch/m/n/11 than just In-creas-ing Block Size.  [][]$\T1/txtt/m/n/11 https :
+ / / medium . com / gochain /
+ []
+
+
+Overfull \hbox (89.1091pt too wide) in paragraph at lines 118--125
+\T1/txtt/m/n/11 why-[]scaling-[]public-[]blockchains-[]is-[]a-[]lot-[]harder-[]
+than-[]just-[]increasing-[]block-[]size-[]5c5e7ed53c38$[][]\T1/5ch/m/n/11 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
+[]\T1/5ch/m/n/11 Jimi S.  Blockchain: how min-ing works and trans-ac-tions are 
+pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
+\T1/5ch/m/n/11 cessed on the blockchain in seven steps.  [][]$\T1/txtt/m/n/11 h
+ttps : / / medium . com / coinmonks /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
+\T1/txtt/m/n/11 how-[]a-[]miner-[]adds-[]transactions-[]to-[]the-[]blockchain-[
+]in-[]seven-[]steps-[]856053271476$[][]\T1/5ch/m/n/11 ,
+ []
+
+
+Underfull \hbox (badness 7451) in paragraph at lines 161--167
+[]\T1/5ch/m/n/11 Max Thake.  What is Proof of Stake?  [][]$\T1/txtt/m/n/11 http
+s : / / medium . com / nakamo-[]to /
+ []
+
+[4]
+Underfull \hbox (badness 6332) in paragraph at lines 218--222
+[]\T1/5ch/m/n/11 Sergio Demian Lerner.  RSK White Pa-per.  [][]$\T1/txtt/m/n/11
+ https : / / docs . rsk . co / RSK _ White _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--229
+[]\T1/5ch/m/n/11 Shaan Ray.  What is Proof of Stake?  [][]$\T1/txtt/m/n/11 http
+s : / / hackernoon . com /
+ []
+
+[5]
+Underfull \hbox (badness 2503) in paragraph at lines 256--262
+[]\T1/5ch/m/n/11 Wikipedia con-trib-u-tors.  Di-rected acyclic graph --- Wikipe
+dia, the free en-cy-clo-pe-
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 272--278
+[]\T1/5ch/m/n/11 Wikipedia con-trib-u-tors.  Public-key cryp-tog-ra-phy --- Wik
+ipedia, the free en-cy-clo-pe-
+ []
+
+) [6] (chapters/Appendix.tex
 LaTeX Font Info:    Font shape `T1/5fp/b/n' in size <11> not available
 (Font)              Font shape `T1/5fp/mb/n' tried instead on input line 6.
-) [4]
+) [7pdfTeX warning (ext4): destination with the same identifier (name{TX}) has 
+been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.142 \end{document}
+                    ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
  (TUDthesis.aux (chapters/Abstract.aux)
 (chapters/Preface.aux) (chapters/chapter-introduction.aux)
-(chapters/chapter-Blockchain-Echosystem.aux)
+(chapters/chapter-Blockchain-Primer.aux)
 (chapters/chapter-Blockchain-Usecases.aux) (chapters/chapter-Fundamentals.aux)
 (chapters/chapter-Architecture.aux) (chapters/chapter-Implementation.aux)
 (chapters/chapter-Testing.aux) (chapters/chapter-conclusion.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `TUDthesis.out' has not changed.
-(rerunfilecheck)             Checksum: B785B2DCB4D72E225ADA125775C84524;5532.
+(rerunfilecheck)             Checksum: 97581C2E25F6E28B7D03F9CA5DECB569;6251.
  ) 
 Here is how much of TeX's memory you used:
- 27118 strings out of 493323
- 485810 string characters out of 3139064
- 755558 words of memory out of 3000000
- 29867 multiletter control sequences out of 15000+200000
- 126228 words of font info for 72 fonts, out of 3000000 for 9000
+ 27491 strings out of 493323
+ 490477 string characters out of 3139064
+ 759825 words of memory out of 3000000
+ 30113 multiletter control sequences out of 15000+200000
+ 132810 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,80p,8890b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/ramxis/Des
-ktop/Thesis Report/Master Thesis/texmf/fonts/type1/softmake/charter/5chr8a.pfb>
-<C:/Users/ramxis/Desktop/Thesis Report/Master Thesis/texmf/fonts/type1/softmake
-/charter/5chri8a.pfb><C:/Users/ramxis/Desktop/Thesis Report/Master Thesis/texmf
-/fonts/type1/softmake/frontpage/5fpm8a.pfb><C:/Users/ramxis/Desktop/Thesis Repo
-rt/Master Thesis/texmf/fonts/type1/softmake/frontpage/5fpr8a.pfb><C:/Users/ramx
-is/Desktop/Thesis Report/Master Thesis/texmf/fonts/type1/softmake/stafford/5sfr
-8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on TUDthesis.pdf (23 pages, 318555 bytes).
+ 67i,13n,80p,8890b,601s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/ly1/texnansi.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/ramxis/Desktop/Thesis Repor
+t/Master Thesis/texmf/fonts/type1/softmake/charter/5chb8a.pfb><C:/Users/ramxis/
+Desktop/Thesis Report/Master Thesis/texmf/fonts/type1/softmake/charter/5chr8a.p
+fb><C:/Users/ramxis/Desktop/Thesis Report/Master Thesis/texmf/fonts/type1/softm
+ake/charter/5chri8a.pfb><C:/Users/ramxis/Desktop/Thesis Report/Master Thesis/te
+xmf/fonts/type1/softmake/frontpage/5fpm8a.pfb><C:/Users/ramxis/Desktop/Thesis R
+eport/Master Thesis/texmf/fonts/type1/softmake/frontpage/5fpr8a.pfb><C:/Users/r
+amxis/Desktop/Thesis Report/Master Thesis/texmf/fonts/type1/softmake/stafford/5
+sfr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchr8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/txfonts/t1xtt.pfb>
+Output written on TUDthesis.pdf (49 pages, 1382270 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 97 named destinations out of 1000 (max. 500000)
- 654 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1032 PDF objects out of 1200 (max. 8388607)
+ 199 named destinations out of 1000 (max. 500000)
+ 769 words of extra memory for PDF output out of 10000 (max. 10000000)
 

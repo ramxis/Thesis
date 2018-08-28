@@ -1,8 +1,37 @@
-\section{Decentralized Supply Chain Management System}
+\section{Decentralized Supply Chain Management System}\label{usecase}
+explaine the use case scenarios from usecase document i.e. section 3 of the document
+
+google visio usecase diagrams w.r.t supplychain and blockchain and take inspiration to design your own usecase diagram
+
+also use the video by IBM to better and more professionally explain the particular use case and its benefits.
+https://www.youtube.com/watch?v=ZKscEx2lO-4
+
+
+
+\subsection{Problem Statement}
+Imagine a company orders a sensitive package for one of their suppliers. The business contract stipulates some guarantees about delivery time, and the conditions under which the package needs to be handled for example at no point should the package be exposed to temperatures above a certain threshold. The package will pass through multiple carriers. The IoT enabled package has embedded sensors to monitor package conditions throughout its journey from supplier to the factory floor. The sensor data is communicated from the package to a blockchain enabled smart contract. All parties have access to the same data. In the event that temperature target is acceded the smart contract will be triggered automatically and the responsible party in the supply chain will be charged with damages stipulated in the contract.
+rewrite this to fit more closely 
+% taken from blockchain usecases document i wrote
+%merge it with explanation from usecase details document
+
+\subsection{Benefits}
+%Benefits
+I.e allows complete transparency to all participants of the supply chain. Enables / Gives end users or customers to have complete confidence that the product was stored, shipped and handled in accordance to strict safety standards and regulations. The transparency brought by this solution to  the supply chain life cycle makes the job of government regulators and safety inspectors much simpler. 
+
 \subsection{System Architecture}
+Contract number or reference number is the primary key for the system components to interact with each other
 \subsubsection{Supply Chain LifeCycle}
 \subsubsection{System Work Flow}
-say that a shipper key will be transferred when a new shipper scans the package
+Make a diagram
+
+make the work flow diagram like you did for blockchain, use fileserver icon for IPFS
+% Remember Registartion should be the first stage in the following figure i.e. whjere teerms are agreed, ref no / tracking nr geenrating and conditions defined 
+%The IoT / tracking stage gets the condtions initializes appropriate sensors based on conditon number and starts tracking procdure.
+%diagram idea mix the visio work flow stages and with flowchart like figure i.e.
+one stage shows workflow as relates to packages i.e. registering contract refnumber and defining conditions i.e. registration phase, transfering data, getting keys etc, the second stage shows smart contract / montiroing dapp monitoring data and giving out punishments and rewards etc. Last two stages are raiden and IPFS, IPFS just stores full logs, Raiden interacts with users who manually queries dapp to transfer money to shippers.
+
+%say that a shipper key will be transferred when a new shipper scans the package
+
 \subsection{System Components}
 \subsubsection{Decentralized Monitoring Application - Master Node}
 Include figure of monitoring app

@@ -1,11 +1,287 @@
-\begin{thebibliography}{{Wik}18}
+\begin{thebibliography}{{Wik}18d}
 
-\bibitem[{Wik}18]{wiki:001}
+\bibitem[{Ada}14]{paper:004}
+{Adam Back, Matt Corallo, Luke Dashjr, Mark Friedenbach, Gregory Maxwell,
+  Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille}.
+\newblock {Enabling Blockchain Innovations with Pegged Sidechains}.
+\newblock \url{https://blockstream.com/sidechains.pdf}, 2014.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Agi}16]{misc:018}
+{Agira Tech}.
+\newblock {3 Types of Blockchain You Need To Know}.
+\newblock
+  \url{http://www.agiratech.com/3-types-of-blockchain-you-need-to-know/}, 2016.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Ahm}16]{misc:002}
+{Ahmed Banafa}.
+\newblock {A Secure Model of IoT with Blockchain}.
+\newblock
+  \url{https://www.bbvaopenmind.com/en/a-secure-model-of-iot-with-blockchain/},
+  2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Air}18]{Airbus:ADS}
+{Airbus}.
+\newblock Airbus supply chain.
+\newblock
+  \url{https://www.adsgroup.org.uk/wp-content/uploads/sites/21/2016/02/Integrated-Supply-Chains.png},
+  2018.
+\newblock [Online; accessed August 21, 2018].
+
+\bibitem[{And}14]{andy_mb}
+{Andreas M. Antonopoulos}.
+\newblock {Mastering Bitcoin}.
+\newblock \url{https://github.com/bitcoinbook/bitcoinbook}, 2014.
+\newblock [Online; accessed August 23, 2018].
+
+\bibitem[{Ben}15]{paper:006}
+{Benjamin Herzberg}.
+\newblock {Blockchain: the solution for transparency in product supply chains}.
+\newblock \url{https://www.provenance.org/whitepaper}, 2015.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Ben}16]{misc:004}
+{Ben Dickson}.
+\newblock {Decentralizing IoT networks through blockchain}.
+\newblock
+  \url{https://techcrunch.com/2016/06/28/decentralizing-iot-networks-through-blockchain/},
+  2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Bit}12]{bitwiki:005}
+{Bitcoin wiki contributors}.
+\newblock Proof of stake --- {Bitcoin wiki}.
+\newblock \url{https://en.bitcoin.it/wiki/Proof_of_Stake}, 2012.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Bit}16]{bitwiki:006}
+{Bitcoin wiki contributors}.
+\newblock Payment channels --- {Bitcoin wiki}.
+\newblock \url{https://en.bitcoin.it/wiki/Payment_channels}, 2016.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Blo}16]{misc:017}
+{Blockchain Hub}.
+\newblock {Blockchains and Distributed Ledger Technologies}.
+\newblock
+  \url{https://blockchainhub.net/blockchains-and-distributed-ledger-technologies-in-general/},
+  2016.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[Blo18]{fig:001}
+Blockchain.info.
+\newblock Median confirmation time.
+\newblock
+  \url{https://www.blockchain.com/charts/median-confirmation-time?timespan=all},
+  2018.
+
+\bibitem[{Chr}17]{misc:019}
+{Christian Lundkvist}.
+\newblock {Introduction to zk-SNARKs with examples}.
+\newblock
+  \url{https://media.consensys.net/introduction-to-zksnarks-with-examples-3283b554fc3b},
+  2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Eth}18]{ethwiki:006}
+{Ethereum wiki Contributors}.
+\newblock Proof of stake faqs --- {Ethereum wiki}.
+\newblock \url{https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQs},
+  2018.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Fil}16a]{misc:006}
+{Filament Foundation}.
+\newblock {Distributed Exchange and the Internet of Things}.
+\newblock
+  \url{https://filament.com/assets/downloads/Filament%20Foundations.pdf}, 2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Fil}16b]{misc:007}
+{Filament Foundation}.
+\newblock {Distributed Exchange and the Internet of Things}.
+\newblock \url{https://filament.com/assets/downloads/Filament%20Security.pdf},
+  2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Fre}17]{medium:003}
+{Fred Ehrsam}.
+\newblock {Scaling Ethereum to Billions of Users}.
+\newblock
+  \url{https://medium.com/@FEhrsam/scaling-ethereum-to-billions-of-users-f37d9f487db1},
+  2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{GoC}17]{medium:006}
+{GoChainGo}.
+\newblock {Why Scaling Public Blockchains Is a Lot Harder than just Increasing
+  Block Size}.
+\newblock
+  \url{https://medium.com/gochain/why-scaling-public-blockchains-is-a-lot-harder-than-just-increasing-block-size-5c5e7ed53c38},
+  2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{IBM}16]{misc:008}
+{IBM IoT blog}.
+\newblock {Apply IoT and blockchain for accountability and security}.
+\newblock \url{https://www.ibm.com/internet-of-things/spotlight/blockchain},
+  2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Jef}15]{misc:012}
+{Jeff Coleman}.
+\newblock {State Channels}.
+\newblock \url{https://www.jeffcoleman.ca/state-channels/}, 2015.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Jim}18]{medium:001}
+{Jimi S.}
+\newblock {Blockchain: how mining works and transactions are processed on the
+  blockchain in seven steps}.
+\newblock
+  \url{https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476},
+  2018.
+\newblock [Online; accessed August 23, 2018].
+
+\bibitem[JP16]{paper:002}
+Thaddeus~Dryja Joseph~Poon.
+\newblock The bitcoin lightning network: Scalable of-chain instant payments.
+\newblock \url{https://lightning.network/lightning-network-paper.pdf}, 2016.
+
+\bibitem[{Lig}15]{misc:011}
+{Lightning Network}.
+\newblock {Lightning Network Scalable, Instant Bitcoin/Blockchain
+  Transactions}.
+\newblock \url{https://lightning.network/}, 2015.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Max}18]{medium:002}
+{Max Thake}.
+\newblock {What is Proof of Stake?}
+\newblock
+  \url{https://medium.com/nakamo-to/what-is-proof-of-stake-pos-479a04581f3a},
+  2018.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[mis17]{misc:016}
+{How Blockchain Tech Is Changing Cloud Storage}.
+\newblock
+  \url{https://www.belugacdn.com/blog/162663814938-how-blockchain-tech-is-changing-cloud-storage},
+  2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[Nak08]{paper:001}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock \url{https://bitcoin.org/bitcoin.pdf}, 2008.
+
+\bibitem[{Pat}12]{misc:009}
+{Patrick Kingsley}.
+\newblock {Financial crisis: timeline}.
+\newblock
+  \url{https://www.theguardian.com/business/2012/aug/07/credit-crunch-boom-bust-timeline},
+  2012.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Pro}17]{paper:007}
+{Protocol Labs}.
+\newblock {Filecoin: A Decentralized Storage Network}.
+\newblock \url{https://filecoin.io/filecoin.pdf}, 2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Pur}16]{misc:005}
+{Pureswaran, Nair, Brody, IBM}.
+\newblock {Empowering the edge Practical insights on a decentralized Internet
+  of Things}.
+\newblock \url{https://www-935.ibm.com/services/multimedia/GBE03662USEN.pdf/},
+  2016.
+\newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Quy}15]{dang_2015}
+{Quynh H. Dang}.
+\newblock {Secure Hash Standard}, {National Institute of Standards and
+  Technology}, ({NIST FIPS}) - 180-4.
+\newblock \url{https://dx.doi.org/10.6028/NIST.FIPS.180-4}, 2015.
+\newblock [Online; accessed August 21, 2018].
+
+\bibitem[{RIC}14]{misc:013}
+{RICHARD GENDAL BROWN}.
+\newblock {A SIMPLE EXPLANATION OF BITCOIN “SIDECHAINS”}.
+\newblock
+  \url{https://gendal.me/2014/10/26/a-simple-explanation-of-bitcoin-sidechains/},
+  2014.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Ser}15]{paper:005}
+{Sergio Demian Lerner}.
+\newblock {RSK White Paper}.
+\newblock \url{https://docs.rsk.co/RSK_White_Paper-Overview.pdf}, 2015.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Sha}17]{misc:001}
+{Shaan Ray}.
+\newblock {What is Proof of Stake?}
+\newblock \url{https://hackernoon.com/what-is-proof-of-stake-8e0433018256},
+  2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{She}14]{paper:008}
+{Shen Noether, Sarang Noether, Monero Research Lab}.
+\newblock {Monero is Not That Mysterious}.
+\newblock \url{https://lab.getmonero.org/pubs/MRL-0003.pdf}, 2014.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Sku}17]{misc:015}
+{Skuchain}.
+\newblock {SkuChain Products}.
+\newblock \url{http://www.skuchain.com/#products}, 2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[Wik18a]{wiki:003}
+Wikipedia.
+\newblock Iota (kryptowährung) --- wikipedia{,} die freie enzyklopädie, 2018.
+\newblock [Online; Stand 22. August 2018].
+
+\bibitem[{Wik}18b]{wiki:001}
 {Wikipedia contributors}.
 \newblock Blockchain --- {Wikipedia}{,} the free encyclopedia.
 \newblock
   \url{https://en.wikipedia.org/w/index.php?title=Blockchain&oldid=855030838},
   2018.
 \newblock [Online; accessed 17-August-2018].
+
+\bibitem[{Wik}18c]{wiki:002}
+{Wikipedia contributors}.
+\newblock Directed acyclic graph --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Directed_acyclic_graph&oldid=846566257},
+  2018.
+\newblock [Online; accessed 22-August-2018].
+
+\bibitem[{Wik}18d]{wiki:007}
+{Wikipedia contributors}.
+\newblock Microtransaction --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Microtransaction&oldid=852232329},
+  2018.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Wik}18e]{wiki:004}
+{Wikipedia contributors}.
+\newblock Public-key cryptography --- {Wikipedia}{,} the free encyclopedia.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Public-key_cryptography&oldid=853882522},
+  2018.
+\newblock [Online; accessed 22-August-2018].
+
+\bibitem[{Wil}12]{misc:010}
+{Wilma Woo}.
+\newblock {CRYPTOCURRENCY IS HALF A TRILLION}.
+\newblock
+  \url{https://bitcoinist.com/cryptocurrency-half-trillion-joint-market-cap-hits-500-billion/},
+  2012.
+\newblock [Online; accessed August 26, 2018].
 
 \end{thebibliography}
