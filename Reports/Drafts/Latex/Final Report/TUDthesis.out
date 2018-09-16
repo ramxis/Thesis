@@ -1,86 +1,91 @@
-\BOOKMARK [1][]{section.1}{Introduction And Motivation}{}% 1
-\BOOKMARK [2][]{subsection.1.1}{Introduction To Blockhain}{section.1}% 2
-\BOOKMARK [2][]{subsection.1.2}{Blockchain Types}{section.1}% 3
-\BOOKMARK [3][]{subsubsection.1.2.1}{Permissionless Blockchains}{subsection.1.2}% 4
-\BOOKMARK [3][]{subsubsection.1.2.2}{Permissioned Blockchains}{subsection.1.2}% 5
+\BOOKMARK [1][]{section.1}{Introduction\040And\040Motivation}{}% 1
+\BOOKMARK [2][]{subsection.1.1}{Introduction\040To\040Blockchain}{section.1}% 2
+\BOOKMARK [2][]{subsection.1.2}{Blockchain\040Types}{section.1}% 3
+\BOOKMARK [3][]{subsubsection.1.2.1}{Permissionless\040Blockchains}{subsection.1.2}% 4
+\BOOKMARK [3][]{subsubsection.1.2.2}{Permissioned\040Blockchains}{subsection.1.2}% 5
 \BOOKMARK [2][]{subsection.1.3}{Motivation}{section.1}% 6
-\BOOKMARK [2][]{subsection.1.4}{Thesis Objective}{section.1}% 7
-\BOOKMARK [1][]{section.2}{Blockchain: Technical Primer}{}% 8
-\BOOKMARK [2][]{subsection.2.1}{Distributed Ledger Technology}{section.2}% 9
-\BOOKMARK [2][]{subsection.2.2}{Asymmetric Cryptography}{section.2}% 10
-\BOOKMARK [3][]{subsubsection.2.2.1}{Digital Wallets}{subsection.2.2}% 11
-\BOOKMARK [2][]{subsection.2.3}{Hashing}{section.2}% 12
-\BOOKMARK [2][]{subsection.2.4}{Merkle Trees}{section.2}% 13
-\BOOKMARK [2][]{subsection.2.5}{Consensus Mechanisms - Mining}{section.2}% 14
-\BOOKMARK [3][]{subsubsection.2.5.1}{Mining}{subsection.2.5}% 15
-\BOOKMARK [3][]{subsubsection.2.5.2}{Proof-of-Work}{subsection.2.5}% 16
-\BOOKMARK [3][]{subsubsection.2.5.3}{Proof-of-Stake}{subsection.2.5}% 17
-\BOOKMARK [2][]{subsection.2.6}{Challenges:Scaling Debate}{section.2}% 18
-\BOOKMARK [3][]{subsubsection.2.6.1}{Increasing Blocksize}{subsection.2.6}% 19
-\BOOKMARK [3][]{subsubsection.2.6.2}{Payment Channels - Lightning Network}{subsection.2.6}% 20
-\BOOKMARK [3][]{subsubsection.2.6.3}{Sidechains}{subsection.2.6}% 21
-\BOOKMARK [1][]{section.3}{Blockchain Applications}{}% 22
-\BOOKMARK [2][]{subsection.3.1}{Crypto Currencies}{section.3}% 23
-\BOOKMARK [2][]{subsection.3.2}{Internet of Things}{section.3}% 24
-\BOOKMARK [3][]{subsubsection.3.2.1}{Autonomous Decentralized Peer-to-Peer Telemetry \(ADEPT\)}{subsection.3.2}% 25
-\BOOKMARK [3][]{subsubsection.3.2.2}{Filament}{subsection.3.2}% 26
-\BOOKMARK [2][]{subsection.3.3}{Supply Chain Management}{section.3}% 27
-\BOOKMARK [3][]{subsubsection.3.3.1}{Skuchain}{subsection.3.3}% 28
-\BOOKMARK [3][]{subsubsection.3.3.2}{Provenance}{subsection.3.3}% 29
-\BOOKMARK [2][]{subsection.3.4}{Filesharing}{section.3}% 30
-\BOOKMARK [3][]{subsubsection.3.4.1}{FileCoin}{subsection.3.4}% 31
-\BOOKMARK [1][]{section.4}{Fundamentals - Technology Stacks}{}% 32
-\BOOKMARK [2][]{subsection.4.1}{Ethereum}{section.4}% 33
-\BOOKMARK [3][]{subsubsection.4.1.1}{Ethereum virtual machine}{subsection.4.1}% 34
-\BOOKMARK [3][]{subsubsection.4.1.2}{Merkle Trees in Ethereum}{subsection.4.1}% 35
-\BOOKMARK [3][]{subsubsection.4.1.3}{Smart Contracts}{subsection.4.1}% 36
-\BOOKMARK [3][]{subsubsection.4.1.4}{Advantages of smart Contracts}{subsection.4.1}% 37
-\BOOKMARK [3][]{subsubsection.4.1.5}{Block limits and Gas}{subsection.4.1}% 38
-\BOOKMARK [3][]{subsubsection.4.1.6}{Future Roadmap}{subsection.4.1}% 39
-\BOOKMARK [3][]{subsubsection.4.1.7}{Casper}{subsection.4.1}% 40
-\BOOKMARK [3][]{subsubsection.4.1.8}{Sharding}{subsection.4.1}% 41
-\BOOKMARK [3][]{subsubsection.4.1.9}{Plasma}{subsection.4.1}% 42
-\BOOKMARK [3][]{subsubsection.4.1.10}{State channels - Raiden Network}{subsection.4.1}% 43
-\BOOKMARK [3][]{subsubsection.4.1.11}{Virtual Channels - Perun}{subsection.4.1}% 44
-\BOOKMARK [2][]{subsection.4.2}{Raiden}{section.4}% 45
-\BOOKMARK [3][]{subsubsection.4.2.1}{Netting Channel Smart contract}{subsection.4.2}% 46
-\BOOKMARK [3][]{subsubsection.4.2.2}{Channel Life cycle}{subsection.4.2}% 47
-\BOOKMARK [3][]{subsubsection.4.2.3}{Raiden Transfers}{subsection.4.2}% 48
-\BOOKMARK [3][]{subsubsection.4.2.4}{Network Protocol}{subsection.4.2}% 49
-\BOOKMARK [3][]{subsubsection.4.2.5}{Raiden API}{subsection.4.2}% 50
-\BOOKMARK [2][]{subsection.4.3}{InterPlanetary File System \(IPFS\)}{section.4}% 51
-\BOOKMARK [3][]{subsubsection.4.3.1}{Cost of Storage on BlockChain}{subsection.4.3}% 52
-\BOOKMARK [3][]{subsubsection.4.3.2}{Curious Case of Crypto Kitties}{subsection.4.3}% 53
-\BOOKMARK [2][]{subsection.4.4}{Quantum Threat to Blockchain}{section.4}% 54
-\BOOKMARK [1][]{section.5}{Decentralized Supply Chain Management System}{}% 55
-\BOOKMARK [2][]{subsection.5.1}{Problem Statement}{section.5}% 56
-\BOOKMARK [2][]{subsection.5.2}{Benefits}{section.5}% 57
-\BOOKMARK [2][]{subsection.5.3}{System Architecture}{section.5}% 58
-\BOOKMARK [3][]{subsubsection.5.3.1}{Supply Chain LifeCycle}{subsection.5.3}% 59
-\BOOKMARK [3][]{subsubsection.5.3.2}{System Work Flow}{subsection.5.3}% 60
-\BOOKMARK [2][]{subsection.5.4}{System Components}{section.5}% 61
-\BOOKMARK [3][]{subsubsection.5.4.1}{Decentralized Monitoring Application - Master Node}{subsection.5.4}% 62
-\BOOKMARK [3][]{subsubsection.5.4.2}{IoT Powered Smart Packages - Sensor Nodes}{subsection.5.4}% 63
-\BOOKMARK [1][]{section.6}{Implementation Details}{}% 64
-\BOOKMARK [2][]{subsection.6.1}{Hardware Setup}{section.6}% 65
-\BOOKMARK [2][]{subsection.6.2}{Software Architecture}{section.6}% 66
-\BOOKMARK [3][]{subsubsection.6.2.1}{Master Node}{subsection.6.2}% 67
-\BOOKMARK [3][]{subsubsection.6.2.2}{Sensor Nodes}{subsection.6.2}% 68
-\BOOKMARK [3][]{subsubsection.6.2.3}{Integrated Payment Solution}{subsection.6.2}% 69
-\BOOKMARK [2][]{subsection.6.3}{Securing the System Against Post Quantum Adversaries}{section.6}% 70
-\BOOKMARK [1][]{section.7}{Testing and Results}{}% 71
-\BOOKMARK [2][]{subsection.7.1}{Testing Environment}{section.7}% 72
-\BOOKMARK [2][]{subsection.7.2}{Results}{section.7}% 73
-\BOOKMARK [3][]{subsubsection.7.2.1}{Unit Testing}{subsection.7.2}% 74
-\BOOKMARK [3][]{subsubsection.7.2.2}{Scenario - I}{subsection.7.2}% 75
-\BOOKMARK [3][]{subsubsection.7.2.3}{Scenario - II}{subsection.7.2}% 76
-\BOOKMARK [3][]{subsubsection.7.2.4}{Scenario - III}{subsection.7.2}% 77
-\BOOKMARK [2][]{subsection.7.3}{Evaluation}{section.7}% 78
-\BOOKMARK [3][]{subsubsection.7.3.1}{Gas Consumption}{subsection.7.3}% 79
-\BOOKMARK [3][]{subsubsection.7.3.2}{Transaction Verification Time}{subsection.7.3}% 80
-\BOOKMARK [1][]{section.8}{Conclusion and Future Work}{}% 81
-\BOOKMARK [1][]{section*.1}{List of Figures}{}% 82
-\BOOKMARK [1][]{section*.2}{List of Tables}{}% 83
-\BOOKMARK [1][]{section*.3}{Bibliography}{}% 84
-\BOOKMARK [1][]{appendix.A}{Appendix Stuff}{}% 85
-\BOOKMARK [1][]{appendix.B}{Acronyms}{}% 86
+\BOOKMARK [2][]{subsection.1.4}{Thesis\040Objective}{section.1}% 7
+\BOOKMARK [1][]{section.2}{Blockchain:\040Technical\040Primer}{}% 8
+\BOOKMARK [2][]{subsection.2.1}{Distributed\040Ledger\040Technology}{section.2}% 9
+\BOOKMARK [2][]{subsection.2.2}{Asymmetric\040Cryptography}{section.2}% 10
+\BOOKMARK [3][]{subsubsection.2.2.1}{Digital\040Wallets}{subsection.2.2}% 11
+\BOOKMARK [2][]{subsection.2.3}{Hashing\040and\040Merkle\040Trees}{section.2}% 12
+\BOOKMARK [2][]{subsection.2.4}{Consensus\040Mechanisms\040-\040Mining}{section.2}% 13
+\BOOKMARK [3][]{subsubsection.2.4.1}{Mining}{subsection.2.4}% 14
+\BOOKMARK [3][]{subsubsection.2.4.2}{Proof-of-Work}{subsection.2.4}% 15
+\BOOKMARK [3][]{subsubsection.2.4.3}{Proof-of-Stake}{subsection.2.4}% 16
+\BOOKMARK [2][]{subsection.2.5}{Challenges:\040Scaling\040Debate}{section.2}% 17
+\BOOKMARK [3][]{subsubsection.2.5.1}{Block\040Size\040Increase}{subsection.2.5}% 18
+\BOOKMARK [3][]{subsubsection.2.5.2}{Payment\040Channels\040-\040Lightning\040Network}{subsection.2.5}% 19
+\BOOKMARK [3][]{subsubsection.2.5.3}{State\040channels\040\205\040PERUN}{subsection.2.5}% 20
+\BOOKMARK [3][]{subsubsection.2.5.4}{Sharding}{subsection.2.5}% 21
+\BOOKMARK [3][]{subsubsection.2.5.5}{Sidechains}{subsection.2.5}% 22
+\BOOKMARK [1][]{section.3}{Blockchain\040Applications}{}% 23
+\BOOKMARK [2][]{subsection.3.1}{Crypto\040Currencies}{section.3}% 24
+\BOOKMARK [2][]{subsection.3.2}{Internet\040of\040Things}{section.3}% 25
+\BOOKMARK [3][]{subsubsection.3.2.1}{Autonomous\040Decentralized\040Peer-to-Peer\040Telemetry\040\(ADEPT\)}{subsection.3.2}% 26
+\BOOKMARK [3][]{subsubsection.3.2.2}{Filament}{subsection.3.2}% 27
+\BOOKMARK [2][]{subsection.3.3}{Supply\040Chain\040Management}{section.3}% 28
+\BOOKMARK [3][]{subsubsection.3.3.1}{Skuchain}{subsection.3.3}% 29
+\BOOKMARK [3][]{subsubsection.3.3.2}{Provenance}{subsection.3.3}% 30
+\BOOKMARK [2][]{subsection.3.4}{Filesharing}{section.3}% 31
+\BOOKMARK [3][]{subsubsection.3.4.1}{FileCoin}{subsection.3.4}% 32
+\BOOKMARK [1][]{section.4}{Fundamentals\040-\040Technology\040Stacks}{}% 33
+\BOOKMARK [2][]{subsection.4.1}{Ethereum}{section.4}% 34
+\BOOKMARK [3][]{subsubsection.4.1.1}{Ethereum\040virtual\040machine}{subsection.4.1}% 35
+\BOOKMARK [3][]{subsubsection.4.1.2}{Merkle\040Trees\040in\040Ethereum}{subsection.4.1}% 36
+\BOOKMARK [3][]{subsubsection.4.1.3}{Ethereum\040State\040Transition\040Function}{subsection.4.1}% 37
+\BOOKMARK [3][]{subsubsection.4.1.4}{Block\040limits\040and\040Gas}{subsection.4.1}% 38
+\BOOKMARK [2][]{subsection.4.2}{Smart\040Contracts}{section.4}% 39
+\BOOKMARK [3][]{subsubsection.4.2.1}{Interacting\040with\040Ethereum\040Smart\040Contracts}{subsection.4.2}% 40
+\BOOKMARK [2][]{subsection.4.3}{Raiden\040Network}{section.4}% 41
+\BOOKMARK [3][]{subsubsection.4.3.1}{Netting\040Channel\040Smart\040contract}{subsection.4.3}% 42
+\BOOKMARK [3][]{subsubsection.4.3.2}{Channel\040Life\040Cycle}{subsection.4.3}% 43
+\BOOKMARK [3][]{subsubsection.4.3.3}{Token\040Transfer\040Types}{subsection.4.3}% 44
+\BOOKMARK [3][]{subsubsection.4.3.4}{Payment\040Routing}{subsection.4.3}% 45
+\BOOKMARK [3][]{subsubsection.4.3.5}{Raiden\040API}{subsection.4.3}% 46
+\BOOKMARK [2][]{subsection.4.4}{InterPlanetary\040File\040System\040\(IPFS\)}{section.4}% 47
+\BOOKMARK [3][]{subsubsection.4.4.1}{Motivation\040-\040Case\040for\040decentralized\040Repository}{subsection.4.4}% 48
+\BOOKMARK [3][]{subsubsection.4.4.2}{IPFS}{subsection.4.4}% 49
+\BOOKMARK [1][]{section.5}{Decentralized\040Supply\040Chain\040Management\040System}{}% 50
+\BOOKMARK [2][]{subsection.5.1}{Use\040Case\040Description}{section.5}% 51
+\BOOKMARK [3][]{subsubsection.5.1.1}{Supply\040Chain\040LifeCycle}{subsection.5.1}% 52
+\BOOKMARK [2][]{subsection.5.2}{System\040Architecture}{section.5}% 53
+\BOOKMARK [2][]{subsection.5.3}{Architecture\040-\040Block\040Diagram\040Overview}{section.5}% 54
+\BOOKMARK [2][]{subsection.5.4}{System\040Components}{section.5}% 55
+\BOOKMARK [3][]{subsubsection.5.4.1}{Decentralized\040Monitoring\040Application\040-\040Master\040Node}{subsection.5.4}% 56
+\BOOKMARK [3][]{subsubsection.5.4.2}{IoT\040Powered\040Smart\040Packages\040-\040IoT\040Nodes}{subsection.5.4}% 57
+\BOOKMARK [3][]{subsubsection.5.4.3}{Shipment\040Tracker\040-\040Smart\040Contract}{subsection.5.4}% 58
+\BOOKMARK [1][]{section.6}{Implementation\040Details}{}% 59
+\BOOKMARK [2][]{subsection.6.1}{Overview}{section.6}% 60
+\BOOKMARK [2][]{subsection.6.2}{Hardware\040Setup}{section.6}% 61
+\BOOKMARK [3][]{subsubsection.6.2.1}{Master\040Node}{subsection.6.2}% 62
+\BOOKMARK [3][]{subsubsection.6.2.2}{IoT\040Node}{subsection.6.2}% 63
+\BOOKMARK [2][]{subsection.6.3}{Master\040Node\040\205\040Implementation}{section.6}% 64
+\BOOKMARK [2][]{subsection.6.4}{IoT\040Nodes\040\205\040Implementation}{section.6}% 65
+\BOOKMARK [2][]{subsection.6.5}{Shipment\040Tracker\040\205\040Design\040Details}{section.6}% 66
+\BOOKMARK [3][]{subsubsection.6.5.1}{Shipment\040Tracker\040\205\040Contract\040Work\040Flow}{subsection.6.5}% 67
+\BOOKMARK [3][]{subsubsection.6.5.2}{Handler\040Authorization}{subsection.6.5}% 68
+\BOOKMARK [3][]{subsubsection.6.5.3}{Requirements}{subsection.6.5}% 69
+\BOOKMARK [3][]{subsubsection.6.5.4}{Violations}{subsection.6.5}% 70
+\BOOKMARK [2][]{subsection.6.6}{Securing\040the\040System\040against\040Post\040Quantum\040Adversaries}{section.6}% 71
+\BOOKMARK [2][]{subsection.6.7}{Implementation\040Challenges}{section.6}% 72
+\BOOKMARK [3][]{subsubsection.6.7.1}{Raiden}{subsection.6.7}% 73
+\BOOKMARK [3][]{subsubsection.6.7.2}{Web3}{subsection.6.7}% 74
+\BOOKMARK [1][]{section.7}{Testing\040and\040Results}{}% 75
+\BOOKMARK [2][]{subsection.7.1}{Testing\040Environment}{section.7}% 76
+\BOOKMARK [2][]{subsection.7.2}{Results}{section.7}% 77
+\BOOKMARK [3][]{subsubsection.7.2.1}{Unit\040Testing}{subsection.7.2}% 78
+\BOOKMARK [3][]{subsubsection.7.2.2}{Scenario\040-\040I}{subsection.7.2}% 79
+\BOOKMARK [3][]{subsubsection.7.2.3}{Scenario\040-\040II}{subsection.7.2}% 80
+\BOOKMARK [3][]{subsubsection.7.2.4}{Scenario\040-\040III}{subsection.7.2}% 81
+\BOOKMARK [2][]{subsection.7.3}{Evaluation}{section.7}% 82
+\BOOKMARK [3][]{subsubsection.7.3.1}{Gas\040Consumption\040and\040Transaction\040Cost}{subsection.7.3}% 83
+\BOOKMARK [3][]{subsubsection.7.3.2}{Transaction\040Verification\040Time}{subsection.7.3}% 84
+\BOOKMARK [1][]{section.8}{Conclusion\040and\040Future\040Work}{}% 85
+\BOOKMARK [2][]{subsection.8.1}{Benefits}{section.8}% 86
+\BOOKMARK [1][]{section*.1}{List\040of\040Figures}{}% 87
+\BOOKMARK [1][]{section*.2}{List\040of\040Tables}{}% 88
+\BOOKMARK [1][]{section*.3}{Bibliography}{}% 89
+\BOOKMARK [1][]{appendix.A}{Appendix\040Stuff}{}% 90
+\BOOKMARK [1][]{appendix.B}{Acronyms}{}% 91

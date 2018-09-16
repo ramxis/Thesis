@@ -36,6 +36,11 @@
 \newblock \url{https://github.com/bitcoinbook/bitcoinbook}, 2014.
 \newblock [Online; accessed August 23, 2018].
 
+\bibitem[Ben14]{DBLP:journals/corr/Benet14}
+Juan Benet.
+\newblock {IPFS} - content addressed, versioned, {P2P} file system.
+\newblock {\em CoRR}, abs/1407.3561, 2014.
+
 \bibitem[{Ben}15]{paper:006}
 {Benjamin Herzberg}.
 \newblock {Blockchain: the solution for transparency in product supply chains}.
@@ -50,25 +55,34 @@
   2016.
 \newblock [Online; accessed August 26, 2018].
 
+\bibitem[{Ber}18]{misc:021}
+{Bernard Marr}.
+\newblock {Here Are 10 Industries Blockchain Is Likely To Disrupt}.
+\newblock
+  \url{https://www.forbes.com/sites/bernardmarr/2018/07/16/here-are-10-industries-blockchain-is-likely-to-disrupt/#20d06348b5a2},
+  2018.
+\newblock [Online; accessed August 25, 2018].
+
 \bibitem[{Bit}12]{bitwiki:005}
 {Bitcoin wiki contributors}.
 \newblock Proof of stake --- {Bitcoin wiki}.
 \newblock \url{https://en.bitcoin.it/wiki/Proof_of_Stake}, 2012.
 \newblock [Online; accessed 25-August-2018].
 
-\bibitem[{Bit}16]{bitwiki:006}
-{Bitcoin wiki contributors}.
-\newblock Payment channels --- {Bitcoin wiki}.
-\newblock \url{https://en.bitcoin.it/wiki/Payment_channels}, 2016.
-\newblock [Online; accessed 25-August-2018].
-
-\bibitem[{Blo}16]{misc:017}
+\bibitem[{Blo}16a]{misc:017}
 {Blockchain Hub}.
 \newblock {Blockchains and Distributed Ledger Technologies}.
 \newblock
   \url{https://blockchainhub.net/blockchains-and-distributed-ledger-technologies-in-general/},
   2016.
 \newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Blo}16b]{misc:024}
+{Blockgeeks}.
+\newblock {Smart Contracts: The Blockchain Technology That Will Replace
+  Lawyers}.
+\newblock \url{https://blockgeeks.com/guides/smart-contracts/}, 2016.
+\newblock [Online; accessed August 31, 2018].
 
 \bibitem[Blo18]{fig:001}
 Blockchain.info.
@@ -84,6 +98,24 @@ Blockchain.info.
   \url{https://media.consensys.net/introduction-to-zksnarks-with-examples-3283b554fc3b},
   2017.
 \newblock [Online; accessed August 25, 2018].
+
+\bibitem[DEFM17]{cryptoeprint:2017:635}
+Stefan Dziembowski, Lisa Eckey, Sebastian Faust, and Daniel Malinowski.
+\newblock Perun: Virtual payment hubs over cryptocurrencies.
+\newblock Cryptology ePrint Archive, Report 2017/635, 2017.
+\newblock \url{https://eprint.iacr.org/2017/635}.
+
+\bibitem[DFH18]{cryptoeprint:2018:320}
+Stefan Dziembowski, Sebastian Faust, and Kristina Hostáková.
+\newblock General state channel networks.
+\newblock Cryptology ePrint Archive, Report 2018/320, 2018.
+\newblock \url{https://eprint.iacr.org/2018/320}.
+
+\bibitem[{Eth}17]{ethwiki:007}
+{Ethereum wiki Contributors}.
+\newblock Patricia tree --- {Ethereum wiki}.
+\newblock \url{https://github.com/ethereum/wiki/wiki/Patricia-Tree}, 2017.
+\newblock [Online; accessed 31-August-2018].
 
 \bibitem[{Eth}18]{ethwiki:006}
 {Ethereum wiki Contributors}.
@@ -123,6 +155,14 @@ Blockchain.info.
   2017.
 \newblock [Online; accessed August 25, 2018].
 
+\bibitem[{Hud}17]{misc:026}
+{Hudson Jameson}.
+\newblock {Accounts, Transactions, Gas, and Block Gas Limits in Ethereum}.
+\newblock
+  \url{https://hudsonjameson.com/2017-06-27-accounts-transactions-gas-ethereum/},
+  2017.
+\newblock [Online; accessed August 31, 2018].
+
 \bibitem[{IBM}16]{misc:008}
 {IBM IoT blog}.
 \newblock {Apply IoT and blockchain for accountability and security}.
@@ -130,10 +170,25 @@ Blockchain.info.
   2016.
 \newblock [Online; accessed August 26, 2018].
 
-\bibitem[{Jef}15]{misc:012}
-{Jeff Coleman}.
-\newblock {State Channels}.
-\newblock \url{https://www.jeffcoleman.ca/state-channels/}, 2015.
+\bibitem[{IBM}17]{misc:014}
+{IBMBlockchain}.
+\newblock {Securing the diamond trade with blockchain}.
+\newblock \url{https://www.youtube.com/watch?v=hHkc-DH0ep4}, 2017.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Jam}18]{misc:022}
+{Jamie Redman}.
+\newblock {Miami Bitcoin Conference Stops Accepting Bitcoin Due to Fees and
+  Congestion}.
+\newblock
+  \url{https://news.bitcoin.com/miami-bitcoin-conference-stops-accepting-bitcoin-due-to-fees-and-congestion/},
+  2018.
+\newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Jef}18]{misc:012}
+{Jeff Coleman,Liam Horne,Li Xuanji}.
+\newblock {Counterfactual: Generalized State Channels}.
+\newblock \url{https://l4.ventures/papers/statechannels.pdf}, 2018.
 \newblock [Online; accessed August 25, 2018].
 
 \bibitem[{Jim}18]{medium:001}
@@ -144,6 +199,12 @@ Blockchain.info.
   \url{https://medium.com/coinmonks/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476},
   2018.
 \newblock [Online; accessed August 23, 2018].
+
+\bibitem[{JP }15]{misc:023}
+{JP Buntinx}.
+\newblock An overview of the ethereum virtual machine.
+\newblock \url{https://nulltx.com/what-is-the-ethereum-virtual-machine/}, 2015.
+\newblock [Online; accessed 25-August-2018].
 
 \bibitem[JP16]{paper:002}
 Thaddeus~Dryja Joseph~Poon.
@@ -177,6 +238,14 @@ Satoshi Nakamoto.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock \url{https://bitcoin.org/bitcoin.pdf}, 2008.
 
+\bibitem[{Nat}18]{misc:020}
+{Nathan Reiff}.
+\newblock {Forget Bitcoin: Blockchain is the Future}.
+\newblock
+  \url{https://www.investopedia.com/tech/forget-bitcoin-blockchain-future/},
+  2018.
+\newblock [Online; accessed August 25, 2018].
+
 \bibitem[{Pat}12]{misc:009}
 {Patrick Kingsley}.
 \newblock {Financial crisis: timeline}.
@@ -184,6 +253,14 @@ Satoshi Nakamoto.
   \url{https://www.theguardian.com/business/2012/aug/07/credit-crunch-boom-bust-timeline},
   2012.
 \newblock [Online; accessed August 26, 2018].
+
+\bibitem[{Pet}15]{paper:009}
+{Peter Frøystad, Jarle Holm}.
+\newblock {Blockchain: Powering the Internet of Value}.
+\newblock
+  \url{https://www.evry.com/globalassets/insight/bank2020/bank-2020---blockchain-powering-the-internet-of-value---whitepaper.pdf},
+  2015.
+\newblock [Online; accessed August 31, 2018].
 
 \bibitem[{Pro}17]{paper:007}
 {Protocol Labs}.
@@ -199,12 +276,12 @@ Satoshi Nakamoto.
   2016.
 \newblock [Online; accessed August 26, 2018].
 
-\bibitem[{Quy}15]{dang_2015}
-{Quynh H. Dang}.
-\newblock {Secure Hash Standard}, {National Institute of Standards and
-  Technology}, ({NIST FIPS}) - 180-4.
-\newblock \url{https://dx.doi.org/10.6028/NIST.FIPS.180-4}, 2015.
-\newblock [Online; accessed August 21, 2018].
+\bibitem[{Rai}17]{rad:001}
+{Raiden Network Team}.
+\newblock Raiden network documentation.
+\newblock \url{https://raiden-network.readthedocs.io/en/stable/index.html},
+  2017.
+\newblock [Online; accessed 31-August-2018].
 
 \bibitem[{RIC}14]{misc:013}
 {RICHARD GENDAL BROWN}.
@@ -238,6 +315,20 @@ Satoshi Nakamoto.
 \newblock {SkuChain Products}.
 \newblock \url{http://www.skuchain.com/#products}, 2017.
 \newblock [Online; accessed August 25, 2018].
+
+\bibitem[{Vit}15a]{eth:001}
+{Vitalek Buterin}.
+\newblock A next-generation smart contract and decentralized application
+  platform.
+\newblock \url{https://github.com/ethereum/wiki/wiki/White-Paper}, 2015.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Vit}15b]{misc:025}
+{Vitalik Buterin}.
+\newblock {Merkling in Ethereum}.
+\newblock \url{https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/},
+  2015.
+\newblock [Online; accessed August 31, 2018].
 
 \bibitem[Wik18a]{wiki:003}
 Wikipedia.

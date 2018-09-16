@@ -27,6 +27,8 @@ Warning--entry type for "paper:004" isn't style-file defined
 --line 216 of file literatur.bib
 Warning--entry type for "paper:005" isn't style-file defined
 --line 226 of file literatur.bib
+Warning--entry type for "misc:014" isn't style-file defined
+--line 233 of file literatur.bib
 Warning--entry type for "misc:015" isn't style-file defined
 --line 240 of file literatur.bib
 Warning--entry type for "paper:006" isn't style-file defined
@@ -43,5 +45,19 @@ Warning--entry type for "misc:018" isn't style-file defined
 --line 281 of file literatur.bib
 Warning--entry type for "misc:019" isn't style-file defined
 --line 288 of file literatur.bib
+Warning--entry type for "misc:020" isn't style-file defined
+--line 295 of file literatur.bib
+Warning--entry type for "misc:021" isn't style-file defined
+--line 302 of file literatur.bib
+Warning--entry type for "misc:022" isn't style-file defined
+--line 309 of file literatur.bib
+Warning--entry type for "paper:009" isn't style-file defined
+--line 330 of file literatur.bib
+Warning--entry type for "misc:024" isn't style-file defined
+--line 338 of file literatur.bib
+Warning--entry type for "misc:025" isn't style-file defined
+--line 345 of file literatur.bib
+Warning--entry type for "misc:026" isn't style-file defined
+--line 366 of file literatur.bib
 Warning--to sort, need author or key in misc:016
-(There were 17 warnings)
+(There were 25 warnings)

@@ -1,14 +1,40 @@
 \section{Testing and Results}
 problems: events didn't work on infura, so had to change architecture from event based system to request resposne system. Going from synchronous system to asynchronous system caused fundamental redesign of the architecture again. 
 \subsection{Testing Environment}
-ropsten, pi, ganachi,IPFS
+ropsten, pi, ganachi,IPFS, etherscan, Ethgasstation
 \subsection{Results}
-\subsubsection{Unit Testing}
+\subsubsection{Unit Testing} \label{UnitTesting} 
+unit testing was mostly done on ganache which is self contained and isolated Ethereum virtual machine program. This replicates ethereum network in a sandboxed envirionment as each ethereum node on the network runs its own implementation of the ethereum virtual machine.
+
+-testing storing minute by minute logs on the blockcahin i.e. to justify how we came across the case that its not feasible to store everything on the ethereum blockchain
+
+
 \subsubsection{Scenario - I}
+Testing with one shipper - no violations
+Testing with multiple shipper - no violations, rotary switch acts as shipper change indicator
 \subsubsection{Scenario - II}
+Testing with one shipper - one violation
+testing with multiple shippers - one violations i.e. see if the violating shipper is easily traceble in the end
 \subsubsection{Scenario - III}
+Testing with one shipper multiple violations.
+Testing with multiple shippers - multiple violations. see if each shipper is only hit with their particular violations.
 \subsection{Evaluation}
-\subsubsection{Gas Consumption}
+\subsubsection{Gas Consumption and Transaction Cost} \label{TrxCost} 
+%may be this should go in the testing section or there two sections should be merged
+All of the testing was done on ropsten.  Ropsten mimics the main net in terms of its operations.  However ropsten Eth can be requested for free from ropsten faucet.  For calculating transaction and operational costs the Mainnet Eth pricing as of 13 August was used. Another important difference is that amount of mining hash power protecting ropsten is far less compared to the main net. Ropsten nodes and miners are operated by both main ethereum client developers i.e. geth and parity. These two companies provide the main hashing power that supports ropsten. t
 deployement,each tx cost, word about gas price etc
+show screenshots of etherscan from your contract for transactions.
+mention gas price fluctuates and in network congestion goes up
+show how much gas and money it takes to deploy a contract
+and how much it takes to do individual transaction
+
+-cost of deployement
+-cost of transactions - storing logs
+
+refer to online links cost of storing on the block chain: give example of using etherscan, and extrapulating from individual tasks that with a big company observing multiple supply chain cycles how it will become quickly untenable to store large logs on the blockchain. make a table of price and predicted costs as a resutl of this testing
+-cost of storing only violations and start and stop logs
+
+solution would be consurtium or private blockchain. trade off between security , trustlessness and decentralization and operational cost.
+
 \subsubsection{Transaction Verification Time}
 dependent on gas price, network congestion etc

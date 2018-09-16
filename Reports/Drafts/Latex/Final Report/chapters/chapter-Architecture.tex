@@ -1,39 +1,117 @@
-\section{Decentralized Supply Chain Management System}\label{usecase}
-explaine the use case scenarios from usecase document i.e. section 3 of the document
-
-google visio usecase diagrams w.r.t supplychain and blockchain and take inspiration to design your own usecase diagram
-
-also use the video by IBM to better and more professionally explain the particular use case and its benefits.
-https://www.youtube.com/watch?v=ZKscEx2lO-4
+\section{Decentralized Supply Chain Management System} \label{usecase} 
+The main contribution of this thesis is a decentralized supply chain management and shipment tracker system. This system is proof of concept implementation to explore applications of blockchain for developing decentralized supply chain management and shipment tracking systems. As discussed in chapter \ref{TS} the backbone of our system is an Ethereum based smart contract. This contract allows invaluable and real time insight into the state of goods at every step of the delivery process. The logistical data is gathered using IoT based smart packages and communicated directly to the smart contract. The requirements for our system are derived from the use case presented in section \ref{ST-Dapp-UC}, so as to define realistic goals which could be realized in the given timeframe.
 
 
+\subsection{Use Case Description} \label{ST-Dapp-UC} 
+Consider an organization that has several suppliers around the world. It uses these suppliers to deliver different components and packages to its factory floor. These packages must be delivered on time and have to be stored, handled and transported under specific environmental or physical constraints. The Organization and Suppliers set up a business contract detailing delivery conditions. The business contract stipulates guarantees about delivery time and the conditions under which the package needs to be handled for example at no point should the package be exposed to temperatures above a certain threshold.  This business use case is modeled in figure \ref{fig:UseCase}. The handling constraints are instantiated as requirements in the smart contract. Once requirements are set the smart contract behaves independently from the perspective of the two shippers. Consequently, we can model the two instantiations as independent contracts i.e. Smart contract A.1 and Smart Contract A.2 which will be referred to as SC-A.1 and SC-A.2 from here on. Smart contracts insure trustless compliance of the agreed upon terms and conditions. Payment channels are established between the organization and its suppliers to insure frictionless payments and remunerations. In this case two payment channels exist Payment Channel A between organization and Supplier A and Payment Channel B between organization and supplier B as shown in figure \ref{fig:UseCase}. These will be referred to as PC-A and PC-B from here on. The system can further be extended to have payment channels between suppliers and shippers shown in the figure as Payment Channels C and D and which will be referred to as PC-C and PC-D. The organization is responsible for compensating every actor in the supply chain life cycle. In order to do so it can either use Ethereum or issue its own ERC20 tokens which can be exchanged for Eth. The main advantage of issuing your own ERC20 token is that you can fix the exchange rate so it’s always tied to a fixed Fiat value. This will protect against price fluctuations in cryptocurrency value. All payment channels for a particular supply chain cycle use the same tokens. The suppliers and shippers get payed in ERC20 tokens.
 
-\subsection{Problem Statement}
-Imagine a company orders a sensitive package for one of their suppliers. The business contract stipulates some guarantees about delivery time, and the conditions under which the package needs to be handled for example at no point should the package be exposed to temperatures above a certain threshold. The package will pass through multiple carriers. The IoT enabled package has embedded sensors to monitor package conditions throughout its journey from supplier to the factory floor. The sensor data is communicated from the package to a blockchain enabled smart contract. All parties have access to the same data. In the event that temperature target is acceded the smart contract will be triggered automatically and the responsible party in the supply chain will be charged with damages stipulated in the contract.
-rewrite this to fit more closely 
-% taken from blockchain usecases document i wrote
-%merge it with explanation from usecase details document
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=180mm,scale=3]{figs/UseCase}
+	\caption{Shipment Tracker - Use case diagram}
+	\label{fig:UseCase}
+\end{figure}
 
-\subsection{Benefits}
-%Benefits
-I.e allows complete transparency to all participants of the supply chain. Enables / Gives end users or customers to have complete confidence that the product was stored, shipped and handled in accordance to strict safety standards and regulations. The transparency brought by this solution to  the supply chain life cycle makes the job of government regulators and safety inspectors much simpler. 
+\clearpage
+
+%%%%%%Reminder: paper written use case docs is better then formal use case document I sent to the professor : rewrite and improve formal document using your paper notes
+
+%\subsection{system Model \ requirements and assumptions} 
+\subsubsection{Supply Chain LifeCycle}
+In order to better explain the supply chain life cycle of our particular use case we use the simplified version of the system presented in figure \ref{fig:monitoring_subdiag}. The simplified version consists of only one supplier and shipper. The company places a new order for components with its supplier and stipulates shipping and handling constraints in the smart contract. 
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=140mm,scale=1]{figs/monitoring_subdiag}
+	\caption{Supply chain Life Cycle}
+	\label{fig:monitoring_subdiag} 
+\end{figure}
+%\clearpage
+
+Once the order has been placed it funds the payment channel associated with its supplier. Supplier packages the components along with a tamper proof smart device which will communicate shipping data with the smart contract. The smart device is a Raspberry Pi running a custom program developed as part of this thesis to monitor package conditions and to send signed data to the smart contract. The data is signed with the help of a proprietary post quantum secure algorithm provided by Dr. Rachid El Bansarkhani. This algorithm protects integrity of data in the presence of post quantum adversaries. The hardware and software that collectively define a smart package will hence forth be referred to as the IoT Node. This node can be configured to send data continuously or when special events are triggered i.e. some shipping violation has occurred. We need internet connectivity throughout the shipping life cycle in order to insure monitoring data is continuously communicated with the Smart Contract and IPFS. The IoT node signs the data with the Post quantum key of the current shipper/ handler.  Monitoring starts as soon as the components are packaged in the supplier warehouse, at this time the data sent to the SC-A.1 is signed with key of the supplier. When the shipper X takes possession of the package from the supplier they scan the package. This scanning event represents changing of ownership of responsibility in the supply chain cycle which means from this point on all data sent to the smart contract will be signed with the key of the shipper X. If there is more than one shipper as show in figure \ref{fig:UseCase}, Each one scans the package to take over shipping responsibilities. In our system Smart Contracts and Dapps are responsible for catching violations and taking appropriate actions to penalize violators and compensate aggrieved parties. This brings full transparency for all stake holders in the supply chain life cycle and resolved disputes if any in an efficient and trustless manner.
+
 
 \subsection{System Architecture}
-Contract number or reference number is the primary key for the system components to interact with each other
-\subsubsection{Supply Chain LifeCycle}
-\subsubsection{System Work Flow}
-Make a diagram
+The proposed system for the use case described in \ref{ST-Dapp-UC} has four main components:
+\begin{enumerate}
+  \item Ethereum Smart contract
+  \item Raiden Payment Channels
+  \item Decentralized Application or Master nodes
+  \item Smart packages or IoT nodes
+\end{enumerate} 
 
-make the work flow diagram like you did for blockchain, use fileserver icon for IPFS
+The abstract system and processes are modeled in figure \ref{fig:Abstractdesign}. Supplier and company agree on shipment conditions in the form of a business contract. These conditions are configured at the start of each shipment cycle. They are instantiated as requirements in a smart contract on the Ethereum blockchain. They cannot be altered after being set in the Smart Contract. The terms of the contract can include any type of handling constraints like exposure to high temperature, pressure, air etc. IoT enabled packages \ref{IoT-Nodes} monitor the package contents according to the defined constraints and conditions with the help of embedded sensors. They communicate shipping and logics data with the smart contract. The smart contract can detect any breaches of the agreed upon terms enabling the system to take appropriate actions to compensate or penalize the parties involved. Payment channels are established between the organization and its suppliers to handle payments efficiently. The payment channels are deployed using Raiden. A company and its suppliers agree upon a set of conditions either implicitly or explicitly at the start of each shipping cycle. The terms of conditions are instantiated in the smart contract along with contract number or tracking number of the package. The supplier initializes the IoT module inside smart package with the tracking number. Once initialized this module contacts the smart contract to receive set of conditions associated with the tracking number. The IoT device then starts the monitoring procedure as shown in figure \ref{fig:Abstractdesign}. In order to minimize transaction costs IoT devices only sends violations to be stored in the blockchain. Full tracking logs containing sensor data like temperature, location, humidity etc are stored using IPFS. The log address or hash is stored in the blockchain which enables our Dapp to always have access to full logs. It can query IPFS nodes using the stored hashes to download complete logs related to any shipping cycle. Once the package is delivered the organization can check the Dapp interface to see if any conditions were violated. If no conditions were violated it transfers full amount to the supplier or shipper. In the event that violations were detected, smart contract communicates them with the monitoring Dapp. If any violations occurred the Dapp can determine the party responsible so the user can take appropriate actions. These actions could range from giving the supplier or shipper a bad rating to monetary punishments such as withholding payments etc. Penalties are determined based on the severity of the violations.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=180mm,scale=1]{figs/Abstractdesign}
+	\caption{Shipment Tracker – Abstract Design}
+	\label{fig:Abstractdesign}
+\end{figure}
+\clearpage
+
+
+
+%\subsubsection{System Work Flow}
+%Make a diagram or may be just add sequence diagram here?
+%this can go into implementation chapter
+%make the work flow diagram like you did for blockchain, use fileserver icon for IPFS
 % Remember Registartion should be the first stage in the following figure i.e. whjere teerms are agreed, ref no / tracking nr geenrating and conditions defined 
 %The IoT / tracking stage gets the condtions initializes appropriate sensors based on conditon number and starts tracking procdure.
 %diagram idea mix the visio work flow stages and with flowchart like figure i.e.
-one stage shows workflow as relates to packages i.e. registering contract refnumber and defining conditions i.e. registration phase, transfering data, getting keys etc, the second stage shows smart contract / montiroing dapp monitoring data and giving out punishments and rewards etc. Last two stages are raiden and IPFS, IPFS just stores full logs, Raiden interacts with users who manually queries dapp to transfer money to shippers.
+%one stage shows workflow as relates to packages i.e. registering contract refnumber and defining conditions i.e. registration phase, transfering data, getting keys etc, the second stage shows smart contract / montiroing dapp monitoring data and giving out punishments and rewards etc. Last two stages are raiden and IPFS, IPFS just stores full logs, Raiden interacts with users who manually queries dapp to transfer money to shippers.
+ 
+\subsection{Architecture - Block Diagram Overview}
+Figure \ref{fig:ArchitectureBD} shows the architectural overview of our system. This system is composed of three high level components, Master Node (see \ref{MasterNode}), IoT Node (see \ref{IoTNode}), and Smart Contract (see \ref{ST-SC}).  The Master Node provides overview of the entire supply chain including activities within individual supply lines. It also handles compensation and payments to suppliers. The IoT Nodes monitor package conditions and communicates logging and tracking data with Smart Contract and IPFS. The Smart Contract provides function and logic to serve as a trustless bridge between Master Node and IoT Node. Master Node queries the smart contract to get IPFS log locations and shipping violations.
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=180mm,scale=1]{figs/Blockdiagram}
+	\caption{Shipment Tracker – System Block Diagram}
+	\label{fig:ArchitectureBD} 
+\end{figure}
+\clearpage
+\subsection{System Components} \label{SysComp} 
+\subsubsection{Decentralized Monitoring Application - Master Node} \label{MasterNode} 
+Figure \ref{fig:ArchitectureMN} details the architecture of  Master Node. This component contains the main decentralized application for monitoring all shipments across multiple supply lines. Its primary intent is to provide administrators or managers a comprehensive overview of the entire supply chain. Ethereum public key serves as the main access control mechanism in this module. It uses the public key to determine which processes or supply lines a user can view or access. The access rights are defined and stored in the smart contract. Master Node has two main sub modules. One module deals with payments and payments channels. This module relies on Raiden (see \ref{raiden}) API to establish payment channels. Raiden client must be running and fully synced with Ethereum blockchain for this module to function. The second module interfaces with the Shipment Tracker smart contract deployed on the Ethereum blockchain. The associated GUI for this module (see fig \ref{fig:ArchitectureMN}) can be used to define requirements and constraints on shipments and packages that must be followed by suppliers and shippers. This module uses web3 JavaScript library, and MetaMask browser extension to broadcast transactions to the Ethereum Blockchain. MetaMask allows us to run our Dapp Master Node without running a full Ethereum Node. The implementation details and functions of each submodule in Master Node are described in \ref{IMN}. 
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=160mm,scale=1]{figs/MasterNode-BD}
+	\caption{Master Node – Block Diagram}
+	\label{fig:ArchitectureMN} 
+\end{figure}
+\clearpage
+\subsubsection{IoT Powered Smart Packages - IoT Nodes} \label{IoTNode} 
+Figure \ref{fig:ArchitectureIoT} shows the architecture of IoT Nodes.  IoT Node is an embedded device with various sensors attached to monitor shipment/package conditions. IoT core logic is sub divided into three main modules Initialization Module, Sensor Module, and Utils Module. Initialization module is responsible for bootstrapping the device at the start of each new shipping cycle. It sets the shipment tracking number, sets the contract address, sets monitoring and logging intervals, and initializes the attached sensors. The device enters monitoring phase after initialization is complete. In this phase the IoT node first contacts the Shipment Tracker Smart Contract to get a list of conditions associated with the current tracking number. It then starts monitoring functions to periodically check that no condition gets violated. If any violations are found it sends them to the Smart Contract to be permanently recorded on the blockchain. In order to communicate with the blockchain we must have access to an Ethereum client. IoT nodes use the remote Ethereum Geth client provided by Infura. The client provided by Infura is just that, unlike MetaMask it does not store keys or handle transaction signing. It expects that any state altering transactions are already signed. IoT Node uses the Utils module to send signed transactions to the Geth client hosted on Infura. The Utils module is also responsible for storing shipping logs on the IPFS Network.  The implementation details of the IoT Node are explained in \ref{IoT-Nodes}.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=170mm,scale=1]{figs/IoTNode-BD}
+	\caption{IoT Node – Block Diagram}
+	\label{fig:ArchitectureIoT} 
+\end{figure}
+\clearpage
+
+\subsubsection{Shipment Tracker - Smart Contract} \label{ST-SC} 
+The shipment Tracker contract is composed of several components as shown in figure \ref{fig:ArchitectureSC}. Functional logic of this contract is broken into several public, private and internal functions. Details of some of the important functional component is given in \ref{ST-SmartContract}.  The contract defines several data structures to store logical data. Shipment Data and violations sent by the IoT node are stored in ShipmentData (see \ref{ST-SmartContract}) structure, Requirements for individual shipping cycles are held in Requirements (see \ref{ST-SmartContract}) structure, and the list of authorized handlers for a individual shipments are saved in Handler (see \ref{ST-SmartContract}) structure. Modifiers in solidity modify function behavior based on some condition. In our contract modifiers are used for restricting access to certain functions and mappings to only authorized personal or devices. I use the modifier OnlyIfSigMatch to insure that data sent by IoT devices is correctly signed by the Post Quantum key of current shipper. Only verified violations are added to the blockchain. Events are used to inform the Master Node, if any state altering function was executed by the Smart Contract. The final component in figure \ref{fig:ArchitectureSC} is the library contract helper.sol. In solidity library contracts are singletons which do not store anything and can be called by any contract to extend their functionality. I developed library contract to handle post quantum signature verification. The main contract calls this library contract to verify PQ signatures. The library driven development helps to make our Smart Contract modular. It also insures that the main contract does not exceed the block limit. The current block limit on Ethereum main net is eighth million gwei.  
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=170mm,scale=1]{figs/SC-BD}
+	\caption{Smart Contract – Block Diagram}
+	\label{fig:ArchitectureSC} 
+\end{figure}
+\clearpage
+
+
+
+%\subsubsection{Post Quantum Module}
 
 %say that a shipper key will be transferred when a new shipper scans the package
 
-\subsection{System Components}
-\subsubsection{Decentralized Monitoring Application - Master Node}
-Include figure of monitoring app
-\subsubsection{IoT Powered Smart Packages - Sensor Nodes}
-include figure of pi with sensors
+%\subsection{Initial Architecture}
+
+%mention that initially each delivery cycle was going to be a single contract deployed, however this would generate lots of segregated contracts to keep track of. plus it will be very expensive in terms of operations, deployement and mantanence on public blockchain like ethereum where user pays for gas. refer to gas consumtion testing section. May even require full time blockchain developers to be able to make changes and improvements to exisiting contract templates.
+%Advantage would be easiser to deal with custom situations and supply chain processes
+%costs of operations would scale with ethereum prices. would make budget planning extremly difficult for organizations
+
+%using such a systemn would create large number segregated databases which would %quickly become unmanagable for large organizations in the events of audits and analytics puposes. This will need created new buisness and IT systems for gathering managing organizing and managing distributed supply chain information.  We want distribution and redundancy of actual data and logic without adding operational overhead in terms of DB consolidtion and management on organizational level processes. The blockchain is providing an adequate solution for taking care of distribution and redundancy, Hence it was decided that it would be more worth while to invest efforts in developing a system which could serve as one generic smart contract for most of organizational needs. refer to section below.  
