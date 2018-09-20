@@ -3,30 +3,30 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces High Level Overview of the Blockchain}}{1}{figure.1}
 \contentsline {figure}{\numberline {2}{\ignorespaces Integrated Supply Chains \cite {Airbus:ADS}}}{5}{figure.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Transaction life cycle in a Blockchain}}{8}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Digital Signatures in Blockchain}}{10}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Transactions Hashed in a Merkle Tree \cite {paper:001}}}{12}{figure.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Constructing a Merkle Tree, adapted from \cite {andy_mb}}}{12}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Median confirmation times for BTC transactions \cite {fig:001}}}{15}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Two way Pegged Sidechain }}{18}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Merkle Trees in Ethereum \cite {misc:025}}}{27}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Ethereum State Transition Function \cite {eth:001}}}{28}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Smart Contract \cite {paper:009}}}{30}{figure.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Bidirectional Payment Channel}}{32}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Payment Routing}}{33}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Routing Transfers in Raiden Network \cite {rad:001}}}{35}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Shipment Tracker - Use case diagram}}{40}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Supply chain Life Cycle}}{41}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Shipment Tracker \IeC {\textendash } Abstract Design}}{44}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Shipment Tracker \IeC {\textendash } System Block Diagram}}{45}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Master Node \IeC {\textendash } Block Diagram}}{46}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces IoT Node \IeC {\textendash } Block Diagram}}{47}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Smart Contract \IeC {\textendash } Block Diagram}}{48}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Sequence diagram of the proposed package tracking system}}{50}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Prototype IoT Node}}{51}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Work Flow diagram for Master Node}}{53}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Work Flow diagram for IoT Node}}{54}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Sample Solidity Mapping}}{55}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Shipment Tracker work flow}}{57}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Adding a new handler to the Handler List}}{58}{figure.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Setting shipping requirements for a package}}{59}{figure.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Adding shipping data and violations to the blockchain}}{60}{figure.30}
+\contentsline {figure}{\numberline {4}{\ignorespaces Digital Signatures in Blockchain}}{11}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Merkle Root Summarizes Transactions in a Block}}{12}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Median confirmation times for BTC transactions \cite {fig:001}}}{16}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Two way Pegged Sidechain }}{19}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Merkle Trees in Ethereum \cite {misc:025}}}{27}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Ethereum State Transition Function \cite {eth:001}}}{28}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Smart Contract \cite {paper:009}}}{30}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Bidirectional Payment Channel}}{31}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Payment Routing}}{32}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Routing Transfers in Raiden Network \cite {rad:001}}}{35}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Shipment Tracker - Use case diagram}}{39}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Supply chain Life Cycle}}{40}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Shipment Tracker \IeC {\textendash } Abstract Design}}{43}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Shipment Tracker \IeC {\textendash } System Block Diagram}}{44}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Master Node \IeC {\textendash } Block Diagram}}{45}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces IoT Node \IeC {\textendash } Block Diagram}}{46}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Smart Contract \IeC {\textendash } Block Diagram}}{47}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Sequence diagram of the proposed package tracking system}}{49}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Prototype IoT Node}}{50}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Work Flow diagram for Master Node}}{52}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Work Flow diagram for IoT Node}}{54}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Sample Solidity Mapping}}{55}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Shipment Tracker work flow}}{57}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Adding a new handler to the Handler List}}{58}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Setting shipping requirements for a package}}{59}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Adding shipping data and violations to the blockchain}}{60}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Deploploying Shipment Tracker contract using MetaMask}}{69}{figure.30}

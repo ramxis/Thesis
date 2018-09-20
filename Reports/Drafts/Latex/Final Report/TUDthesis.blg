@@ -1,6 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: TUDthesis.aux
 A level-1 auxiliary file: chapters/Abstract.aux
-A level-1 auxiliary file: chapters/Preface.aux
 A level-1 auxiliary file: chapters/chapter-introduction.aux
 A level-1 auxiliary file: chapters/chapter-Blockchain-Primer.aux
 A level-1 auxiliary file: chapters/chapter-Blockchain-Usecases.aux
@@ -25,8 +24,6 @@ Warning--entry type for "misc:013" isn't style-file defined
 --line 209 of file literatur.bib
 Warning--entry type for "paper:004" isn't style-file defined
 --line 216 of file literatur.bib
-Warning--entry type for "paper:005" isn't style-file defined
---line 226 of file literatur.bib
 Warning--entry type for "misc:014" isn't style-file defined
 --line 233 of file literatur.bib
 Warning--entry type for "misc:015" isn't style-file defined
@@ -41,10 +38,8 @@ Warning--entry type for "paper:008" isn't style-file defined
 --line 267 of file literatur.bib
 Warning--entry type for "misc:017" isn't style-file defined
 --line 274 of file literatur.bib
-Warning--entry type for "misc:018" isn't style-file defined
+Warning--entry type for "arXiv:1806.03693" isn't style-file defined
 --line 281 of file literatur.bib
-Warning--entry type for "misc:019" isn't style-file defined
---line 288 of file literatur.bib
 Warning--entry type for "misc:020" isn't style-file defined
 --line 295 of file literatur.bib
 Warning--entry type for "misc:021" isn't style-file defined
@@ -60,4 +55,5 @@ Warning--entry type for "misc:025" isn't style-file defined
 Warning--entry type for "misc:026" isn't style-file defined
 --line 366 of file literatur.bib
 Warning--to sort, need author or key in misc:016
-(There were 25 warnings)
+Warning--empty school in Lysyanskaya:2002:SSA:936405
+(There were 24 warnings)

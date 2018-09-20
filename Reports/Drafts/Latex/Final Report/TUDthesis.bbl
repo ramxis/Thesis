@@ -1,3 +1,4 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{{Wik}18d}
 
 \bibitem[{Ada}14]{paper:004}
@@ -5,13 +6,6 @@
   Andrew Miller, Andrew Poelstra, Jorge Timón, and Pieter Wuille}.
 \newblock {Enabling Blockchain Innovations with Pegged Sidechains}.
 \newblock \url{https://blockstream.com/sidechains.pdf}, 2014.
-\newblock [Online; accessed August 25, 2018].
-
-\bibitem[{Agi}16]{misc:018}
-{Agira Tech}.
-\newblock {3 Types of Blockchain You Need To Know}.
-\newblock
-  \url{http://www.agiratech.com/3-types-of-blockchain-you-need-to-know/}, 2016.
 \newblock [Online; accessed August 25, 2018].
 
 \bibitem[{Ahm}16]{misc:002}
@@ -91,13 +85,24 @@ Blockchain.info.
   \url{https://www.blockchain.com/charts/median-confirmation-time?timespan=all},
   2018.
 
-\bibitem[{Chr}17]{misc:019}
-{Christian Lundkvist}.
-\newblock {Introduction to zk-SNARKs with examples}.
-\newblock
-  \url{https://media.consensys.net/introduction-to-zksnarks-with-examples-3283b554fc3b},
-  2017.
-\newblock [Online; accessed August 25, 2018].
+\bibitem[BM18]{cryptoeprint:2018:274}
+Rachid~El Bansarkhani and Rafael Misoczki.
+\newblock G-merkle: A hash-based group signature scheme from standard
+  assumptions.
+\newblock Cryptology ePrint Archive, Report 2018/274, 2018.
+\newblock \url{https://eprint.iacr.org/2018/274}.
+
+\bibitem[CDE{\etalchar{+}}12]{Corbett:2012:SGG:2387880.2387905}
+James~C. Corbett, Jeffrey Dean, Michael Epstein, Andrew Fikes, Christopher
+  Frost, J.~J. Furman, Sanjay Ghemawat, Andrey Gubarev, Christopher Heiser,
+  Peter Hochschild, Wilson Hsieh, Sebastian Kanthak, Eugene Kogan, Hongyi Li,
+  Alexander Lloyd, Sergey Melnik, David Mwaura, David Nagle, Sean Quinlan,
+  Rajesh Rao, Lindsay Rolig, Yasushi Saito, Michal Szymaniak, Christopher
+  Taylor, Ruth Wang, and Dale Woodford.
+\newblock Spanner: Google's globally-distributed database.
+\newblock In {\em Proceedings of the 10th USENIX Conference on Operating
+  Systems Design and Implementation}, OSDI'12, pages 251--264, Berkeley, CA,
+  USA, 2012. USENIX Association.
 
 \bibitem[DEFM17]{cryptoeprint:2017:635}
 Stefan Dziembowski, Lisa Eckey, Sebastian Faust, and Daniel Malinowski.
@@ -111,7 +116,15 @@ Stefan Dziembowski, Sebastian Faust, and Kristina Hostáková.
 \newblock Cryptology ePrint Archive, Report 2018/320, 2018.
 \newblock \url{https://eprint.iacr.org/2018/320}.
 
-\bibitem[{Eth}17]{ethwiki:007}
+\bibitem[{Eth}17a]{eth:009}
+{Ethereum Wiki Contributors}.
+\newblock Ethereum sharding research compendium.
+\newblock
+  \url{https://github.com/ethereum/wiki/wiki/Sharding-introduction-R&D-compendium},
+  2017.
+\newblock [Online; accessed 25-August-2018].
+
+\bibitem[{Eth}17b]{ethwiki:007}
 {Ethereum wiki Contributors}.
 \newblock Patricia tree --- {Ethereum wiki}.
 \newblock \url{https://github.com/ethereum/wiki/wiki/Patricia-Tree}, 2017.
@@ -200,6 +213,13 @@ Stefan Dziembowski, Sebastian Faust, and Kristina Hostáková.
   2018.
 \newblock [Online; accessed August 23, 2018].
 
+\bibitem[{Joh}11]{cryptoeprint:2011:484}
+{Johannes Buchmann, Erik Dahmen, and Andreas Hülsing}.
+\newblock Xmss - a practical forward secure signature scheme based on minimal
+  security assumptions.
+\newblock Cryptology ePrint Archive, Report 2011/484, 2011.
+\newblock \url{https://eprint.iacr.org/2011/484}.
+
 \bibitem[{JP }15]{misc:023}
 {JP Buntinx}.
 \newblock An overview of the ethereum virtual machine.
@@ -211,12 +231,25 @@ Thaddeus~Dryja Joseph~Poon.
 \newblock The bitcoin lightning network: Scalable of-chain instant payments.
 \newblock \url{https://lightning.network/lightning-network-paper.pdf}, 2016.
 
+\bibitem[{Kar}18]{arXiv:1806.03693}
+{Karim Sultan,Umar Ruhi,Rubina Lakhani}.
+\newblock {CONCEPTUALIZING BLOCKCHAINS:CHARACTERISTICS \& APPLICATIONS}.
+\newblock \url{https://arxiv.org/pdf/1806.03693}, 2018.
+\newblock [Online; accessed August 25, 2018].
+
 \bibitem[{Lig}15]{misc:011}
 {Lightning Network}.
 \newblock {Lightning Network Scalable, Instant Bitcoin/Blockchain
   Transactions}.
 \newblock \url{https://lightning.network/}, 2015.
 \newblock [Online; accessed August 25, 2018].
+
+\bibitem[Lys02]{Lysyanskaya:2002:SSA:936405}
+Anna~A. Lysyanskaya.
+\newblock {\em Signature Schemes and Applications to Cryptographic Protocol
+  Design}.
+\newblock PhD thesis, Cambridge, MA, USA, 2002.
+\newblock AAI0804606.
 
 \bibitem[{Max}18]{medium:002}
 {Max Thake}.
@@ -276,6 +309,13 @@ Satoshi Nakamoto.
   2016.
 \newblock [Online; accessed August 26, 2018].
 
+\bibitem[{Quy}15]{dang_2015}
+{Quynh H. Dang}.
+\newblock {Secure Hash Standard}, {National Institute of Standards and
+  Technology}, ({NIST FIPS}) - 180-4.
+\newblock \url{https://dx.doi.org/10.6028/NIST.FIPS.180-4}, 2015.
+\newblock [Online; accessed August 21, 2018].
+
 \bibitem[{Rai}17]{rad:001}
 {Raiden Network Team}.
 \newblock Raiden network documentation.
@@ -291,11 +331,20 @@ Satoshi Nakamoto.
   2014.
 \newblock [Online; accessed August 25, 2018].
 
-\bibitem[{Ser}15]{paper:005}
-{Sergio Demian Lerner}.
-\newblock {RSK White Paper}.
-\newblock \url{https://docs.rsk.co/RSK_White_Paper-Overview.pdf}, 2015.
-\newblock [Online; accessed August 25, 2018].
+\bibitem[RS04]{10.1007/978-3-540-25937-4_24}
+Phillip Rogaway and Thomas Shrimpton.
+\newblock Cryptographic hash-function basics: Definitions, implications, and
+  separations for preimage resistance, second-preimage resistance, and
+  collision resistance.
+\newblock In Bimal Roy and Willi Meier, editors, {\em Fast Software
+  Encryption}, pages 371--388, Berlin, Heidelberg, 2004. Springer Berlin
+  Heidelberg.
+
+\bibitem[RSA78]{Rivest:1978:MOD:359340.359342}
+R.~L. Rivest, A.~Shamir, and L.~Adleman.
+\newblock A method for obtaining digital signatures and public-key
+  cryptosystems.
+\newblock {\em Commun. ACM}, 21(2):120--126, February 1978.
 
 \bibitem[{Sha}17]{misc:001}
 {Shaan Ray}.
@@ -374,5 +423,12 @@ Wikipedia.
   \url{https://bitcoinist.com/cryptocurrency-half-trillion-joint-market-cap-hits-500-billion/},
   2012.
 \newblock [Online; accessed August 26, 2018].
+
+\bibitem[XWS{\etalchar{+}}17]{7930224}
+X.~Xu, I.~Weber, M.~Staples, L.~Zhu, J.~Bosch, L.~Bass, C.~Pautasso, and
+  P.~Rimba.
+\newblock A taxonomy of blockchain-based systems for architecture design.
+\newblock In {\em 2017 IEEE International Conference on Software Architecture
+  (ICSA)}, pages 243--252, April 2017.
 
 \end{thebibliography}

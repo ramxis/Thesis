@@ -1,3 +1,7 @@
 \select@language {english}
 \select@language {english}
 \contentsline {table}{\numberline {1}{\ignorespaces Permissioned vs Permissionless Blockchains}}{2}{table.1}
+\contentsline {table}{\numberline {2}{\ignorespaces Gas Price and transaction times}}{68}{table.2}
+\contentsline {table}{\numberline {3}{\ignorespaces Cost of contract deployment}}{68}{table.3}
+\contentsline {table}{\numberline {4}{\ignorespaces Cost of Storage on Ethereum Blockchain}}{69}{table.4}
+\contentsline {table}{\numberline {5}{\ignorespaces Daily Operational Cost}}{70}{table.5}
