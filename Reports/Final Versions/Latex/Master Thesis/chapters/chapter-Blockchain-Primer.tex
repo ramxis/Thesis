@@ -1,0 +1,194 @@
+\section{Blockchain: Technical Primer} \label{Blockchain}
+In this chapter some of the technical concepts and terminologies related to blockchain are explained. This technology allows participants to transact with each other using a peer-to-peer network that guarantees censorship resistance, immutability, transaction finality, and protection against double spend attacks. Blockchains can be better explained with the help of figure \ref{fig:bc-workflow}. In this example Alice wants to transfer two bitcoins to Bob. She uses her private key to creates a signed transaction for transferring these coins to Bob. Every user in the network has pair of keys: a public key that serves as their unique identifier or address and a private key for signing transactions (see section \ref{AC}). The signed transaction is broadcast to the bitcoin network where it waits until it is picked up by a special node called a miner. The miner verifies transaction signatures and batches pending transactions into blocks. Each block carries the hash of the one that came immediately before it. Next step is to calculate the hash of the entire block and append it at the end of the blockchain as shown in figure \ref{fig:bc-workflow}. Blockchain protocols have built in consensus mechanism to ensure that peers always agree on only one longest chain (see \ref{Mining}). Blockchain is not just a technology it is actually a systems and like most systems it is composed of individual components which come together to make the whole. The next few sections explain the important building blocks or sub components of the blockchain system.
+\vspace{0.5cm}
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=130mm,scale=1]{figs/bc-workflow}
+	\caption{Transaction life cycle in a Blockchain}
+	\label{fig:bc-workflow}
+\end{figure}
+\clearpage
+
+\subsection{Distributed Ledger Technology} 
+Distributed ledger Technology refers to a shared and distributed database replicated across members of a peer-to-peer network. Each member of the network receives the same copy of the data. New data can only be added to the ledger when consensus is achieved among the members. Consensus rules and mechanisms may vary from network to network and are described in \ref{Mining}. These rules are designed to ensure that data on the ledger remains synchronized across network participants. Blockchain is a special type of distributed ledger where cryptography is used to achieve consensus and ensure transaction authenticity.  Information stored on the blockchain is immutable i.e. once recorded it cannot be altered. Blockchain is not the only structure used for DLT. IOTA \cite{wiki:003} and Hashgraph have successfully employed Directed Acyclic Graphs (DAG) \cite{wiki:002} for creating their DLT. 
+\vspace{0.5cm}
+\subsection{Asymmetric Cryptography} \label{AC}
+Asymmetric or public key cryptography is an important building block of any blockchain network. This cryptography technique relies on a pair of keys: A public key which is widely available or shared with everyone, and a private key which is only known to the owner. These two keys are mathematically related to each other. One key usually encrypts and the other key is used for decryption. If the private key encrypts only the corresponding public key can decrypt and vice versa \cite{wiki:004}. Public key cryptography is widely employed for:
+
+\textbf{Public key Encryption} 
+
+Publick key encryption is an encryption technique where data is encrypted using senders public key. The recipient can only decrypt the data and read the message if he is in possession of the corresponding private key \cite{wiki:004}. Encryption guarantees confidentiality. Encryption function $Encrypt(m,pk) \rightarrow C$ takes an arbitrary length plain text message and converts it to cipher text using the recipients public key. The recipients applies the decryption function $Decrypt(C,Sk) \rightarrow PlainText$ to decrypt the encrypted message using his secret key.
+
+\textbf{Digital Signatures} 
+
+Digital signatures (see \ref{DSD}) based on public key cryptography are used in a number of applications including blockchain. Data or message is signed with sender’s private key. Anyone can verify the message signature using the corresponding public key. In Bitcoin, Ethereum and other blockchain networks digital signatures are used to guarantee authenticity, integrity and non-repudiation \cite{wiki:004}.
+\vspace{0.5cm}
+%\clearpage
+\subsection{Cryptographic Hash Functions}
+Hash functions underpin most cryptographic primitives of modern security applications. Hash Functions are used to calculate fixed length hashes for variable length data. Formally a hash function $H:\{0,1\}^* \rightarrow \{0,1\}^n$ is computed as $ \mathcal{H} = (H,KGen) $, where $ KGen(1^n) $ outputs a fixed length byte string $ H(m)  \text{ }\epsilon\text{ } \{0,1\}^n $. Given a variable length message m, such that $m  \text{ }\epsilon\text{ } \{0,1\}^*$ \cite{cryptoeprint:2018:274}. Hash functions are used for message authentication (HMACS), and digital signatures and other forms of authentication. Hashing algorithms are designed in a way that even a slight change in the input data will result in a vastly different output hash \cite{10.1007/978-3-540-25937-4_24}. All cryptographic hash function should have the following basic properties:
+
+
+\textbf{Deterministic:} The hash function should be deterministic. This means that for any given input $m$ that produces a hash value $H(m)$, the hash function should always produce the hash value $H(m)$ as long the input remains the same \cite{10.1007/978-3-540-25937-4_24}.
+
+\textbf{One-Wayeness:} This property implies that it is not realistic or computationally feasible to determine the input message $m$ given a random $H(m)$ \cite{cryptoeprint:2018:274}. In other words the hash function is a One-Way function \cite{10.1007/978-3-540-25937-4_24}.
+
+\textbf{Collision Resistance:} A hash functions is collision resistant, if it is unfeasible to find two messages, such that $ m \neq m^\prime$ that map to the same hash value $H(m) = {H(m^\prime)}$ \cite{cryptoeprint:2018:274}. In other words it is very difficult to find two different inputs which hash to the same output hash value.
+\vspace{0.5cm}
+\subsubsection{Hashing and Blockchains}
+Blockchain networks employ hashing algorithms in their consensus protocols and mining (see \ref{Mining}) process. Ethereum uses an algorithm called Ethash (modfied Dagger Hashimoto) and bitcoin uses SHA-256 \cite{dang_2015} hashing algorithm. These algorithms are used as a mechanism to guarantee integrity and to prevent unauthorized tampering and corruption of the distributed ledger. They are used to link blocks with each other in the blockchain. Each new block contains the hash of the blockchain that came before it as shown in figure \ref{fig:blockchain}. Block hash represents the state of the blockchain when it was created. This allows anyone to easily verify the complete state of the entire blockchain. Any attempt to alter data in any block will result in a vastly different hash for that block and will also require that hashes for all subsequent blocks be recalculated.
+%\vspace{0.5cm}
+\clearpage
+\subsection{Digital Signatures} \label{DSD} 
+Digital Signatures are an important building block of most cryptographic protocol and security systems. They are used for guaranteeing data integrity, authentication, and non – repudiation. Data Integrity means that the receiver can have confidence that the data was not altered during transit. If the message has a signature attached, the receiver can verify weather the message was altered by verifying message signature. Authentication guarantees that the message came from authenticated source i.e. sender of the message is in fact the one holding the private key that signed this message \cite{Rivest:1978:MOD:359340.359342}. Non – repudiation means that the sender cannot deny that he sent the message if it is correctly signed. A digital signature scheme includes a digital key generation algorithm, a secure signing algorithm and a secure verification algorithm. These three algorithms can be describe by the following equations as describe in \cite{Lysyanskaya:2002:SSA:936405}. 
+
+The key generation algorithm $G$ generates public/private key pairs.
+\begin{equation}
+G:keyGen(1^n) \rightarrow (Pk,Sk) 
+\end{equation}
+
+Secure Signing algorithm $S$
+\begin{equation}
+S:Sign(sk,m) \rightarrow \sigma
+\end{equation}
+ 
+The verification algorithm $V$ accepts or rejects the signatures.
+\begin{equation} 
+V:Verify(pk,m,\sigma)=\{0,1\}  
+\end{equation}
+ 
+For correctness $S$ and $V$ must satisfy:
+ \begin{equation}
+  Pr [ (pk, sk) \leftarrow G(1^n), V( pk, m, S(sk, m) ) = accepted ] = 1 
+ \end{equation}
+ 
+Digital Signatures were first introduced by Rivest, Shamir and Adleman in their paper \cite{Rivest:1978:MOD:359340.359342} as part of the RSA digital signature scheme. This algorithm uses public key cryptography to sign message digest \cite{Rivest:1978:MOD:359340.359342}. 
+%\vspace{0.3cm}
+\clearpage
+\subsubsection{Digital Signatures and Wallets}
+Digital Signatures are used to verify the authenticity of a transaction in blockchains. A transaction is generated using a program known as  a digital wallet. Digital wallets manage user keys and helps them transfer coins. Transactions are signed using some signature algorithm. Bitcoin and Ethereum use Elliptic Curve Digital signature algorithm for signing transactions. The wallet regularly queries the blockchain to get number of coins assigned to a user's private key. Figure \ref{fig:bc-sig} shows how digital signatures are used in the blockchain. Alice generates a signed transaction for transferring 1 btc to Bob. This transaction is broadcast to the network where it is picked up by a miner. The miner verifies Alice’s signature using her public key. If the signature is verified the miner updates the blockchain ledger with new balances for Alice and Bob.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=120mm,scale=1]{figs/sig}
+	\caption{Digital Signatures in Blockchain}
+	\label{fig:bc-sig}
+\end{figure}
+\clearpage
+
+\subsection{Merkle Trees} \label{MerkleTrees}
+Blockchain is a continuously growing list of transactions which are grouped into blocks. A block contains multiple transactions and a block hash as shown in figure \ref{fig:blockchain}. This hash is calculated over the entire block. A block is actually a special data structure which is implemented with the help of a Merkle tree as shown in figure \ref{fig:mtree}. Andreas Antonopoulos defines merkle trees in his book “Mastering Bitcoin” as \textit{“A merkle tree, also known as a binary hash tree, is a data structure used for efficiently summarizing and verifying the integrity of large sets of data.”} \cite{andy_mb} (ch.9). They are used to summarize all transactions in a block using cryptographic hashes. Transactions are grouped into blocks and hashed together to form a Merkle tree \cite{paper:001}. The root of this Merkle tree or Root hash is stored in the block's header This process is shown in figure \ref{fig:mtree}. This enables fast and efficient verification of any transaction in a particular block. In a tree comprising of N data elements only \(2*log2 (N)\) calculations are required to verify if a particular data element or transaction is included or not. Without Merkle trees it will be prohibitively expensive to run blockchain nodes. This would adversely impact the decentralization of the system \cite{cryptoeprint:2018:274}, \cite{paper:001}. 
+\vspace*{1mm}
+%\vspace{1cm}
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=130mm,scale=1]{figs/mtree}
+	\caption{Merkle Root Summarizes Transactions in a Block} 
+	\label{fig:mtree}
+\end{figure}
+
+In bitcoin a Merkle tree is constructed by recursively hashing pair of nodes using SHA256 cryptographic hash function as shown in figure \ref{fig:mtree} \cite{andy_mb} (ch.9).  In the example tree there are four leaf nodes storing hashes of four transactions. The leaf nodes do not store actual transactions rather TX data is hashed and result is stored in the Merkle tree. Each leaf node is designated as \( H_{0}, H_{1}, H_{2}, H_{3} \) and given by the equation: \[ H_{0} = SHA256(SHA256(Transaction_{0}))\]
+Since Merkle trees are in essence binary trees hence even number of nodes are required to have a balanced tree. Two leaf nodes are hashed together to form a parent node as given by equation \eqref{eq:2}. In the event of odd number of transactions, the last transaction is duplicated to have an even number of leaf nodes as shown by equation \eqref{eq:3}. The recursive hashing process starts from the bottom and continues until there is only one node left at the top which is called the Merkle Root. This is the parent hash of all child nodes and summarizes all the data in all transactions. This root hash is placed in the block header \cite{cryptoeprint:2018:274}, \cite{paper:001}.
+
+\begin{equation}
+  \label{eq:2}
+H_{(0,1)} = SHA256(SHA256(H_{0} || H_{1}))
+\end{equation}
+
+\begin{equation}
+  \label{eq:3}
+ H_{(3,3)} = SHA256(SHA256(H_{3} || H_{3}))
+\end{equation}
+
+
+%\clearpage
+\vspace{0.5cm}
+\subsection{Consensus Mechanisms and Protocols} \label{Mining} 
+Electronic coins are defined as a chain of digital signatures that serves to establish ownership \cite{paper:001}. In order for Alice to transfer one coin to Bob, she must sign the hash of a previous transaction and the public key of Bob. Anyone can verify the chain of ownership by verifying signatures. Signature verification only confirms that Alice was in possession of the coin at some point in time. It does not guarantee that Alice did not try to spend the same coin more than once \cite{paper:001}. Therefor a mechanism is needed that guarantees that any previous owner (Alice) did not sign any earlier transaction for transferring the same coin. The only way to verify this in a decentralize system is to announce all transactions, and to have a mechanism to ensure that all participants agree on a single shared history or order of transactions. Payee (Bob) needs proof, that at the time of token transfer, the majority of network participants agreed, that Alice did not generate an earlier transaction to transfer the same coin \cite{paper:001}. The process which establishes consensus in the Bitcoin network is called Mining.
+%%%%%%%%%%%%%%%%%%%%%%Extras%%%%%%%%%%%%%%%%%%%%%%%%%
+%put the figure of digital coin from bitcoin white paper section transactions
+%\subsubsection{Consensus Protocols}
+%\clearpage
+
+\textbf{Mining}
+
+Blockchain participants must agree on a single state of the distributed ledger. In Bitcoin the process of achieving consensus is termed as Mining. Mining underpins Bitcoin’s security model. This process is a designed to guarantee security and integrity of the distributed ledger. It serves to protect the network from fraudulent transactions and double spend attacks \cite{paper:001}. It is also the process by which new blocks are generated. Miners spend something of value like electricity in the form of computing power by running complicated algorithms (Proof of Work \ref{PW}). They are rewarded by the network with block rewards or newly minted coins. This process prevents bad actors or attackers from modifying the state of decentralized ledger against network rules \cite{paper:001}. Attackers will need to control at least fifty-one percent of network hash rate to mount a successful attack. This is virtually impossible in a sufficiently large decentralized network like Bitcoin or Ethereum. There are two main type of consensus algorithms Proof-of-Work \ref{PW} and Proof-of-Stake \ref{PS}.
+\vspace{0.5cm}  
+\subsubsection{Proof-of-Work} \label{PW}
+It was proposed by Satoshi Nakamoto in the bitcoin white paper \cite{paper:001}, as means for establishing consensus. Miners solve complicated mathematical problems to validate transactions. Pending transactions are batched into blocks and the miners compete with each other to calculate the hash of the block. The hash output of the block must start with specific number of leading zeroes in order to satisfy protocol rules. The exact number of leading zeroes depends upon the network difficulty. This difficulty is adjusted automatically after every 2016 blocks. It determines how easy or hard it is to find the output hash for a block. The function that calculates difficulty is determined by a moving average and targets average number of blocks per hour \cite{paper:001}. If blocks are generated too fast, the difficulty increases and vice versa. This is done in order to compensate for increasing hardware speed and varying interests in running nodes. Proof-of-work protocols can be summarized in the following steps:
+
+\begin{itemize}
+  \item Miners try to find the hash output for a block with a fixed number of leading zeroes. They do this by repeatedly changing part of the block called nonce and recalculating the hash output  \cite{medium:001}.
+  \item First miner to solve the puzzle and find the hash broadcasts his solution or proof-of-work to the rest of the network  \cite{medium:001}.
+  \item Upon receiving the solution other miners verify it to ensure that it is correct. Before they agree to add the it to the blockchain they verify all the transaction in the block to make sure they are valid  \cite{medium:001}.
+  \item If majority of miners agree on the solution and agree to add the block to the blockchain than consensus is achieved  \cite{medium:001}.
+\end{itemize}
+This approach has some inherent disadvantages. It requires huge amounts of electricity to achieve consensus in large blockchain networks such as Bitcoin and Ethereum. Some estimates have put bitcoins annual energy consumption on the same level as countries likes Austria or Switzerland. POW operates on the basis of one CPU one vote model. This approach can lead to mining centralization by large mining pools and chip manufacturers.
+\vspace{0.5cm}  
+\subsubsection{Proof-of-Stake} \label{PS}
+Proof of Stake is an alternative approach for reaching consensus and protecting from double spend attacks in a decentralized network. It solves many problems inherent to POW algorithms. It is defined as \textit{“Proof of Stake (PoS) is a category of consensus algorithms for public blockchains that depend on a validator's economic stake in the network”} \cite{ethwiki:006}. POS requires users or forgers as they are called to lock up their digital coins in an escrow to get a chance to validate new blocks. The deposited coins serve as collateral and an incentive for the forgers to behave honestly. If a forger approves fraudulent transaction they will lose the coins they staked and will be banned from participating in the block validation process in the future. The crux of POS systems is the fact that for any attack to be successful the attacker will need to own majority of the coins on the network. Therefore, the attacker will be the one most severely impacted by his own attack \cite{bitwiki:005}. This serves as a huge deterrent against any potential bad actors. Block validators are incentivized with block rewards (combination of Tx fees and coins). They are selected by the network in a pseudo – random selection process based on a combination of factors. Selecting forgers solely on the size of their stake will hugely benefit the rich miners making the rich even more richer. There are several methods to avoid these problems two of which are given below. \cite{medium:002}, \cite{misc:001}
+
+\textbf{Coin Age based Selection:}
+This method choses validators based on how long their coins have been staked for or the ‘coin age’ of their stake. The coin age is calculated by multiplying the size of a validators stake with the number of days the coins have been held in escrow. Once a validator generates a block their coin age is reset and they have to wait a fixed amount of time before they can be selected to validate another block \cite{misc:001}.
+
+\textbf{Randomized Block Selection:}
+This method choses validators based on a combination of lowest hash value and the size of their stake \cite{misc:001}.
+
+%%%%%%%%%%%%%%%%%%%%%%Extras%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsection{Delegated Proof of stake}
+%\subsection{Full Nodes}
+%\subsection{Transaction Finality}
+%mention how finality can impact confirmation times and how it might impact any %potential supply chain management app.
+%https://medium.com/coinmonks/blockchain-finality-pow-and-pos-35915a37c682
+\vspace{0.5cm}  
+\subsection{Scaling Debate and Solutions}\label{scaling} 
+Blockchain technology is still in its infancy. It is a novel idea to solve several interesting problems in a trustless and decentralized manner. However, it needs to be able to scale to handle millions of transactions per second in order to compete with existing centralized platforms. Bitcoin can on average perform 3 to 4 transactions per second while Ethereum can handle up to 20 transactions per second. Compare this to Visa which on average handled over 1100 transactions per second in 2016 and has an estimated capacity to perform up to 100000 transactions in a second \cite{medium:003}. Transaction speed measured in TPS is an important to metric to measure the performance of any financial system. During 2016 and 2017 major blockchain networks saw enormous growth in their user base. This caused exponential increase in transaction volume resulting in congested networks which caused huge delays in transaction confirmations as shown by graph in figure \ref{fig:mct}. This had a domino effect on transaction fees as well, causing them to sky rocket. Miners are incentivized to pick transactions with higher fees to mine first. The long confirmation delays coupled with high transactions fees caused many organizations and vendors to stop accepting bitcoins \cite{misc:022}. The scaling problem is further amplified in smart contract platforms like Ethereum[\ref{eth}] which aim to be a hub for large scale decentralized applications or Dapps. Most existing and proposed Dapps use mircotransaction (MTX) as part of their business model. \textit{“Microtransactions are a business model where users can purchase virtual goods via micropayments”} \cite{wiki:007}. In order to efficiently run such applications Ethereum needs a way to effectively handle $\mu$-transactions. In most cases these transactions need to be executed immediately and cannot wait for long block confirmation times. This requires exponential increase in transactions per second or TPS for blockchain to become a viable alternative to centralized solutions. Sections \ref{BSI}, \ref{LN}, \ref{SCP}, \ref{Shard} and  \ref{SIDE} present possible solutions for solving the scaling problem.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=120mm,scale=1]{figs/median-confirmation-time}
+	\caption{Median confirmation times for BTC transactions \cite{fig:001}}
+	\label{fig:mct}
+\end{figure}
+%\clearpage
+\vspace{0.5cm}  
+\subsubsection{Block Size Increase} \label{BSI} 
+Transactions are grouped into blocks before they are verified. POW consensus rules require that there is some distance between successive blocks so that each verified block is successively incorporated by a majority of nodes in their copy of the ledger. This means that roughly only one block is generated every ten minutes \cite{paper:001}. In addition, some blockchains like Bitcoin have placed an upper limit on the size of each block. Currently for Bitcoin the block size limit is 1 megabyte. One suggestion is to simply increase the block limit to allow more transactions to be verified at any given time.  This solution however has many problems. First of all, increasing block size results in only a linear increase in transactions per second. Secondly, it will adversely impact the decentralization of the network. Larger blocks require higher computational power to process each block and also drastically impact the size of the distributed ledger. This leads to more centralization as not everyone can afford the equipment required to successfully mine new blocks \cite{medium:006}.  
+\vspace{0.5cm}  
+\subsubsection{Payment Channels - Lightning Network} \label{LN}
+An alternative solution is to use Layer - 2 transaction networks. Lightning network is bitcoins proposed solution for the scaling problem. Lightning network is defined as \textit{“A decentralized system for instant, high-volume micropayments that removes the risk of delegating custody of funds to trusted third parties”} \cite{paper:002}. It advocates using payment channels to handle transactions off chain. Payment Channels allow users to transfer coins and assets using off chain transactions which can be enforced on the blockchain using a cryptographic technique known as hash locked transfers. Hash locking prevents spending of outputs until some specified condition is met or some secret is revealed.  To guarantee security assets in Payment Channels must be backed up by assets on the blockchain. Multiple channels are joined together to form payment networks. In an ideal situation where all participants are honest only two transactions are added to the blockchain while participants can make unlimited number of instant transactions within the channel. Lightning Network and Raiden Network (see \ref{raiden}) are both examples of payment networks. Payment channels are essentially multi-signature blockchain addresses. In order to spend funds from the channel both parties must sign off on the transaction agreeing to the new balance of the channel. The new balance is stored as the most recent transaction in the channel. Simply put, a lightning network payment channel is a smart contract on the bitcoin blockchain which is mostly executed off-chain after creation \cite{misc:011}. In the ideal case, the two transactions that go on the blockchain are the ones for opening and closing a channel \cite{misc:011}. This enables users to make off chain payments with confidence. If anything goes wrong blockchain can cryptographically verify the terms of the Smart Contract and enforce them on-chain \cite{misc:012}, \cite{paper:002}.  
+%\clearpage
+\vspace{0.5cm}  
+\subsubsection{State channels – PERUN} \label{SCP} 
+State channels work in the same manner as payment channels. They can deal with any type of state altering transaction. State channels significantly enrich the functionality of payment channels. Consider a Smart Contract ‘C’ which is executed in a state channel in an off-chain manner. This is achieved by letting channel state contain storage string $\alpha$ as well as financial balance. Where $\alpha$ describes the current state of ‘C’ by storing values of all contract variables. As long as there is no conflict all parties can freely update $\alpha$. In the event that one of the users misbehaves the others can push the latest version of $\alpha$ on the blockchain which will finish executing ‘C’ starting from the latest agreed upon state i.e. $\alpha$ \cite{misc:012}. A brief summary of this process is given below: 
+\begin{enumerate}
+
+\item Part of the state of blockchain is locked in a multi signature address, all participants must agree in order to update this state \cite{misc:012}.
+\item 
+Instead of submitting updates to the blockchain, participants update the state of the channel between themselves \cite{misc:012}.
+\item Each new fully signed update overwrites the previous one and is the only valid state for the channel that can be pushed on the blockchain \cite{misc:012}.
+\item In the event of a disagreement, any participant can push the latest fully signed state to the blockchain which will finish executing the remainder of the contract and settle any outstanding operations \cite{misc:012}.
+\item If nothing goes wrong participants submit the final state to the blockchain which closes the channel \cite{ misc:012}.
+
+\end{enumerate}
+Perun offers a new technique for connecting state channels which does not require interaction with intermediaries for every single update of the channel. Perun constructs a new primitive called virtual channels over so called multistate channels. Multi state channels are an extension of state channels presented above. Multistate channels allow for parallel creation and execution of several Nano contracts. Perun is an interesting proposal for scaling Ethereum blockchain which can potentially work for all types of Smart Contracts. The scheme presented in Perun claims to be secure against arbitrary corruption of any of the communicating partners or intermediaries. Detailed technical descriptions of this scheme are presented in \cite{cryptoeprint:2018:320} and \cite{cryptoeprint:2017:635}. In this scheme basic state channels are connected via “virtual channels” which minimize interaction with intermediaries in channel chains. A channel can be established between Alice and Bob with the help of intermediary Ingrid. In the case when they are both honest each update to the channel can be made independent of Ingrid and the only interaction that involves Ingrid is for opening and closing of the channel. In the event that a dispute arises between Alice and Bob, they first try to resolve the dispute with the help of Ingrid. If that fails, then the dispute resolution is escalated to the blockchain \cite{cryptoeprint:2018:320}, \cite{cryptoeprint:2017:635}.
+
+\subsubsection{Sharding} \label{Shard} 
+One scaling proposal that is of particular interest, specially for the Ethereum community is Sharing. Sharding is not a new concept in fact it has been successfully employed in large database systems for a number of years now. A database shard is a horizontal partitioning of the database. Each shard is held on a separate server. This spreads the load and improves performance \cite{Corbett:2012:SGG:2387880.2387905}. Ethereum developers are proposing to apply the same concept to blockchain space. Their proposal calls for partitioning the Ethereum blockchain into smaller chunks or shards. The idea is to partition Ethereum nodes and transactions into smaller groups. Each group is responsible for and manages a section of the ledger instead of every node being responsible for the complete ledger. A Smart Contract will be used to manage data and transactions that are accepted as valid by the main chain. The proposal further calls for creating a set of notaries to vote on validity of transactions within each shard \cite{eth:009}. 
+\vspace{0.5cm}  
+\subsubsection{Sidechains} \label{SIDE} 
+Sidechain is a blockchain that runs parallel to the main blockchain. It extends the functionality of the main chain enabling decentralize transfer of assets and tokens between the two chains. Sidechains allow coins to be moved between two separate blockchains. Tokens from the main chain can be securely moved to the sidechain and used in these chains. The token transfer takes places at a fixed predetermined rate \cite{misc:013}. In order to transfer main chain assets to a side chain they are sent to a special address on the main chain. Once this transaction is verified a confirmation is broadcast in the sidechain enabling the network to assign equivalent assets to the users account in the sidechain \cite{paper:004}. They can help with blockchain scaling as they can take some of the pressure off the main chain. Developers can design specialized sidechains to run their Dapps more efficiently while still taking advantage of security and decentralization provided by the mainchain. Sidechains are implemented using a Two – way peg as shown in figure \ref{fig:SC}.
+\vspace{3cm}  
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=180mm,scale=1]{figs/sidechain}
+	\caption{Two way Pegged Sidechain }
+	\label{fig:SC}
+\end{figure}
+
+%\textbf{RootStock RSK SideChain}
+
+%RSK is a sidechain to bitcoin. It is Two-way pegged to bitcoin. The RSK code aims to be backwards compatible to Ethereum i.e. code can be written in solidity or serpent and can be used on Ethereum. RSK aims to be a platform for decentralized applications and smart contracts on bitcoin. Miners are incentivized to mine smart contracts on RSK by rewarding them with bitcoins. Bitcoin miners can simultaneously mine both blockchains and rewarded through a process called “merge-mining”. Rootstock has its own version of Ethereum virtual machine (EVM). Currently the developers are working on what is called a federated peg which is essentially a system of notaries and a Multisignature exit address. The developers aim to go from federated peg to a two-way pegged system based on Simplified Payment Verification (SPV) \cite{andy_mb}, \cite{paper:005}. 
+
+%\textbf{Federated peg:} is a system consisting of a set of notaries and a multi signature exit address. When funds are sent to this exit address, an SPV proof on RSK sidechain is created for this transaction. This SPV proof allows the conversion of the locked Bitcoins in the federated address into coins on rootstock sidechain. This conversion is done automatically. However, moving funds from RSK back to Bitcoin requires collaboration of federators. Basically a smart contract acts as bridge master and controls all unspent transaction outputs. This contract broadcasts a transaction to federators by using a log message. On receiving this message, federators send signatures to bridge master who combines all these signatures in to a fully signed transaction. This signed transaction is broadcast to RSK blockchain where any user can put this transaction onto bitcoin blockchain. This unlocks bitcoins on the bitcoin blockchain \cite{paper:005}.
+
+%%%%%%%%%%%%%%%%%%%different solutions for scaling https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

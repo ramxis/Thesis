@@ -1,0 +1,101 @@
+\select@language {english}
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction And Motivation}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introduction To Blockchain}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Blockchain Types}{2}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Permissionless Blockchains}{2}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Permissioned Blockchains}{3}{subsubsection.1.2.2}
+\contentsline {subsection}{\numberline {1.3}Motivation}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Thesis Objective}{7}{subsection.1.4}
+\contentsline {section}{\numberline {2}Blockchain: Technical Primer}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Distributed Ledger Technology}{9}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Asymmetric Cryptography}{9}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Cryptographic Hash Functions}{10}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Hashing and Blockchains}{10}{subsubsection.2.3.1}
+\contentsline {subsection}{\numberline {2.4}Digital Signatures}{11}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Digital Signatures and Wallets}{12}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.5}Merkle Trees}{13}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Consensus Mechanisms and Protocols}{14}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Proof-of-Work}{15}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Proof-of-Stake}{16}{subsubsection.2.6.2}
+\contentsline {subsection}{\numberline {2.7}Scaling Debate and Solutions}{16}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Block Size Increase}{17}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}Payment Channels - Lightning Network}{18}{subsubsection.2.7.2}
+\contentsline {subsubsection}{\numberline {2.7.3}State channels \IeC {\textendash } PERUN}{18}{subsubsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.4}Sharding}{19}{subsubsection.2.7.4}
+\contentsline {subsubsection}{\numberline {2.7.5}Sidechains}{20}{subsubsection.2.7.5}
+\contentsline {section}{\numberline {3}Blockchain Applications}{21}{section.3}
+\contentsline {subsection}{\numberline {3.1}Crypto Currencies}{21}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Internet of Things}{21}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Autonomous Decentralized Peer-to-Peer Telemetry (ADEPT)}{22}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Filament}{22}{subsubsection.3.2.2}
+\contentsline {subsection}{\numberline {3.3}Supply Chain Management}{23}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Skuchain}{23}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Provenance}{24}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.4}Filesharing}{24}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}FileCoin}{25}{subsubsection.3.4.1}
+\contentsline {section}{\numberline {4}Design Decisions and Technology Stacks}{26}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ethereum}{26}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Ethereum virtual machine}{27}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Merkle Trees in Ethereum}{27}{subsubsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Ethereum State Transition Function}{29}{subsubsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}Block limits and Gas}{30}{subsubsection.4.1.4}
+\contentsline {subsection}{\numberline {4.2}Smart Contracts}{30}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Interacting with Ethereum Smart Contracts}{31}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {4.3}Raiden Network}{32}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Netting Channel Smart contract}{33}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}Channel Life Cycle}{34}{subsubsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3}Token Transfer Types}{35}{subsubsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.4}Payment Routing}{35}{subsubsection.4.3.4}
+\contentsline {subsubsection}{\numberline {4.3.5}Raiden API}{36}{subsubsection.4.3.5}
+\contentsline {subsection}{\numberline {4.4}InterPlanetary File System (IPFS)}{37}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Motivation - Case for decentralized Repository}{37}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}IPFS}{37}{subsubsection.4.4.2}
+\contentsline {section}{\numberline {5}Decentralized Supply Chain Management System}{39}{section.5}
+\contentsline {subsection}{\numberline {5.1}Use Case Description}{39}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Supply Chain LifeCycle}{41}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}System Architecture}{42}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Architecture - Block Diagram Overview}{44}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}System Components}{45}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Decentralized Monitoring Application - Master Node}{45}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}IoT Powered Smart Packages - IoT Nodes}{46}{subsubsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.3}Shipment Tracker - Smart Contract}{47}{subsubsection.5.4.3}
+\contentsline {section}{\numberline {6}Implementation Details}{48}{section.6}
+\contentsline {subsection}{\numberline {6.1}Overview}{48}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Hardware Setup}{50}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Master Node}{50}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}IoT Node}{50}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.3}Master Node \IeC {\textendash } Implementation}{51}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}IoT Nodes \IeC {\textendash } Implementation}{53}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Shipment Tracker \IeC {\textendash } Design Details}{55}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Shipment Tracker \IeC {\textendash } Contract Work Flow}{56}{subsubsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.2}Handler Authorization}{57}{subsubsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.3}Requirements}{58}{subsubsection.6.5.3}
+\contentsline {subsubsection}{\numberline {6.5.4}Violations}{60}{subsubsection.6.5.4}
+\contentsline {subsection}{\numberline {6.6}Securing the System against Post Quantum Adversaries}{61}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Implementation Challenges}{63}{subsection.6.7}
+\contentsline {subsubsection}{\numberline {6.7.1}Problems with Raiden and Fixes}{63}{subsubsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.2}Problems with Web3}{63}{subsubsection.6.7.2}
+\contentsline {section}{\numberline {7}Testing and Evaluation}{65}{section.7}
+\contentsline {subsection}{\numberline {7.1}Testing Environment and Strategy}{65}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Shipment Tracker Contract}{65}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}Testing Complete System Interaction}{65}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}Master Node}{65}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}IoT Node}{66}{subsubsection.7.1.4}
+\contentsline {subsection}{\numberline {7.2}Testing Scenarios and Results}{66}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Scenario - I}{66}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Scenario - II}{68}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}Scenario - III}{70}{subsubsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.4}Scenario - IV}{71}{subsubsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.5}Scenario - V}{72}{subsubsection.7.2.5}
+\contentsline {subsection}{\numberline {7.3}Evaluation}{73}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Transaction Speed and Cost}{73}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Contract Deployment Cost}{73}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3}Cost of Storage on the Blockchain}{75}{subsubsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.4}Cost of storing Violations and Requirements}{75}{subsubsection.7.3.4}
+\contentsline {section}{\numberline {8}Conclusion and Future Work}{76}{section.8}
+\contentsline {subsection}{\numberline {8.1}Limitations and Future Work}{76}{subsection.8.1}
+\contentsline {section}{List of Figures}{I}{section*.1}
+\contentsline {section}{List of Tables}{III}{section*.2}
+\contentsline {section}{Bibliography}{IV}{section*.3}
+\contentsline {section}{\numberline {A}Acronyms}{X}{appendix.A}
