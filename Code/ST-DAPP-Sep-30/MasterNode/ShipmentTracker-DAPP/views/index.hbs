@@ -1,0 +1,274 @@
+
+<!--script type="text/javascript" src="/javascripts/dist/web3.min.js"></script-->
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/form-modal.css" >
+
+<nav class="navbar navbar-default navbar-expand-xl navbar-light">
+	<div class="navbar-header d-flex col">
+		<a class="navbar-brand" href=""><i class="fa fa-cube"></i>Ethereum<b>App</b></a>
+
+	</div>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <button id="home-btn" class="btn navbar-btn" type="button" onclick="renderRaiden()">Home</button>
+      </li>
+      <li>
+        <button id="raiden-btn" class="btn navbar-btn" type="button" onclick="renderRaiden()">Raiden</button>
+      </li>
+      <li>
+        <button id="requirement-btn" class="btn navbar-btn" type="button" data-toggle="modal" data-target="#myModal">Pkg Requiremnets</button>
+      </li>
+      <li>
+        <button id="Contact-btn" class="btn navbar-btn" type="button" onclick="contactForm()">contact</button>
+      </li>
+      <li>
+        <button id="About-btn" class="btn navbar-btn" type="button" onclick="renderAbout()">About</button>
+      </li>
+		</ul>
+		<form class="navbar-form form-inline">
+		</form>
+		<ul class="nav navbar-nav navbar-right ml-auto">
+      <div id="eth">
+              <select id="account-selected" onchange="acc_Select()">
+                <option value="default">Select Account</option>
+              </select>
+      </div>
+	 </ul>
+	</div>
+</nav>
+
+<div class="jumbotron">
+  <!--nav class="navbar navbar-expand-sm" id="navbar1"-->
+    <!--ul class="navbar-nav">
+      <li class="nav-item active">
+        <button id="home-btn" class="btn navbar-btn" type="button" onclick="renderIndex()">Home</button>
+      </li>
+
+    </ul-->
+  <!--/nav-->
+  <!--div id="eth">
+          <select id="account-selected" onchange="acc_Select()">
+            <option value="default">Select Account</option>
+          </select>
+  </div-->
+  <div class="page-header">
+  <h1>{{title}}</h1>
+  <h3>Welcome to {{title}}</h3>
+  <h1>Shipment Tracker Dapp</h1>
+  <h2 id="User Account">Account:<span></span></h2>
+  <h3 id="contract-address" hidden="hidden">{{contractAddress}}</h3>
+  <h6 id="contrac-address">Contract address:{{contractAddress}}</h6>
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="card" id="shipperinfo-card">
+    <div class="card-header">
+      <!--button id="getHandlerList" onclick="appendHandlerList()"><b>Show Handlers</b></button-->
+      <a class="btn btn-primary" id="Hanlders" onclick="appendHandlerList()"><i class="material-icons">&#xE863;</i> <span>Show Handlers</span></a>
+      <div id="add-new-handler">
+						<b>Tracking Nr:</b> <input type="text" name="TrackingNr" id="shTrackingNr" value='' required onclick="clearText('shTrackingNr')">
+						 <b>Shipper Name:</b> <input type="text" name="shipmentHandlerName" id="shHandlerName" value='' required onclick="clearText('shHandlerName')">
+						 <b>Shipper PQ Key:</b> <input type="text" name="shipmentHandlerKey" id="shHandlerKey" value='' required onclick="clearText('shHandlerKey')">
+             <b>Handler Eth Address:</b> <input type="text" name="shipmentHandlerAddress" id="shHandlerAddress" value='' required onclick="clearText('shHandlerAddress')">
+
+             <button id="stcontract-address" onclick="addNewHandler()"><b>+</b></button>
+             <button id="remove-address" onclick="removeHandler()"><b>-</b></button>
+						 <!--button id="test" onclick="test()"><b>-</b></button-->
+             <img id="loader" src="/images/rings-1.gif">
+      </div>
+    </div>
+    <div id="handler-list" class="card-body">
+			<table class="table table-striped table-hover" id="handlerTable">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Tracking Nr:</th>
+						<th>Handler Name</th>
+						<th>Ethereum Address</th>
+						<th>PQ Public Key</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-4">
+          <img id="loader-1" src="/images/rings-1.gif">
+          <h2>Shipment <b>Details</b></h2>
+        </div>
+        <div class="col-sm-8">
+          <!--a class="btn btn-primary" onclick="showShipmentTracking()"><i class="material-icons">&#xE863;</i> <span>Show ALL Packages</span></a-->
+					<a class="btn btn-primary" onclick="showShipmentTracking()"><i class="material-icons">&#xE863;</i> <span>Show ALL Violations</span></a>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="table-filter">
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="show-entries">
+            <span>Show</span>
+            <select class="form-control">
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+              <option>20</option>
+            </select>
+            <span>entries</span>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+             <div class="filter-group">
+               <label>Tracking Nr.</label>
+               <input type="text" class="form-control">
+             </div>
+             <div class="filter-group">
+               <label>Location</label>
+               <select class="form-control">
+                 <option>All</option>
+                 <option>Berlin</option>
+                 <option>London</option>
+                 <option>Madrid</option>
+                 <option>New York</option>
+                 <option>Paris</option>
+               </select>
+             </div>
+             <div class="filter-group">
+               <label>Status</label>
+               <select class="form-control" id="selectStatus" onchange="updatePkgTrackingTable()">
+                 <option>Any</option>
+                 <option>Delivered</option>
+                 <option>Shipping</option>
+                 <option>Pending</option>
+                 <option>Cancelled</option>
+               </select>
+             </div>
+           <span class="filter-icon"><i class="fa fa-filter"></i></span>
+         </div>
+       </div>
+     </div>
+     <table class="table table-striped table-hover" id="packageTrackingTable">
+       <thead>
+         <tr>
+           <!--th>#</th-->
+           <th>BlockNr</th>
+           <th>Timestamp</th>
+           <th>Shipper ID</th>
+					 <th>IoT Address</th>
+           <th>Tracking Number</th>
+           <th>Location</th>
+           <th>Status</th>
+           <th>Data</th>
+           <th>DataID</th>
+           <th>Violations</th>
+         </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+     </table>
+
+     <!--div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+					<li class="page-item"><a href="#" class="page-link">6</a></li>
+					<li class="page-item"><a href="#" class="page-link">7</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </div-->
+   </div>
+   <!--table wrapper end-->
+ </div>
+ <!--container end-->
+<table class="table table-striped table-hover">
+
+  <div class="container">
+             <!-- Modal -->
+             <div id="myModal" class="modal fade" role="dialog">
+                 <div class="modal-dialog">
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                         <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <div id ="m-title" class="modal-title">
+                                 <h4>Requirement Registration</h4>
+                             </div>
+                         </div>
+                         <div class="modal-body">
+													 <form role="form" onSubmit="return SetRequirements()"id="reused_form" >
+                             <!--form role="form" method="get" id="reused_form" -->
+                                 <p><b> Fill out the form below for adding new requirements for Pkg Tracking. </b></p>
+																 <img id="loader-2" src="/images/rings-2.gif">
+																 <div class="form-group">
+                                     <label for="trID"> <b>Tracking Nr:</b></label>
+                                     <input type="text" class="form-control" id="trID" name="trID" required maxlength="50" data-toggle="tooltip" title="Requirement applies to this Pkg ID">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="reqID"> <b>Requirement ID:</b></label>
+                                     <input type="text" class="form-control" id="reqID" name="reqID" required maxlength="50">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="req-title"> <b>Requirement Title:</b></label>
+                                     <input type="text" class="form-control" id="req-title" name="req-title" required maxlength="50">
+                                 </div>
+
+                                 <div class="form-group">
+                                     <label for="req-min"> <b>Min Threshold:</b></label>
+                                     <input type="number" class="form-control" id="req-min" name="req-min" maxlength="50" data-toggle="tooltip" title="Only Integers allowed">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="req-max"> <b>Max Threshold:</b></label>
+                                     <input type="number" class="form-control" id="req-max" name="req-max" maxlength="50" data-toggle="tooltip" title="Only Integers allowed">
+                                 </div>
+																 <div>
+																 <span><b>Severity Level</b></span>
+										             <select class="form-group" id="sevLevel">
+										               <option>Low</option>
+										               <option>Medium</option>
+										               <option>High</option>
+										               <option>Critical</option>
+										             </select>
+										           </div>
+																 <div class="form-check">
+    													 				<input type="checkbox" class="form-check-input" id="MinCheck">
+    																	<label class="form-check-label" for="MinCheck"><p><b>Min Flag</b></p></label>
+  																</div>
+																	<div class="form-check">
+     													 				<input type="checkbox" class="form-check-input" id="MaxCheck">
+     																	<label class="form-check-label" for="MaxCheck"><p><b>Max Flag</b></p></label>
+   																</div>
+                                 <!--button type="submit" class="btn btn-lg btn-success btn-block" id="btnSetReq" onclick="SetRequirements()">Send TX! &rarr;</button-->
+																 <button type="submit" class="btn btn-lg btn-success btn-block" id="btnSetReq">Send TX! &rarr;</button>
+                             </form>
+                             <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Sent your message successfully!</h3> </div>
+                             <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+<script src="/javascripts/dapp.js"></script>
+
+<!--/div-->
