@@ -8,11 +8,14 @@ var DHTDigitalSensor = GrovePi.sensors.DHTDigital;
 var LightAnalogSensor = GrovePi.sensors.LightAnalog;
 var DigitalButtonSensor = GrovePi.sensors.DigitalButton;
 var RotaryAngleAnalogSensor = GrovePi.sensors.RotaryAnalog;
+var LoudnessAnalogSensor = GrovePi.sensors.LoudnessAnalog;
+
 var led = new GrovePi.sensors.DigitalOutput(3);
 var dhtSensor = new DHTDigitalSensor(4, DHTDigitalSensor.VERSION.DHT11, DHTDigitalSensor.CELSIUS);
 var toogle = false;
 var IO = require('./Utils.js');
 var pkg = require('./main.js');
+var city;
 
 PQ1="eff3bc952afdc46400bcfc07a5699f525119760f364cb04129323e207fcdc18c"
 PQ2="d6cea69138fa00da0fa2af65912191ad45b35a690150855e99c2f3c293334f85";
@@ -59,10 +62,8 @@ function TempSensor() {
   return SensorReading;
 }
 function HumiditySensor() {
-  //await sleep(1000);
+
   console.log('starting Humidity Reading');
-  //console.log('GrovePi Version :: ' + board.version());
-  //var dhtSensor = new DHTDigitalSensor(4, DHTDigitalSensor.VERSION.DHT11, DHTDigitalSensor.CELSIUS);
   var Temp = dhtSensor.read();
   if(Temp<0) {
     Temp = dhtSensor.read();//to get rid of garbage
@@ -72,9 +73,7 @@ function HumiditySensor() {
       ID:"Humidity",
   };
 
-  //console.log("Hum full:",Temp);
   console.log(SensorReading);
-  //dhtSensor.read();
   return SensorReading;
 
 }
@@ -101,6 +100,14 @@ function PressureReading() {
    return SensorReading;
 }
 
+function SoundSensor() {
+  var loudnessSensor = new LoudnessAnalogSensor(0);
+  //Analog Port 2
+  console.log('Loudness Analog Sensor (start monitoring - reporting results every 10s)');
+  var reading = loudnessSensor.read();
+  console.log("loundess reading is",reading);
+}
+
 function RotarySensor() {
   var rotaryAngleSensor = new RotaryAngleAnalogSensor(1)
           //Analog Port 1
@@ -109,20 +116,54 @@ function RotarySensor() {
           rotaryAngleSensor.start()
           rotaryAngleSensor.on('data', function (res) {
             console.log('Rotary onData value =' + res)
+            val = Math.floor(res/10);
+            switch (val) {
+              case 0:
+                  city = "Berlin";
+                  break;
+              case 1:
+                  city = "Munich";
+                  break;
+              case 2:
+                  city = "Amsterdam";
+                  break;
+              case 3:
+                  city = "Frankfurt";
+                  break;
+              case 4:
+                  city = "Darmstadt";
+                  break;
+              case 5:
+                  city = "Hamburg";
+                  break;
+              case 6:
+                  city = "Paris";
+                  break;
+              case 7:
+                  city = "London";
+                  break;
+              case 8:
+                  city = "Lahore";
+                  break;
+              case 9:
+                  city = "Koln";
+
+            }
           })
 }
 
 function GPSReading() {
+  console.log("loc is",city);
   var dummySensorReading = {
       Logitude:50,
       Latitutde:100,
       ID:"LOC",
-      Loc:"Darmstadt"
+      Loc:city
   };
   return dummySensorReading;
 }
 
-
+module.exports.SoundSensor = SoundSensor;
 module.exports.TempSensor = TempSensor;
 module.exports.PressureReading = PressureReading;
 module.exports.HumiditySensor = HumiditySensor;

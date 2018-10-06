@@ -72,6 +72,7 @@ function InitializeSensors(reqList,pubAddress,pvtkey,message) {
   board.init();
   read.RotarySensor();
   read.ButtonPress();
+  read.SoundSensor();
 }
 function MonitorPkgConditions(reqList,pubAddress,pvtkey,message) {
   for(var i=0;i<reqList.length;i++) {
@@ -219,12 +220,10 @@ function onExit(err) {
 }
 function gracefulClose() {
   console.log("Stopping: ");
-  //if(IO.stopFlag==1) {
     board.close();
     clearInterval(closeInterval);
     process.removeAllListeners();
     process.exit();
-  //}
 
 }
 // catches ctrl+c event
