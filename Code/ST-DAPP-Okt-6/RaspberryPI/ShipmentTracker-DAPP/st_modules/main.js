@@ -133,9 +133,19 @@ function MonitorPkgConditions(reqList,pubAddress,pvtkey,message) {
       chkViolations(Data,reqList[i],pubAddress,pvtkey);//chk violations
 
     }
-    else if(reqList[i][0]=="TID") {
-      console.log("TID Called");
+    else if(reqList[i][0]=="dB") {
+      //console.log("TID Called");
       //sensor.close();
+      GPS = read.GPSReading();
+      Data = read.SoundSensor();
+      Data.trackingNr = IO.getTrackingNr();
+      Data.status = "Shipping";
+      Data.Loc = GPS.Loc;
+      //get shipper ID
+      //var Hash=IO.tempHash(message);
+      //console.log("Read Light");
+      IO.writeLog(Data);
+      chkViolations(Data,reqList[i],pubAddress,pvtkey);//chk violations
     }
   }
 }

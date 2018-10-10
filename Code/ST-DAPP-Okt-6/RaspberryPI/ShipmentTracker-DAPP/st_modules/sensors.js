@@ -103,9 +103,14 @@ function PressureReading() {
 function SoundSensor() {
   var loudnessSensor = new LoudnessAnalogSensor(0);
   //Analog Port 2
-  console.log('Loudness Analog Sensor (start monitoring - reporting results every 10s)');
+//console.log('Loudness Analog Sensor (start monitoring - reporting results every 10s)');
   var reading = loudnessSensor.read();
+  var SensorReading = {
+      value:reading,
+      ID:"dB",
+  };
   console.log("loundess reading is",reading);
+  return SensorReading;
 }
 
 function RotarySensor() {

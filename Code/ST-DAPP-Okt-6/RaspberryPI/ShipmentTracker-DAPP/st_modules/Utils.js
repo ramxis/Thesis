@@ -345,9 +345,11 @@ async function w3call_LogTrackingInfo(pubAddress,privateKey,Data)
       //var cData = encryptArg(Data);
 
       //console.log(w3.utils.hexToBytes(Signature));
-      const funcAbi = shipmentTracker.LogTrackingInformationNew.getData(Data.value,Data.ID,Data.Loc,Data.trackingNr,Data.status,shipperID,signature,_seed);
+      //TODO:change this back if find any errors
+      //const funcAbi = shipmentTracker.LogTrackingInformationNew.getData(Data.value,Data.ID,Data.Loc,Data.trackingNr,Data.status,shipperID,signature,_seed);
+      const funcAbi = shipmentTracker.LogTrackingViolations.getData(Data.value,Data.ID,Data.Loc,Data.trackingNr,Data.status,shipperID,signature,_seed);
       console.log(Data.value,Data.ID,Data.Loc,Data.trackingNr,Data.status,shipperID,signature,_seed);
-      //const funcAbi = shipmentTracker.LogTrackingViolations.getData(Data.value,Data.ID,Data.Loc,Data.trackingNr,Data.status,shipperID,signature,_seed);
+
       //var estimatedGas;
       //console.log(contractAddress.toString(),funcAbi);//TODO:remove
       var nonce;
